@@ -1,4 +1,4 @@
-ayes' Theorem Background: Thomas Bayes, an 18th-century British mathematician, significantly contributed to probability theory. His most notable work, Bayes' Theorem, was published posthumously.
+Bayes' Theorem Background: Thomas Bayes, an 18th-century British mathematician, significantly contributed to probability theory. His most notable work, Bayes' Theorem, was published posthumously.
 
 Intuitive Judgments and Probability: The video introduces two problems to challenge intuitive judgments:
 
