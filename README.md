@@ -1,4 +1,4 @@
-# MathNote
+# MathNote / Mathematics Note
 
 
 以下是一些常見的電腦代數系統（Computer Algebra Systems，CAS）：
