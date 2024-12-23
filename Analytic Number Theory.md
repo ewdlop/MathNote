@@ -1,6 +1,6 @@
 So confusing.
 
-Image using analytic number theory to find the latest formula for pi but its conditions require non-real numbers.
+Image using Analytic Number Theory to find the latest formula for pi but its conditions require non-real numbers.
 
 And we use it.
 
