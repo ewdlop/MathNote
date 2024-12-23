@@ -98,3 +98,5 @@
 [Quantum Invaraint(https://en.wikipedia.org/wiki/Quantum_invariant)](https://en.wikipedia.org/wiki/Quantum_invariant)
 
 [Gregory W. Moore(https://www.physics.rutgers.edu/~gmoore/)](https://www.physics.rutgers.edu/~gmoore/)
+
+![CoursePoster.png](CoursePoster.png)
