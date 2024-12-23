@@ -1,0 +1,3489 @@
+\input harvmac.tex
+\def\CP {{\cal P }}
+\def\CL {{\cal L}}
+\def\CV {{\cal V}}
+\def\p {\partial}
+\def\CS {{\cal S}}
+\def\hb {\hbar}
+\def\inbar{\,\vrule height1.5ex width.4pt depth0pt}
+\def\IB{\relax{\rm I\kern-.18em B}}
+\def\IC{\relax\hbox{$\inbar\kern-.3em{\rm C}$}}
+\def\IP{\relax{\rm I\kern-.18em P}}
+\def\IR{\relax{\rm I\kern-.18em R}}
+
+
+\Title{\vbox{\baselineskip12pt\hbox{YCTP-P17-90}\hbox{}}}
+{\vbox{\centerline{Matrix Models of 2D Gravity}
+\centerline{}
+\centerline{and}
+\centerline{}
+\centerline{Isomonodromic Deformation$^1$}}}
+
+\centerline{Gregory Moore}
+
+\bigskip{\baselineskip14pt
+\centerline{Department of Physics}\centerline{Yale University}
+\centerline{New Haven, CT 06511-8167}}
+\bigskip
+\bigskip
+\bigskip
+\noindent
+We review the relation between the string equations of 
+the matrix model approach to 2D quantum gravity and the 
+method of isomonodromic deformation. 
+
+\footnote{}{$^1$ Based on lectures given at the workshop of the 
+Yukawa International Seminar, Kyoto, 10-19 May 1990, The 
+Carg\`ese Workshop on Random Surfaces and 2D Gravity,
+May 28-June 1 1990, and the Trieste conference on 
+``Topological Methods in Quantum Field Theories,'' 11-15 June 1990}
+
+\draft
+
+\newsec{Introduction} 
+
+One of the principle goals of the theory of 
+2D gravity is making sense of the formal expression
+\eqn\formal{
+Z(\mu,\kappa;T_i)=\sum_h\int_{MET_h}dg e^{\mu\int\sqrt{g}+\kappa\int R}
+Z_{QFT(T_i)}[g] }
+where we integrate over metrics $g$ on surfaces with $h$ handles 
+with a weight defined by the Einstein-Hilbert action 
+($\mu$ is the cosmological constant and $\kappa$ is Newton's 
+constant, or, equivalently, the string coupling) together 
+with the partition function of some 2D quantum field theory,
+$QFT(T_i)$. The parameters $T_i$ should be thought of as 
+coordinates on a subspace of the space of 2D field theories, 
+or, equivalently, coordinates for a space of string backgrounds.
+
+The expression \formal\ is of course extremely formal, especially when 
+one includes the sum over topologies.
+Nevertheless, in the physical literature, rigorous definitions of 
+this expression can be proposed using the methods of 
+random matrix theory. Last year these concrete definitions 
+led to a beautiful result for \formal\ for an appropriate set 
+of quantum field theories
+\nref\BK{E. Br\'ezin and V. Kazakov, ``Exactly solvable field
+theories of closed strings,'' Phys. Lett. {\bf B236}(1990)144.}%
+\nref\DS{M. Douglas and S. Shenker, ``Strings in less than one
+dimension,'' Rutgers preprint RU-89-34.}%
+\nref\GM{D. Gross and A. Migdal, ``Nonperturbative two dimensional
+quantum gravity,'' Phys. Rev. Lett. {\bf 64}(1990)127.}%
+\nref\GMi{D. Gross and A. Migdal, ``A nonperturbative treatment of
+two-dimensional quantum gravity,'' Princeton preprint PUPT-1159(1989).}
+\nref\newD{M. Douglas, ``Strings in less than one dimension
+and the generalized KdV hierarchies,''  Rutgers preprint RU-89-51.}
+\nref\bdss{T. Banks, M. Douglas, N. Seiberg, and S. Shenker,
+``Microscopic and macroscopic loops in non-perturbative two dimensional
+gravity,'' Rutgers preprint RU-89-50.}\refs{\BK{--}\bdss}. 
+The answer depends only on a particular 
+combination $x=x(\mu,\lambda)$ and is most simply expressed as 
+a differential equation satisfied by 
+\eqn\spfcht{u(x;T_i)={\p^2\over\p x^2} Z .}
+The differential equation 
+satisfied by $u$ for
+coupling to the $(p,q)$ 
+minimal conformal field theory
+\ref\bpz{Belavin, Polyakov, Zamalodchikov, Nucl. Phys.}\ 
+was most elegantly 
+formulated by M. Douglas in \newD\ in terms of a differential 
+operator $L=D^q+u_{q-2}(x)D^{q-2}+\cdots u_0(x)$ where 
+$D=d/dx$ and $u_{q-2}$ is identified with the ``specific heat'' 
+$u(x)$ of \spfcht . The system of equations:
+\eqn\dgle{[L^{p/q}_+,L]=1 }
+where the subscript $+$ indicates the differential operator part of 
+a pseudodifferential operator. The equations for massive 
+models interpolating between the minimal models have the form
+$\sum_p T_p [L^{p/q}_+,L]=1$. 
+
+The specific case of the $(2p-1,2)$ models (corresponding 
+to single hermitian matrix models) have been most intensively
+studied. In this case we have simply $L=D^2+u(x)$ so that 
+hierararchy of kdv equations $\dot L=[L^{(2p-1)/2}_+,L]$
+may be written as 
+\eqn\kdv{{\p u\over \p t}={\p\over\p x}R_p [u(x)] }
+where the conserved densities $R_p$ of the kdv flow are 
+known as ``Gelfand-Dickii'' potentials in the 2d gravity 
+literature. The string equations then take the perhaps 
+more familiar form
+\eqn\onemat{\sum_j (j+\half)T_j R_j[u(x)]=x}
+
+Several interesting properties of these equations were
+discovered shortly after the initial formulation of the 
+double scaling limit. One of the more remarkable 
+results is that a solution to \onemat\ , as a function of the 
+$T_j$ should satisfy kdv flow in the $T_j$ \bdss\ .
+The original argument for this was proposed from the 
+physical point of view using the matrix model integral, 
+which makes certain implicit assumptions about 
+boundary conditions. Later the issue of proper
+boundary conditions for physically acceptable solutions 
+of \onemat\ were clarified, again from the matrix model
+point of view, by Br\'ezin, Marinari, and Parisi
+\ref\BMP{E. Brezin, E. Marinari, and G. Parisi, ``A Non-Perturbative 
+Ambiguity Free Solution of a String Model,'' ROM2F-90-09}.
+These authors argued, heuristically, 
+that the existence of physically reasonable solutions 
+depends on the parity of $m$, the largest index for 
+which $T_m\not=0$. In particular, they proposed that 
+physically reasonable solutions exist only for $m$ odd, 
+and in this case the asymptotics fixes a unique solution of 
+\onemat\ which is pole-free on the real axis. 
+They backed up their arguments with a numerical solution 
+for the case $m=3$. This development
+led to the very interesting papers
+\ref\dss{M. Douglas, N. Seiberg, and S. Shenker, 
+``Flow and instability in quantum gravity,'' Rutgers preprint, 
+RU-90-19}
+\ref\bahnot{G. Bahnot, G. Mandal and O. Narayan,
+``Phase transitions in 1-matrixc models,'' IAS preprint
+IASSNS-HEP-90/52}\ in which it was demonstrated, again numerically, 
+that one cannot use kdv flow to define ``pure gravity'' 
+(an $m=2$ solution) by flowing from the well-defined 
+$m=3$ solution. Essentially, the solution develops a 
+shock wave and there is no well-defined
+$T_2\to \infty$ limit.
+
+This paper is a review and continuation of 
+\ref\geom{G. Moore, ``Geometry of the string equations,'' 
+Yale preprint YCTP-P4-90}\ where  
+the formalism of isomonodromic deformation
+\nref\Its{A. Its and V. Yu. Novokshenov, {\it The Isomonodromic
+Deformation Method in the Theory of Painlev\'e Equations,}
+Springer Lect. Notes Math. 1191.}\ and some related ideas 
+were applied to the string equations. 
+The purpose of our paper \geom\ was threefold.
+First, the isomonodromic deformation formalism is well
+suited to proving rigorously the statements regarding 
+the properties of kdv flow and existence and uniqueness of
+solutions mentioned above. In particular, in section ???
+below we review how this formalism can be used to prove 
+these properties. The formalism applies equally well to the 
+string equations associated with unitary-matrix models and 
+with double-cut phases of the hermitian matrix models so 
+we outline the equations for this case too.
+Second, through the work of the 
+Kyoto school
+\nref\Jimboi{M. Jimbo, T. Miwa, K. Ueno, ``Monodromy Preserving 
+Deformation of Linear Ordinary Differential Equations with Rational
+Coefficients,'' Physica {\bf 2D}(1981)306.}
+\nref\Jimboii{M. Jimbo and T. Miwa, ``Monodromy Preserving 
+Deformation of Linear Ordinary Differential Equations with Rational
+Coefficients. II,'' Physica {\bf 2D}(1981)407.}
+\nref\Jimboiii{M. Sato, T. Miwa, and M. Jimbo, ``Aspects of Holonomic
+Quantum Fields Isomonodromic Deformation and Ising Model,''
+in {\it Complex Analysis, Microlocal Calculus and Relativisitic
+Quantum Theory}, D. Iagolnitzer, ed., Lecture Notes in Physics 126}
+\nref\Jimboiv{M. Jimbo, ``Introduction to Holonomic Quantum 
+Fields for Mathematicians,'' Proc. Symp. in Pure Math. {\bf 49}(1989)part
+I. 379.}
+\refs{\Jimboi{--}\Jimboiv}\ it is known that the isomonodromic
+deformation formalism is closely related to the quantum field 
+theory of free fermions in two-dimensional spacetime. This is 
+extremely suggestive since hermitian matrix models can also
+be written in terms of free fermions. It is worth having a good
+understanding of any connection between these fermions since 
+it might be an indication of a deep connection between nonperturbative
+2D gravity and ``quantum field theory on the spectral curve.''
+These matters are discussed in section three below.
+Third, and more philosophically, interesting physics is usually
+related to interesting geometry, and this certainly ought to 
+be the case for nonperturbative quantum gravity. We would like 
+to know the underlying geometrical significance of the string 
+equations. By this we do {\it not} mean the geometrical 
+meaning of the terms in the asymptotic expansion of solutions
+to the string equations, for these have already been 
+adequately understood from the point of view of topological
+field theory
+\ref\witt{E. Witten, ``On the structure of the topological phase of 
+two dimensional gravity,'' preprint IASSNS-HEP-89/66}
+\ref\distler{J. Distler, ``2D quantum gravity, topological
+field theory and multicritical matrix models,'' princeton 
+preprint PUPT-1161}
+\ref\DiWit{R. Dijkgraaf and E. Witten, ``Mean Field Theory, Topological 
+Field Theory, and Multi-Matrix Models,'' IASSNS-HEP-90/18;PUPT-1166}
+\ref\newvsq{E. Verlinde and H. Verlinde, ``A Solution of two 
+dimensional topological quantum gravity,'' preprint IASSNS-HEP-90/40}
+\ref\dvv{Dijkgraaf, Verlinde, Verlinde}.
+Some proposals for a geometrical meaning of the string
+equations can be found in section four below.
+
+Closely related matters have been discussed in many recent papers.
+Of these we draw particular attention to 
+\ref\emil{E. Martinec, unpublished}
+\ref\witrev{E. Witten, ``Two dimensional gravity and
+intersection theory on moduli space,'' IAS preprint,
+IASSNS-HEP-90/45}\ 
+\ref\morozovi{A. Gerasimov, A. Marshakov, A. Mironov, 
+A. Morozov, and A. Orlov, ``Matrix Models of 2D gravity and 
+Toda Theory,'' P.N. Lebedev Institute preprint, July 1990}
+\ref\morozovii{A. Mironov and A. Morozov, ``On the origin of 
+virasoro constraints in matrix models: lagrangian approach,''
+P.N. Lebedev Institute preprint, July 1990}
+where, among other things,
+the matrix models were shown to be equivalent to the 
+infinite Toda chain - an important integrable system- 
+even {\it before} taking the continuum limit.
+
+\newsec{Matrix Models and 2D Field Theory}
+
+In this section we outline how a 2D field theory ``on 
+the spectral curve'' may be seen to emerge from the 
+matrix model integral. Our understanding of this phenomenon
+is woefully incomplete, but we believe some
+key features may be seen already at this stage. 
+Most importantly we will 
+see that the spectral parameter of inverse scattering 
+theory is identified with the eigenvalue coordinate
+of the random matrix path integral. This point of
+view has also been emphasized in \morozovi\morozovii\ 
+(although some details are different).
+
+\subsec{The level-spacing problem}
+
+The clearest example of the phenomenon we are discussing 
+can be seen already in the large $N$ limit of hermitian 
+matrix models. Consider the matrix model:
+\eqn\gauss{\eqalign{
+Z_N&=\int d^{N^2}\phi e^{- N  tr V(\phi)}\cr
+&=\int \prod d\lambda_i \Delta^2 e^{-N \sum_i V(\lambda_i)}\cr} }
+where $V(\lambda)$ is a polynomial in $\lambda$. 
+and consider furthermore the probability $\tau(I;N)$
+that no eigenvalue falls in the range $I=[\lambda_1,\lambda_2]$.
+It was shown in 
+\ref\dnsmt{M. Jimbo, T. Miwa, Y. Mori and M. Sato, 
+``Density Matrix of an Impenetrable Bose Gas and the 
+Fifth Painlev\'e Transcendent'' Physica {\bf 1D} (1980)80}
+that $\tau(a_1-a_2)=\lim_{N\to \infty}
+\tau([a_1/N,a_2/N];N)$ is the partition function of 
+a quantum field theory of free fermions (and is, moreover
+the tau function for the isomonodromy problem related to 
+the Painlev\'e V equation.) Since the context in which 
+this was originally understood is (superficially) removed
+from matrix models we will show how this may be understood 
+from the matrix model point of view. 
+
+We begin by explaining the origin of the quantum field theory.
+Correlation functions with the measure
+\gauss\  can be interpreted 
+\ref\mehta{M. L. Mehta, {\it Random Matrices} Academic Press,1967. }
+\ref\itzdr{See sec. 10.3 in C. Itzykson and J.-M. Drouffe,
+{\it Statistical Field Theory}, vol. 2, Cambridge Univ. Press. 1989}
+\bdss\ as expectation values in a slater determinant of 
+fermion one-body wavefunctions given by orthonormal functions:
+%
+%$$\psi_j(\lambda)= \bigl({N\over 2\pi}\bigr)^{1/4}
+%\bigl({N\over j!}\bigr)^{1/2}(\lambda^j+\cdots)e^{-N\lambda^2/ 4} $$
+%
+$$\psi_j(\lambda)= P_n(\lambda)e^{-{N\over 2}V(\lambda)} $$
+where $P_n$ are orthonormal polynomials for the measure 
+$d\lambda e^{-NV(\lambda)}$.
+As in \bdss\ we may pass to second quantized wavefunctions:
+\eqn\sec{
+\eqalign{\psi(\lambda)&=\sum_{n=1}^\infty \psi_n(\lambda)a_n\cr
+\psi(\lambda)^\dagger&=\sum_{n=1}^\infty \psi_n(\lambda)a_n^\dagger\cr
+\{\psi^\dagger(\lambda),\psi(\lambda')\}&=\delta(\lambda-\lambda')\cr} 
+}
+where the ground state is the Fermi sea with the first 
+$N$ levels filled.
+As argued in \bdss\ the main contributions to correlation functions 
+come from the neighborhood of the Fermi level. 
+For even potentials
+we can rewrite the recursion relation for orthogonal
+polynomials \BK\DS\GM\ in the form:
+\eqn\newrec{
+\eqalign{
+\lambda p_{2n}(\lambda)&=\sqrt{r_{2n+1}}p_{2n+1} +\sqrt{r_{2n}}p_{2n-1}\cr
+\lambda p_{2n+1}(\lambda)&=\sqrt{r_{2n+2}}p_{2n+2} 
++\sqrt{r_{2n+1}}p_{2n}
+\cr}
+}
+By evaluating these at $\lambda=0$ we see that quite generally 
+if we expect a continuum limit for the orthonormal wavefunctions
+themselves in the neighborhood of $\lambda=0$ we should define 
+\eqn\sclwv{
+p_{2n+1}({\lambda\over N})=(-1)^nf_1(x,\lambda)
+\qquad
+p_{2n}({\lambda\over N})=(-1)^nf_2(x,\lambda)
+}
+where $x=n/N$. Assuming $r_n$ has an expansion of the 
+form $r_n=r(x)+\epsilon^2r_1(x)+\cdots$ where $\epsilon=1/N$
+we find that \newrec\ implies
+\eqn\sclwvi{
+\eqalign{
+f_1&=(r(x))^{-1/4}sin\biggl[\lambda\int^x {dx'\over \sqrt{r(x')}}\biggr]\cr
+f_2&=(r(x))^{-1/4}cos\biggl[\lambda\int^x {dx'\over \sqrt{r(x')}}\biggr]\cr
+} }
+Since the dominant contributions of physical quantities 
+come from the neighborhood of the Fermi level ($x=1$) we see 
+that quite generally the orthonormal wavefunctions become 
+sines and cosines. THese arguments can be checked explicitely
+using hermite functions in the case of a gaussian measure.
+
+From the behavior of the 1-body wavefunctions we see that
+$\hat \psi(\gamma;N)\equiv {1\over \sqrt{N}}\psi(\gamma/N)$
+has a smooth large $N$ limit.
+For example, 
+for the two-point function one easily verifies
+the exact formula:
+\eqn\extpt{
+\langle N|\psi^\dagger(\lambda_1)\psi(\lambda_2)| N\rangle
+=\sqrt{r_{N+1}}{\psi_{N+1}(\lambda_1)\psi_N(\lambda_2)-
+\psi_{N+1}(\lambda_2)\psi_N(\lambda_1)\over
+\lambda_1-\lambda_2}
+} 
+so that we have
+\eqn\limkernel{
+\langle N|\hat\psi^\dagger(\gamma)\hat\psi(\gamma')| N \rangle 
+\rightarrow {1\over  \pi} {sin (\gamma-\gamma')\over
+\gamma-\gamma'} \qquad .}
+On the operator level we define $p=(n-2N)/2N$ and 
+\eqn\osc{\eqalign{
+a_1(p)&=\sqrt{N}(-1)^{n+N}\bigl(\hat a_{2n}- i\hat a_{2n+1}\bigr)\cr
+a_2(p)&=\sqrt{N}(-1)^{n+N}\bigl(\hat a_{2n}+ i\hat a_{2n+1}\bigr)\cr} }
+where $\hat a_n\equiv a_{N+n}$. The sum over $n$ becomes an
+integral $\int^{\infty}_{-1}dp$. 
+Again, assuming that the main contributions
+come from the neighborhood of the Fermi level we extend this to 
+an integral over the entire $p$ axis.
+Our main claim is therefore that $\hat \psi$ has a good large $N$
+limit and is given by 
+\eqn\lmfn{\eqalign{
+\hat\psi(\gamma)&=
+e^{i\gamma}\int^\infty_{-\infty}
+dp~ a_1(p)e^{i\gamma p}
++e^{-i\gamma}\int^\infty_{-\infty}
+dp~ a_2(p)e^{-i\gamma p}\cr
+&=e^{i\gamma}\psi_1(\gamma)+e^{-i\gamma}\psi_2(-\gamma)\cr}
+ }
+and that the Fermi sea becomes the ground state 
+defined by 
+$a_i(p)|0\rangle=0$ for $p>0$ and $a_i^\dagger(-p)|0\rangle=0$
+for $p>0$. 
+
+Now let us return to the problem of the level spacing.
+In terms of the orthogonal polynomials $\psi_j$ 
+we have \mehta\itzdr
+\eqn\level{\eqalign{
+\tau(I;N) &=det\biggl[\delta_{j,k}-\int_{\lambda_1}^{\lambda_2}d\lambda
+\psi_j(\lambda)\psi_k(\lambda)\biggr]_{0\leq j,k\leq N-1} \cr
+&=\langle N|exp\bigl(-\int_{\lambda_1}^{\lambda_2}
+\hat\psi^\dagger(\lambda)
+\hat\psi(\lambda) d\lambda \bigr)|N\rangle\cr}\qquad .
+}
+In the $N\to\infty$ limit, taking $\lambda_i=a_i/N,$ 
+and $I=[a_1,a_2]$ we obtain:
+$$\tau(I)=\langle 0|:exp\biggl(
+-\int_I\hat\psi^\dagger
+\hat\psi\biggr) :|0\rangle$$
+where the normal-ordered exponential is 
+evaluated by expanding in power series and point-splitting 
+all the integrals so that the delta functions in the 
+two-point correlation functions don't contribute.
+This is simply a correlation function in the 
+theory of the one-dimensional Bose gas, also known as the 
+nonlinear Schr\"odinger theory, in the completely 
+impenetrable case,  as studied in  
+\dnsmt
+\ref\Korep{A.R. Its, A.G. Izergin, V.E. Korepin, and N.A. Slavnov,
+``Differential equations for quantum correlation functions,'' 
+preprint}
+\ref\Korepi{A.R. Its, A.G. Izergin, and V.E. Korepin, ``Temperature
+correlators of the impenetrable bose gas as an integrable system,''
+ICTP preprint IC/89/120}. 
+In particular,
+$\tau(I)$ is simply the Fredholm determinant 
+$det~(1-K)$ where $K$ is the kernel defined by 
+\limkernel\ on the interval $I$.
+and the integral operator 
+$I+K$ is in the infinite dimensional group of ``completely integrable
+kernels'' described in \Korep\ . 
+Following the general procedure described in \dnsmt\Korep\Korepi\ 
+we define 
+$\chi_1(z)=e^{iz}\psi_1(z)$ and $\chi_2(z)=e^{-iz}
+\psi_2(-z)$ so that $\hat\psi=\chi_1+\chi_2$ and $\psi^\dagger=
+\chi_1^\dagger + \chi_2^\dagger$, and consider the ``Baker-Akhiezer 
+framing'':
+\eqn\levii{
+\Psi_{\alpha\beta}(\lambda,\lambda')={\langle 0|\chi_\alpha^\dagger(\lambda)
+exp(-\int_I\chi^\dagger \chi)\chi_\beta(\lambda')|0\rangle\over
+\langle 0|exp(-\int_I\chi^\dagger \chi)|0\rangle} 
+\qquad .}
+As we will see below this matrix satisfies a linear ODE in 
+$\lambda$ reminiscent of the Knizhnik-Zamalodchikov equation 
+whose study allows us to derive information on the 
+determinant $\tau(I)$. 
+
+\subsec{Multi-Cut Solutions}
+
+We now turn to an example in which we take a double
+scaling limit. We consider a special class of 
+multicritical potentials
+\ref\molinari{Molinari} 
+\ref\crmr{C. Crnkovic and G. Moore,``Multi-Critical Multi-Cut
+Matrix Models,'' Yale preprint YCTP-??-90}
+\eqn\mulpt{V'_m(\lambda)=k(m)\lambda^{2m+1}\bigl(1-{1\over \lambda^2}
+\bigr)^{1/2}|_+ }
+where the subscript $+$ means we keep the polynomial part in an
+expansion about infinity and 
+\eqn\const{k(m)=2^{2m+1}{(m+1)!(m-1)!\over (2m-1)!} \qquad .}
+The potential
+$V_m(\lambda)$ has the shape of a double well, and the bump
+at $\lambda=0$ becomes progressively flatter as $m$ increases.
+These potentials are characterized by the property that the eigenvalue 
+distribution at tree level consists of two separate 
+cuts, which, at the critical point, meet at the origin.
+These theories have very interesting phase transitions investigated
+in \molinari\dss\crmr\ .
+
+We now consider the double scaling limit and the recursion 
+relations for these models. We denote orthonormal polynomials 
+by $\CP_k$ and we have the standard relation 
+\eqn\reci{\lambda \CP_n=\sqrt{R_{n+1}}\CP_{n+1}+\sqrt{R_n}\CP_{n-1} }
+As in 
+\ref\molinari{molinari}
+\dss\ we assume 
+that $R_{2n}$ and $R_{2n+1}$ have different scaling limits:
+\eqn\scli{\eqalign{R_{2n}&=r_c+a^{1/m}f(z) + a^{2/m} g(z)+\cdots\cr
+R_{2n+1}&=r_c-a^{1/m}f(z)+a^{2/m}g(z)+\cdots\cr} }
+where, in the standard way, $x={2n\over N}=1-a^2 (z-z_0)$ and 
+$Na^{2+1/m}=1$. The tree-level string equation 
+is easily shown to be \crmr\
+\eqn\tree{f^{2m}= {-z\over 2^{2m-1} (m+1)} }
+Since $V$ is even we can group the orthogonal 
+polynomials into even and odd classes and the operation 
+of multiplication by $\lambda$ maps even orthogonal polynomials
+to odd polynomials and vice versa. By studying the recursion 
+relation \reci\ in the neighborhood of $\lambda\cong 0$ we
+expect that the orthogonal polynomials 
+\eqn\lmply{\eqalign{
+f^+(z,\lambda)&\equiv j(a,\lambda)(-1)^k\CP_{2k}(a^{1/m}\lambda)\cr
+f^-(z,\lambda)&\equiv j(a,\lambda)(-1)^k\CP_{2k+1}(a^{1/m}\lambda)\cr} }
+will have smooth limits, where we have allowed for a possible 
+``wavefunction renormalization'' $j$ which is $z$-independent.
+
+Thus, following the reasoning before we now consider a doublet 
+of second quantized Fermi fields....etc.
+
+The double-scaling limit of \reci\ becomes
+\eqn\reciii{\lambda \vec \psi=\sqrt{8}\biggl(-i\sigma_2
+{d\over dz}-\sigma_1 {f\over 4}\biggr)\vec \psi}
+where $\vec\psi=(f^+(z,\lambda),f^-(z,\lambda) )$. We now consider
+the double scaling limit of the full recursion relation
+\eqn\reciv{{d\over d\lambda}\vec\CP =
+N\bigl(V'(\lambda)_+\bigr) \vec\CP }
+where the subscript $+$ indicates that we keep only the 
+upper triangular part of the matrix representation of the 
+operator $V'(\lambda)$ in the basis of orthonormal polynomials. 
+In the double 
+scaling limit, with an appropriate choice of $j$ and a
+slight redefinition of $\vec \psi$, the recursion relations 
+become
+\eqn\laxi{
+\CL\vec\psi\equiv
+\biggl({d\over dz}+\sigma_3 \lambda+f \sigma_1\biggr)\vec\psi=0}
+\eqn\laxii{
+\biggl({d\over d\lambda}-M_m(\lambda,f)\biggr)\vec\psi=0
+}
+where $M_m$ is polynomial in $\lambda$ and differential polynomial
+in $f$. We may find $M_m$ explicitly as follows.
+Note that the commutator of $M_m$ with $\CL$ is just $\sigma_3$.
+In integrable systems theory the method of 
+Zakharov and Shabat  determines
+the space of matrices $M$ which are polynomial in $\lambda$ 
+and differential polynomial in $f$ and whose commutator with 
+$\CL$ is $\lambda$-independent. The vector
+space of such matrices is spanned by the matrices
+occuring in the Lax pairs for the modified KDV hierarchy. 
+(See, e.g., 
+\ref\DrS{Drinfeld and Sokolov, ``Equations of Korteweg-de Vries 
+type and simple Lie algebras,''
+Sov. Jour. Math. (1985)1975, section 3.8}\ .) 
+
+The flatness condition following from \laxi\ and\laxii\ gives an 
+ordinary differential equation for $f$. Comparing with 
+the result \tree\ derived at tree level we find 
+\eqn\res{M_l=(2l+1) \biggl[\bigl
+(U_l+(V_l'/2\zeta)\bigr)\sigma_3
++V_l\sigma_1 -(V_l'/2\zeta)i\sigma_2\biggr]\Psi =0}
+where
+\eqn\uets{\eqalign{
+U_l&\equiv R_l + \zeta^2 R_{l-1}+\cdots \zeta^{2l}R_0 +{z\over 2l+1}\cr
+V_l&\equiv \zeta S_{l-1} +\zeta^3 S_{l-2}+\cdots \zeta^{2l-1} S_0\cr
+S_l&\equiv f R_l-\half R_l'\cr} 
+}
+and the KDV potentials are evaluated for $u=f^2 + f'$. The compatibility 
+conditions become $S_m+{z\over 2m+1} f=0$, which is 
+the equation found in 
+\ref\peri{V. Periwal and D. Shevitz, ``Unitary-Matrix Models 
+as Exactly Solvable String Theories,'' Phys. Rev. Lett. 
+{\bf 64}(1990)1326.}
+for unitary-matrix ensembles. 
+This differential equation is the equation for a 
+self-similar solution to the MKdV flow
+\eqn\mckf{
+{\p f\over \p t_l}={\p \over \p x}S_l[f]
+}
+that is, if $\psi(x,t)=t^\alpha f(z)$
+where $z=t^\alpha x$ and $\alpha=-1/(2l+1)$. 
+then $f$ must satisfy the above ODE. 
+
+More generally, by adding the multicritical potentials 
+$V=\sum_\ell t_\ell a^{(2m-2\ell)/m} V_\ell$ 
+we simply replace
+\eqn\repl{M_m\rightarrow \sum_\ell t_\ell M_\ell}
+which yields the more general string equations:
+\eqn\msvmd{\sum t_l S_l +{1\over 2m+1} z f=0 }
+By arguments analogous to those above we find that 
+the orthogonal polynomials must also satisfy linear equations 
+in the variables $t_\ell$:
+
+WRITE OUT LAX FOR MKDV
+
+\subsec{Single-Cut solutions}
+
+The double scaling limit was originally defined for a 
+different universality class of phase transitions.
+In these cases the critical behavior arises from the 
+integration near a nonzero value of $\lambda=\lambda_c$, 
+and for the $m^{th}$ multicritical point we have the scaling behavior
+$R_n\to r_c + a^{2/m} u(z)$ for $n/N=1-a^2 (z-z_0)$, with
+$Na^{2+1/m}$ fixed.
+In this
+case it is natural to assume that the orthogonal polynomials 
+have a limit of the kind:
+$$p_n(\lambda_c+a^{2/m}\lambda)\to j(a,\lambda)p(z,\lambda)$$
+where the wavefunction renormalization will be determined below.
+The limit of the recursion relation becomes
+\eqn\schrod{\bigl({d^2\over dz^2} + u(z)\bigr)p(z,\lambda)=\lambda 
+p(z,\lambda) 
+}
+showing that the orthogonal polynomials define a Baker-Akhiezer 
+function. Similarly, in the limit we have the quantum 
+field
+$$a^{1/m}\psi(\lambda_c+a^{2/m}\lambda)\rightarrow 
+\hat \psi(\lambda)=\int dz a(z) p(z,\lambda)$$
+and the two point function is simply 
+$$\langle z_0|\hat \psi^\dagger(\lambda_1)
+\hat\psi(\lambda_2)|z_0\rangle={p'(z_0,\lambda_1)p(z_0,\lambda_2)-
+p'(z_0,\lambda_2)p(z_0,\lambda_1)\over \lambda_1-\lambda_2}$$
+If we send one field to infinity we obtain simply the 
+Baker function, reminiscent of the situation in conformal 
+field theory.
+ 
+Moreover, if we perturb around the multicritical point we 
+add the potential
+\eqn\prtrb{
+\delta V= N\sum t_l (\lambda-\lambda_c)^{l+1/2} a^{(2m-2l)/ m}}
+and the partition function now becomes
+\eqn\newtpt{
+\langle 0|e^{\int \psi^\dagger(\lambda)\psi(\lambda)
+\sum t_l^{l+1/2}\lambda^{l+1/2} }|0\rangle
+}
+Thus, as a function of the $t_l$ the partition function 
+is simply the Fredholm determinant $det(1-K)$ for the 
+kernel defined by 
+\eqn\kerna{\eqalign{
+K(\lambda_1,\lambda_2)&=\sqrt{\vartheta(\lambda_1)}K_0(\lambda_1,\lambda_2)
+\sqrt{\vartheta(\lambda_2)}\cr
+K_0(\lambda_1,\lambda_2)&={p'(z,\lambda_1)p(z,\lambda_2)-
+p'(z,\lambda_2)p(z,\lambda_1)\over \lambda_1-\lambda_2}\cr
+\vartheta(\lambda)&=\sum t_l \lambda^{l+1/2}\cr}
+}
+Again, $1+K$ is
+in the class of completely integrable integral operators
+\Korep (in this case the convergence of the integrals is 
+rather delicate. the only case we can analyze is the ``topological''
+point $m=1$ in which case the relevent integrals are 
+conditionally convergent). 
+Following the procedure of \dnsmt\Korep\Korepi\ as before
+we consider the linear matrix equation satisfied
+by $\vec\psi=(p'(x,\lambda)~p(x,\lambda))$:
+\eqn\lopp{
+\CL\vec\psi\equiv -{d\over dx} + \pmatrix{0&\lambda+u\cr
+1&0\cr}\vec\psi=0 \qquad .}
+On the other hand, 
+from their origin in the matrix model it is clear that 
+${d\over d\lambda}\vec\psi$ may be expressed as a matrix operator 
+on $\vec\psi$ which is  polynomial in $\lambda$ with $x$-dependent
+coefficients as in \laxii\ . As in the previous discussion 
+we can determine $M_m$ by the method of 
+Zakharov and Shabat \DrS\ . Recall that the $l^{th}$ 
+KdV flow can be written as the compatibility condition
+$[2\p/\p t_l + \CP_l,\CL]=0\qquad ,$
+where the $sl(2)$ matrix 
+\eqn\popp{
+\CP_l\equiv \pmatrix{A_l& B_l\cr
+C_l&-A_l\cr} }
+may be expressed in terms of the conserved densities $R_l$ of 
+KDV flow
+\ref\Gelf{I.M. Gelfand and L.A. Dickii, ``Asymptotic Behavior of the 
+Resolvent of Sturm-Liouville Equations and the Algebra of the 
+Korteweg-De Vries Equations,'' Russian Math Surveys, {\bf 30}(1975)77.}
+via
+\eqn\potent{\eqalign{
+C_l&=R_l+\lambda R_{l-1}+\cdots + \lambda^{l-1}R_1 + \lambda^l R_0\cr
+A_l&=\half C_l'\cr
+B_l&=(\lambda+u)C_l-A_l'\cr} }
+It follows that if we define
+\eqn\wittx{
+\IP=-\hbar{d\over d\lambda}-\half\sum_j (j+\half)T_{j}\CP_{j-1}
++\pmatrix{0&\hbar x-(\sum_j (j+\half) T_jR_j)\cr
+0&0\cr} }
+(where $\CP_{-1}=0$) 
+then the equation $[\IP_l,\CL]=0$ is equivalent to the 
+string equation.
+Thus the compatibility conditions for the first pair and 
+last pair of linear systems
+\eqn\linsys{\eqalign{
+\IP \Psi(\lambda,x,T_j)&=0\cr
+\CL \Psi(\lambda,x,T_j)&=0\cr
+(2\hbar{d\over dT_j}+\CP_j)\Psi(\lambda,x,T_j)&=0\cr} }
+give the massive $(2l-1,2)$ and KdV equations, respectively. It can be 
+shown that the compatibility conditions for the first and 
+third equations above follow from the string and kdv 
+equations. 
+Similar considerations allow us to write the 
+string equations for arbitrary $(p,q)$ in first order
+form.
+
+\subsec{Relation to other work}
+
+The emergence of a quantum field theory on the 
+spectral curve has been discovered in several different
+guises in recent investigations into matrix models.
+In 
+\ref\das{S.R. Das and A. Jevicki, ``String field 
+theory and physical interpretation of d=1 strings,'' 
+Brown preprint BROWN-HET-750}
+\ref\sengupt{A.M. Sengupta and S.R. Wadia, ``Excitations
+and interactions in d=1 string theory,'' Tata preprint}\ 
+it is shown that one may derive a quantum field theoretical 
+representation of the $d=1$ matrix model involving 
+fields $\phi(t,\lambda)$ where $t$ is the 1-dimensional 
+time and $\lambda$ is the eigenvalue coordinate of the 
+string. 
+This should be regarded as the $d=1$ version 
+of the phenomena discussed for $d<1$ in this paper. 
+It would be extremely interesting to related the 
+$d=1$ theories to the $d<1$ theories by some analog of the 
+Feigin-Fuks construction. 
+polchinski?
+
+There has also been a good deal of fuss over the 
+discovery that the partition function of the matrix 
+model is annihilated by operators forming a 
+subalgebra of the Virasoro algebra
+\ref\fukuma{Fukuma, Kawai, ???}
+\dvv\morozovi\morozovii\ . We will see later that the 
+2D quantum field theory on the spectral curve is related to 
+a 2D conformal field theory, thus making the appearance of 
+a Virasoro algebra completely natural
+\foot{Essentially the same remark was made in a pretty
+paper by A. Mironov and A. Morozov \morozovii\ .}.
+
+It would be extremely interesting to understand 
+the origin of the field theory on the spectral curve 
+in the sum over topologies of conformal-field-theoretic
+correlators.
+Some curious speculations along these lines are 
+described in 
+\ref\knizhnik{V.G. Knizhnik, ``Multiloop amplitudes in 
+the theory of quantum strings and complex geometry,'' 
+Usp. Fiz. Nauk. {\bf 159}(1989)401. English translation:
+Sov. Phys. Usp. {\bf 32}(1989)945, section 12}
+\morozovi\ .
+
+In this context 
+it is interesting to note that many integrable massive field 
+theories have correlation functions related to Painlev\'e 
+equations
+\ref\mcoy{E. Barouch, B.M. McCoy, and T.T. Wu, Phys. Rev. Lett. {\bf
+31} (1973)1409; T.T. Wu, B.M. McCoy, C.A. Tracy, and E. Barouch, 
+Phys. Rev. {\bf B13}(1976)316.}
+\Jimboiii\
+\Korep\ .
+
+\newsec{Isomonodromic Deformation}
+
+In the previous section we saw the appearance of a 2D quantum field 
+theory on the spectral curve, and interpreted the 
+string equations and kdv flow as 
+compatibility conditions for linear equations satisfied by 
+correlation functions in the theory.
+These linear differential equations are essentially 
+flatness conditions, and very similar equations have
+appeared in conformal field theory.
+In conformal field theory we often meet linear differential equations, 
+for example null vector equations or 
+the Knizhnik-Zamalodchikov equation, which depend 
+on parameters, e.g. the positions of various fields and the 
+moduli of some Riemann surface, and which have interesting 
+monodromy. It is quite typical that deforming the parameters, 
+e.g., the moduli of the surface, leaves the monodromy 
+unchanged. In the conformal field theory literature this is 
+often expressed in terms of the flatness of the Friedan-Shenker
+vector bundles over moduli space. This flatness condition 
+is an example of isomonodromic deformation. In this section
+we will see that isomonodromic deformation is the key behind
+the linear systems occuring in all the matrix model 
+problems discussed above.
+
+\subsec{The Level spacing problem}
+
+Following \dnsmt\ we show that $\Delta_I$ is simply the 
+$\tau$ function for isomonodromic deformation associated with 
+$gl(2)$ fermions $\psi_{1,2}$, as in the previous sections.
+At this point one may easily follow all the steps in 
+section seven of \dnsmt\ using the interpretation in terms of a doublet
+of fermions
+\foot{For readers of \dnsmt\ one can identify, for example,
+$R_I^\pm(x,x';\xi)$ with the two point function of
+$\hat\chi^\dagger_i(x)$ with $\hat\psi(x')$, and so on.}. 
+In particular, we can compute the monodromy of 
+\levii\ under analytic continuation of $x$ around $a_i$. From the 
+operator product expansion we compute $d\Psi \Psi^{-1}$
+where $d$ is exterior differentiation in $x,a_i$. This gives once more
+Knizhnik-Zamalodchikov type equations, interpreted here as 
+isomonodromic deformation equations. From the general arguments of the 
+previous section we deduce that $\Delta_I$ is the tau function 
+for isomonodromic deformation.
+
+work out more details--motivates isomonodromy
+
+\subsec{Stokes phenomenon}
+
+The isomonodromic deformation method focuses on the monodromy
+of the solutions of the equation in $\lambda$. Since our 
+equation is of the form
+${d\over d\lambda}\Psi=\CA(\lambda)\Psi$ where $\CA$ is polynomial
+in $\lambda$ (and 
+we consider $\lambda$ as a coordinate on $\IP^1$) 
+it would appear that there can be no monodromy. In fact, the 
+singularity at infinity induces a kind of monodromy in the 
+form of Stokes phenomenon.
+
+To put Stokes phenomenon in perspective let us consider again
+the differential equation 
+\eqn\lin{{d\over d\lambda}\Psi=\CA(\lambda)\Psi}
+where $\CA$ is meromorphic in $\lambda$. 
+Near a 
+regular singular point $\lambda_0$ where $\CA$ has a pole 
+we may write a formal solution to the differential equation as
+\eqn\regi{\Psi(\lambda)=\hat\Psi(\lambda)e^{M~log(\lambda-\lambda_0)}}
+where $\hat\Psi$ is a formal power series in $\lambda-\lambda_0$.
+It is a 
+nontrivial property of differential equations with regular 
+singularities that $\hat \Psi$ is in fact a convergent power 
+series, so we may conclude that the monodromy is $e^{2\pi iM}$. 
+
+Stokes phenomenon appears when we try to find solutions to 
+our equation and $\CA$ has a pole of order larger than one.
+For simplicity we assume that 
+$$\CA(\lambda)={A_{-r}\over (\lambda-\lambda_0)^{r+1}}+\cdots$$
+with $A_{-r}$ diagonalizable. In this case it can be shown
+\ref\Wasow{W. Wasow, {\it Asymptotic Expansions for Ordinary 
+Differential Equations}, Interscience, 1965.}
+that we have a formal solution 
+\eqn\formi{\Psi=\hat\Psi e^{T(\lambda-\lambda_0)}} 
+with 
+$$T={D_{-r}\over (\lambda-\lambda_0)^r}+\cdots
+{D_{-1}\over(\lambda-\lambda_0)}+M~log~(\lambda-\lambda_0)$$
+where the $D_i$ are diagonal and commute with the ``formal
+monodromy'' $M$. In general $\hat \Psi$ is only an asymptotic
+series. It nonetheless has nontrivial analytic meaning in 
+the following sense. There exist angular sectors in 
+the neighborhood of the singular point as in
+\fig\sectors{Stokes sectors in the neighborhood of an 
+irregular singular point. The two solutions $\Psi_{1,2}$ are
+asymptotic to the formal solution only in 
+the indicated sectors.}
+in which there exist true solutions of \lin\ which are 
+asymptotic to the formal solution \formi\ . The regions 
+can be found from considering the nature of the 
+essential singularity $e^T$. Notice that this is 
+exponentially growing and decaying in the angular 
+sectors where $cos r\theta$ is positive and negative,
+respectively, where $\theta$ is an angular coordinate 
+around $\lambda_0$. 
+Typically a true solution asymptotic to the formal 
+solution can only be defined in a sector of angular
+width $\pi/r$ which contains regions of both 
+growth and decay. Therefore if we compare two 
+such solutions which are defined on regions with 
+a nontrivial overlap, as in \sectors\ they may 
+differ by right-multiplication by a constant 
+matrix. Such matrices are called Stokes matrices, 
+and, labelling the sectors by $\Omega_k$ we obtain
+a set of Stokes matrices $S_k$ associated with the 
+differential equation. 
+
+A basic example: Airy functions
+
+According to the works
+\ref\flasch{H. Flaschka and A. Newell, ``Monodromy and 
+Spectrum-Preserving Deformations I,'' Comm. Math. Phys. 
+{\bf 76}(1980)65.}
+\Jimboi\Jimboii\Jimboiii\Jimboiv\ the 
+Stokes matrices should be considered as a generalization 
+of the notion of the monodromy of the differential equation.
+This is not meant so suggest that a solution to the differential
+equation cannot be analytically continued to a single valued
+solution in an entire neighborhood of the singular point,
+and this happens in many classical examples. The point is, 
+such a single-valued solution has the ``wrong'' asymptotic 
+behavior in all but one sector.
+
+\subsec{Asymptotic analysis of the PII family}
+
+We now apply the isomonodromic deformation formalism
+to the compatibility conditions for the string equations.
+Since the equation in $\lambda$  depends
+polynomially on $\lambda$ it cannot have interesting monodromy 
+in the complex plane. It does have an irregular singular 
+point at infinity and, it turns out, physically interesting
+solutions to \laxii\linsys\ exhibit Stokes phenomenon. 
+The differential equations \laxii\linsys\
+depend on parameters $x,T_j,f,f_z,f_{zz},\dots$, where, 
+for the moment, we consider $f,f_z,f_{zz},\dots $ to be 
+independent quantities.
+In the case of 2D gravity, 
+the parameters $x,T_j$ have the dual physical interpretation of
+coordinates
+in the space of 2D field theories and moduli of a generalization 
+of a riemann surface (discussed in section 5 below). 
+NEED BETTER MOTIVATION
+It is 
+therefore natural to ask what conditions $f,f_z,f_{zz},\dots$
+must satisfy if the monodromy is to be independent of the 
+moduli. We may answer this question as follows.
+
+As we vary $z,T_j$ we obtain a family of invertible matrix
+solutions $\Psi(\lambda,z,T_j)$ to 
+\eqn\lasaga{{d\over d\lambda} \Psi=\sum t_{\ell} M_\ell\Psi }
+so we may consider the quantity ${\p \Psi\over \p z}\Psi^{-1}$, which 
+is a rational matrix in $\lambda$. The only singularities 
+can be at $\lambda=\infty$, so we need only know the behavior 
+of a solution to \lasaga\ in this limit. Therefore we 
+perform an asymptotic solution of \lasaga\ 
+by relating the matrix elements of \res\ 
+to the resolvent $R(x,\lambda^2)$ (??square?)
+of the Schr\"odinger operator $L=D^2+u$. The result is 
+that $\Psi=\hat\Psi e^T$
+where  
+$$T=\half\biggl(\sum_l{2m+1\over 2l+1}t_l \lambda^{2l+1}\biggr)\sigma_3
+$$
+and 
+$$\eqalign{
+\hat\Psi&=1+{\hat \Psi_1\over \lambda}+{\hat \Psi_2\over \lambda^2}+\cdots\cr
+\hat\Psi_1&={-if\over 2}\sigma_2+H\sigma_3\cr}$$
+where $H'=\half f^2$. Since the Stokes data is unchanged under
+deformation of $z$ we can compute $\p_z\Psi \Psi^{-1}$ 
+by substituting the asymptotic expansion and we find
+the condition \laxi\ . From this condition it follows that, 
+as functions of $z$, $f_z$ must be the derivative of $f$ etc., 
+and $f(z)$ must satisfy the string equation.
+Similarly, one may 
+compute $\hat\Psi{\p T\over\p t_l}\hat\Psi^{-1}mod (1/\lambda)$
+to obtain the linear condtion ????. This shows that if one 
+considers a solution to \msvmd\ as a function of the $t_\ell$ then,
+if the stokes data are fixed, $f$ must satisfy mkdv flow.
+ 
+\subsec{Asymptotic analysis of the PI family}
+
+A very similar computation can be carried out for 
+the equation $\IP\Psi=0$. There is one (important)
+technical change.
+Since the highest power of $\lambda$ does not
+multiply an invertible matrix one must make a 
+transformation \Jimboii\
+\ref\Kapaev{A. Kapaev, ``Asymptotics of solutions of the Painlev\'e
+equation of the first kind,'' Differential Equations, 
+{\bf 24}(1988)1107.}
+$\lambda=\zeta^2$ and
+\eqn\zee{\eqalign{
+\Psi(\lambda)&=\zeta^{1/2}\pmatrix{1&1\cr
+1/\zeta&-1/\zeta\cr} W(\zeta)\cr
+W(\zeta)&=\zeta^{-1/2}\half \pmatrix{1&\zeta\cr
+1&-\zeta\cr}\Psi(\lambda)\cr} }
+The leading singularity in the equation for $W$ now 
+multiplies $\sigma_3$ and we may easily find
+$W\sim \hat W e^{T/\hbar}$ where 
+\eqn\asymp{
+\eqalign{
+T&=
+\biggl(-{1\over 4}
+\sum_{j=1} T_j \zeta^{2j+1} +\zeta x\biggr)
+\sigma_3\cr
+\hat W&=1+ {H_1\over \zeta}\sigma_3 +
+{u\over 4\zeta^2}\sigma_1 +\CO(1/\zeta^3)\cr} }
+Again,
+this may be proved by relating the matrix elements in 
+the differential equation to the resolvent of the Schr\"odinger
+operator $L=-D^2+u$. As before, if we deform $x$ keeping the 
+Stokes data fixed then we can evaluate the expression 
+${\p \Psi\over \p x}\Psi^{-1}$ from its asymptotics.
+(In this case one must take into account that
+the equation for $W$ has a regular 
+singularity at zero.)
+The result is just:
+\eqn\laxi{{\p\Psi\over \p x}\Psi^{-1}=\pmatrix{0&\lambda+u\cr
+1&0\cr}
+}
+and comparing with section 3.1 we see that this means
+$u(x)$ must satisfy the string equation. Similarly we
+can ask for the condition that deformations in $T_j$
+keep the Stokes data fixed, and we find remaining linear
+equations in \linsys\ so that $u(x;T_j)$ satisfies 
+KDV flow. 
+
+We will indicate below how the physical 
+asymptotic conditions on $u(x)$ as a function of $x$
+fix the Stokes data uniquely. Thus we have proven that 
+$u(x;T_j)$ satisfies kdv flow. The original proposal
+of Banks, Douglas, Seiberg, and Shenker
+\bdss\ , was based on more physical (but entirely reasonable)
+arguments. The following argument for KDV flow has also been 
+proposed in \emil\witrev\morozovi\ .
+In the matrix model, before the continuum limit is taken,
+the jacobi matrix representing multiplication by 
+$\lambda$ in the space of orthogonal polynomials 
+satisfies toda flow. It was proposed  some time ago
+\ref\moser{J. Moser, ``Finitely many mass points on the line under
+the influence of an exponential potential--an integrable system,''
+in  Lecture Notes in Physics {\bf 38}, J. Moser, ed., p. 467}
+that the continuum limit of toda flow should give 
+(m)kdv flow.
+
+\subsec{$\tau$ functions}
+
+One of the beautiful results of the Kyoto school on
+isomonodromic deformation was the definition of the 
+$\tau$ function for isomonodromic deformation, which 
+motivated the perhaps better known tau function 
+of the KP hierarchy. Applying \Jimboi\Jimboii\ to 
+our case we see that 
+\eqn\clsdfrm{
+\omega=Res_{\zeta=\infty} tr\Biggl[ 
+\bigl(\hat W^{-1}{d\hat W\over d\zeta}\bigr) d T\Biggr] }
+is a closed one-form on the space of deformation parameters.
+Since $\omega$ is closed 
+one can then define (locally, in the space of 
+deformation parameters) 
+the {\it tau function} via $\omega=d(log \tau)$.
+We have just seen that
+$dH_1/dx=u$, and substituting into the equation for $d(log\tau)$
+we get $d(log\tau)=-2H_1$, hence
+\eqn\freeeng{
+u(x;T_j)=-{d^2\over dx^2}log \tau }
+and hence the partition function of the matrix model
+(whose logarithm is the partition function of 2D 
+gravity) is simply the tau function.
+Since the tau function for isomonodromic deformations
+is known always to be holomorphic
+\ref\Miwa{T. Miwa, ``Painlev\'e property of monodromy
+preserving deformation equations and the analyticity of 
+$\tau$ functions,'' Publ. Res. Inst. Math. Sci. {\bf 17}
+(1981)703}\ 
+we see that the {\it only} singularities of a solution
+$u$ to the string equations are second order poles. 
+This result may be easily extended to the entire hierarchy 
+of $(p,q)$ equations.
+
+If we apply the definition \clsdfrm\ to the asymptotic 
+expansion for the PII family we find
+\eqn\tauf{f^2=2H'={\p^2\over \p z^2}log~ \tau \qquad .}
+On the other hand, computing the connected two-point function of 
+$tr\phi^2$ one can show \peri\crmr\ 
+\eqn\twopt{
+\langle tr\phi^2~tr\phi^2\rangle_c =R_N\bigl(R_{N+1}+R_{N-1}\bigr)\to
+{1\over 8} - a^{2/m} f^2 }
+so that the partition function of the unitary matrix model is just the 
+tau function. (WE HAVE USED $g=f^2$ WHICH WE ONLY PROVED TO TREE LEVEL
+SO FAR!)
+
+
+\subsec{Stokes matrices for the PI family}
+
+In order to obtain physical solutions to the 
+string equation we need to choose proper 
+boundary conditions. In the isomonodromic 
+deformation literature it is shown that the 
+``initial conditions'' of a solution to 
+the nonlinear compatibility condition (the 
+string equation) may be taken to be the stokes
+matrices of the associated linear problem. 
+In this section we discuss the stokes data 
+for the PI family for the ``physical'' solutions
+to the string equations.
+
+The issue of the correct choice of boundary conditions 
+for a physically acceptable solution to the string equation
+is dictated by the origin of the specific heat in 
+the matrix model integral
+\BMP
+\ref\David{F. David, ``Phases of the large N matrix model
+and non-perturbative effects in 2d gravity,'' Saclay
+preprint SPhT/90-090}. 
+For example, in the case of the m=3 member of the PI family,
+i.e., $R_3[u(x)]=x$, the physical asymptotics are given by
+$u\sim \CO(x^{1/3})$ as $x\to\pm\infty$. Since each asymptotic
+condition fixes two boundary conditions we expect that these
+asymptotics uniquely specify the solution.
+From the numerical 
+integration in \BMP\ it appears that the solution is pole-free. 
+
+We will show that the above asymptotics 
+uniquely determines the Stokes parameters in the monodromy 
+problem associated to $R_3=x$. Since one can reconstruct 
+a solution from the stokes data (via the * operator, see below)
+it follows that the solution is completely unique.
+This unique solution is real for all $x$. 
+
+We investigate the direct monodromy problem following closely
+the treatment in
+\ref\Itsi{See reference \Its, especially, chapter 5.}
+\Kapaev . Recall that, after the transformation \zee\
+our equation can be written as
+\eqn\dforz{\eqalign{
+\hbar {d W\over d\zeta}&=\Biggl[(B+\zeta^2 C+\Delta_l)
+\sigma_3-(B-\zeta^2 C+\Delta)i\sigma_2+(2\zeta A
+-{\hbar \over 2\zeta})\sigma_1\Biggr]W\cr\cr
+&=\biggl[(\zeta^{2l+2}+{u^2\over 8}\zeta^{2l-2}+\cdots)\sigma_3 +
+(-{u'\over 4}\zeta^{2l+1}+\cdots)\sigma_1 
++ (-{u\over 2}\zeta^{2l}+\cdots)(-i\sigma_2)\biggr]W
+\cr}  }
+where 
+$$\eqalign{
+C\equiv -\half\sum_j (j+\half)T_{j}C_{j-1}&
+\qquad \qquad \Delta=\hbar x -\sum (j+\half)T_jR_j\cr
+A_l= \half C' &\qquad\qquad B=(\lambda+u)C-A'\cr}
+$$
+Equation \dforz\ 
+has an irregular singularity of order $2l+3$ at infinity
+and a regular singularity at the origin. 
+
+We consider some general properties of the stokes 
+matrices for these equations.
+For the $(2l-1,2)$ string equation we will have $4l+6$ Stokes sectors
+$\Omega_k$ each containing a unique ray 
+$\theta={\pi\over 4l+6}(2k-1)$, $k=0,\dots 4l+5$
+along which 
+$cos[(2l+3)\theta]=0$, thus we may take neighborhoods of 
+infinity defined by:
+\eqn\sectors{
+\Omega_k\equiv \{\zeta| {\pi\over 4l+6}+ {\pi\over 2l+3}(k-2)
+< arg \zeta < {\pi\over 4l+6}+ {\pi\over 2l+3}k\} }
+for $k=0,\dots, 4l+5$. We will consider $k$ as an integer
+defined modulo $4l+6$. 
+The Stokes sectors have the property that in $\Omega_k$ 
+there is a unique solution $W_k$ to \dforz\ with the
+asymptotic behavior $\hat W e^{T/\hbar}$. 
+On the overlap $\Omega_k\cap\Omega_{k+1}$ the two solutions 
+$W_{k+1}$ and $W_k$ must be 
+related by Stokes matrices
+\eqn\sto{W_{k+1}=W_k S_k \qquad. }
+Since $W_{k+1}$ and $W_k$ have the same asymptotic expansion
+in their respective sectors, the $S_k$ are constrained
+to be triangular. In fact
+\eqn\sto{
+S_{2k}=\pmatrix{1&s_{2k}\cr 0&1\cr}\qquad\qquad
+S_{2k+1}=\pmatrix{1&0\cr s_{2k+1}&1\cr}  }
+
+The stokes parameters $s_i$ are not all independent but 
+satisfy the constraints:
+
+\noindent
+1. $s_{k+2l+3}=s_k$.
+
+\noindent
+2. \eqn\mncnst{S_1\cdots S_{2l+3}=-i \sigma_1 }
+
+\noindent
+3. $s_{2l+3-k}=-\bar s_k$ if $u$ is real.
+
+We may prove these properties as follows.
+For property 1, we use
+the symmetry of equation \dforz\ to conclude that
+$W_{k+2l+3}(\zeta)=\sigma_1W_k(-\zeta)\sigma_1$ and hence that 
+$S_{k+2l+3}=\sigma_1 S_k\sigma_1=S_k^{tr}$, from which 1 follows.
+Next, for 2 we remark that the original 
+equation in $\lambda$ is regular throughout the $\lambda$ plane.
+The solution is simply $Pexp\int^\lambda A(\lambda')d\lambda'$ for
+an appropriate matrix $A$ hence 
+the only singularities in $\Psi$ can occur at infinity. Thus, near
+$\zeta=0$ we have
+\eqn\nrzr{
+W(\zeta)\cong \half\zeta^{-1/2}\pmatrix{1&\zeta\cr 1&-\zeta\cr} 
+}
+By
+\nrzr\ , if we analytically continue $W_1$ from $\Omega_1$ then 
+$W_1(-\zeta)=-i\sigma_1W_1(\zeta)$ from which we obtain 2. 
+Finally if $u$ is real then all the coefficients of powers of 
+$\zeta$ in $\IP$ are real so that $\bar W_k(\zeta)=W_{-k}(\bar\zeta)$
+implying 3. 
+
+Since the determinant of \mncnst\ is automatically satisfied, 
+\mncnst\ only imposes three independent constraints on the 
+Stokes matrices so
+we have $2l+3-3=2l$ independent Stokes parameters.
+Note that this is the number of initial conditions in the 
+string equation. In fact, the two sets of parameter spaces 
+may be regarded as the same.
+
+Let us now consider the implications of physical asymptotics. 
+Consider the equation $\IP\Psi=0$
+as $x\to \pm\infty$. We must distinguish several cases.
+Since $R_l=\kappa_l u^l +\cdots $ with 
+$$\kappa_l=(-1)^l{(2l-1)!!\over 2^{l+1}l!}$$
+we see that perturbation theory predicts that the solution to
+the string equation is given by
+\eqn\ascses{\eqalign{
+u\sim \bigl(-1/2\kappa_{l+1}\bigr)^{1/(l+1)}x^{1/(l+1)} &\qquad l\quad
+{\rm even},\quad x\to\pm\infty\cr
+u\sim \pm\bigl(1/2\kappa_{l+1}\bigr)^{1/(l+1)}(-x)^{1/(l+1)} &\qquad l\quad
+{\rm odd}, \quad x\to -\infty\cr}
+}
+where $l$ is the largest index for which $t_{l+1}\not=0$. 
+In fact, perturbation theory tells us to take the $+$ root for $u$ 
+in the case of odd $l$, but we may easily examine both cases at once.
+Rescaling variables and only keeping leading order terms we 
+may rewrite the equation $\IP \Psi=0$ as
+\eqn\limeqt{
+{dW\over d\xi}=\tau\Biggl[ (2\xi^2\pm 1)p_l^\pm(\xi)\sigma_3
+\mp p_l^\pm(\xi)i\sigma_2
+-{1\over 2\xi \tau}\biggl({8l\kappa_{l+1}
+\over l+1}\xi^2 p_l(\xi)+1 \biggr)
+\sigma_1
++\CO(1/\tau^2)\Biggr]W
+}
+where
+$p_l^\pm(\xi)=\sum_{p=0}^l (\pm 1)^p\kappa_p\xi^{2l-2p}$.
+EXPLAIN WHY LOWER l's IRREL
+For $l$ odd we obtain this equation with $x\to -\infty$, 
+where: 
+$$\zeta=(-x/2\kappa_{l+1})^{1/(2l+2)}\xi \qquad\qquad 
+\tau=(-x/2\kappa_{l+1})^{(2l+3)/(2l+2)}\qquad .$$ 
+For $l$ even we obtain this equation with $\pm x\to +\infty$, where
+$$\zeta=(\pm x/(-2\kappa_{l+1}))^{1/2l+2}\xi \qquad\qquad 
+\tau=(\pm x/(-2\kappa_{l+1}))^{(2l+3)/(2l+2)}\qquad .$$
+
+The evaluation of the Stokes matrices is carried out by doing 
+a WKB analysis in the $\tau\to\infty$ limit as in \Its . Thus one 
+obtains true solutions to \limeqt\ which are asymptotic as
+$\tau\to\infty$ to the WKB ansatz:
+$$ W^{WKB}\sim
+T exp\Biggl[\tau\int^\zeta\Lambda(\zeta')d\zeta'
+\Biggr]
+$$
+where $T$ diagonalizes \limeqt to $\Lambda=\mu\sigma_3$. 
+There are several WKB solutions in different regions defined by 
+the turning points and conjugate Stokes lines. The turning 
+points are simply the roots $\xi_i$ of $\mu$, and the  
+conjugate Stokes lines are the lines defined by the vanishing real 
+part:
+\eqn\skis{
+\Re\int_{\xi_i}^{\xi}\mu(\xi')d\xi'=0
+}
+The general procedure for finding the stokes matrices is described in 
+\Its . A simple consequence of this procedure allows us to 
+obtain certain necessary conditions on 
+the Stokes matrices which, in some cases, fix the parameters 
+uniquely. The main observation is that
+if, at a turning point 
+which is a root of $p_l$ the conjugate Stokes lines form three large 
+regions each abutting an open region infinity as in fig. 6,
+then the Stokes matrix for the transition function associated with the middle 
+region $\tilde \Omega_2$ is trivial \geom\ .
+
+Our first task is therefore to describe the Stokes lines.
+For the the case $l=2$ we have fig. 9 and fig. 10. 
+From the limit $x\to +\infty$ we obtain that $s_1=s_6=0$. 
+From the limit $x\to -\infty$ we obtain $s_2=s_5=0$, and 
+from the monodromy constraints we get
+$s_0=s_3=s_4=-i$.
+Unfortunately,
+if we move on to higher $l$ we meet a technical problem 
+which is that the configuration of Stokes lines becomes
+too complicated to use our observation immediately to set 
+half the Stokes parameters to zero. 
+Nevertheless, studying small $l$ leads to a 
+natural guess for the stokes parameters in 
+the general case. For 
+$l$ even, comparing the constraints from the 
+physical asymptotics
+at either end 
+of the axis will fix two disjoint sets of Stokes
+parameters. We expect that $s_1=s_2=\cdots =s_l=0$
+while $s_{l+1}=s_{l+2}=s_{2l+3}=-i$ so that the solution 
+is unique, and the stokes data is always concentrated on 
+the wedges abutting the $x$ and $y$ axes in the 
+$\zeta$ (=$\sqrt{\lambda}$) plane.
+
+We have not used the reality 
+constraints in a very essential way. An interesting 
+solution of the Painlev\'e equation is the triply truncated
+solution, characterized by $u\sim +(-x)^{1/2}$ for 
+$x\to-\infty$ and $u\sim\pm i x^{1/2}$ for $x\to \infty$. 
+Using the above technique one easily shows that in this
+case the constraints $s_2=s_3=-i$, $s_0=s_5=0$, 
+$s_1+s_4=0$ are supplemented by $s_1=0$ or $s_4=0$, 
+depending on the sign of the imaginary part. In either
+case we confirm that the solution is unique.
+
+An analog of the BMP solutions exists for the 
+PII family
+\ref\Hast{S.P. Hastings and J.B. McLeod, ``A boundary value 
+problem associated with the second painlev\'e transcendent and the 
+Korteweg-de Vries equation,'' Arch. Rat. Mech. and Anal. {\bf 73}(1980)31}
+\ref\cdm{\v C. Crnkovi\'c, M. Douglas, and G. Moore, 
+``Physical solutions for unitary-matrix models,'' Yale preprint
+YCTP-P6-90.}. 
+In this case physical asymptotics specifies 
+that $u(x)$ grows algebraically at one end of the 
+axis and decays exponentially at the other end
+\dss\cdm\ . Applying the above techniques one finds 
+that in this case (at least for the first two members
+of the PII family) the stokes data is concentrated 
+entirely on the $y$-axis, but the necessary conditions
+leave a single parameter undetermined. In this case,
+however, the inverse monodromy problem is equivalent
+to an integral equation (the self-similar Gelfand-Levitan-Marchenko
+equation) which can be examined directly. 
+This is done in \cdm\ where it is shown that 
+the physical solution is unique.
+
+
+Again it is interesting examine the Stokes data.
+We may again apply our lemma for the first two 
+cases in the series. 
+In the first two cases in the PII 
+hierarchy these two constraints 
+lead to a configuration of Stokes lines
+from which we may conclude 
+{\it necessary} conditions that,
+together with the monodromy constraints only determine 
+the Stokes parameters up to a single real parameter.
+The nontrivial Stokes matrices are again concentrated 
+the y-axis.
+
+\subsec{KdV orbits are disconnected}
+
+The string equation and kdv flow are compatible equations.
+This does not mean that, as we change the $T_j$ the solution 
+automatically satisfies kdv flow. As we have seen above, 
+if the stokes data are held fixed then we do have kdv 
+flow. If we consider the kdv orbits of solutions of the 
+string equation we may wonder whether they are connected. 
+Certainly they are formally connected. For example,
+consider the equation
+\eqn\flowi{
+\half(m_1+\half)R_{m_1}+\half(m_2+\half)T R_{m_2}=x
+}
+with $m_1>m_2$. As discussed in \bdss
+\ref\cgmr{C. Crnkovic, P. Ginsparg, and G. Moore, ``The Ising model,
+the Yang-Lee edge singularity, and $2D$ quantum gravity,'' Phys. 
+Lett. {\bf 237B}(1990)196.}\ 
+if one scales a solution $u(x;T)$ to \flowi\ using 
+$v(y;T)=T^{-2/(2m_2+1)}u\bigl(T^{-1/(2m_2+1)}y;T\bigr)$, then 
+the large $T$ limit $v(y)=\lim_{T\to\infty}v(y;T)$ must
+be a solution of the lower order string equation 
+$\half(m_2+\half)R_{m_2}[v]\sim x$, provided the limit
+exists. However, the existence of this limit is a very delicate 
+issue. Indeed, in \dss\ convincing evidence is presented that
+the flow from $m=3$ to $m=2$ does not exist. 
+
+Since, as we have seen, physical asymptotics fixes the stokes 
+data, and since kdv flow is isomonodromic, we are in a position 
+to investigate analytically the result in \dss\ .
+Suppose the $T\to\infty$ limit does exist.
+Then we can scale $\zeta\to T^{-1/(2m_2+1)}\zeta$ in \dforz\ 
+to obtain a connection with a smooth $T\to\infty$ limit. Since
+solutions can in principle be obtained from the path-ordered exponential
+of the connection, solutions to \dforz\ will also have smooth 
+$T\to\infty$ limits. Moreover, from the asymptotics in $\zeta$
+we see that the coefficients have smooth $T\to\infty$ limits
+and in fact approach the asymptotics of the lower order equation.
+Thus, fundamental solutions smoothly approach fundamental solutions for the
+lower order equation, although they will be defined on small regions of
+angular width ${2\pi\over 4m_1+2}$ and hence only define part of a
+fundamental solution for the lower order equation which is defined on the
+larger regions of angular width ${2\pi\over 4m_2+2}$. Because of this 
+we find two rules governing flows:
+
+\noindent
+1. A large region associated with a trivial Stokes matrix for the 
+``$m_2$ equation'' cannot contain a small region with a nontrivial
+Stokes matrix for the ``$m_1$ equation.''
+
+\noindent
+2. A large region associated with a nontrivial Stokes matrix for the 
+``$m_2$ equation'' must contain at least one small region with a 
+nontrivial Stokes matrix for the ``$m_1$ equation.''
+
+Note that for even and odd $l$ the nontrivial Stokes data disagrees
+on the real axis. Hence, by rule 1 it is impossible to use KdV flow 
+to go from an even $l$ to an odd $l$ model, confirming the result of 
+\dss\ . Note that flow from an even $l$ to a smaller even $l$
+is consistent with rules 1 and 2. 
+
+
+COMPARE DAVID'S RESULTS!!!
+CONTRADICTION???
+
+\newsec{Isomonodromy and Free Fermions}
+
+In this section we will 
+interpret the isomonodromy problem connected with the 
+string equations in conformal-field-theoretic terms. 
+Our paradigm will be the solution of the Riemann-Hilbert
+problem for the case of regular singular points given ten 
+years ago by the Kyoto school
+\ref\holoii{M. Sato, T. Miwa, M. Jimbo, ``Holonomic Quantum Field Theory
+II,'' Publ. RIMS {\bf 15}(1979)201}.
+We review their construction first, in the light of subsequent
+developments in CFT. Then we consider the case of irregular 
+singular points. Developing further some work of Miwa
+\ref\miwai{T. Miwa, ``Clifford operators and Riemann's monodromy problem,''
+Publ. Res. Inst. Math. Sci. {\bf 17}(1981)665}, we find
+that the theory of irregular singular points can be included 
+at the expense of the introduction of a new kind of operator.
+In a way we are 
+making a nontrivial extension of conformal field theory by expanding 
+the class of functions admitted in the theory from analytic functions 
+with algebraic singularities to analytic functions with essential 
+singularities. This is reflected in the need to expand the 
+class of operators from twist operators to star operators.
+
+\subsec{Regular Singular Points}
+
+The basic idea of \holoii\ is that the solution to an $m\times m$
+matrix differential equation 
+\eqn\diffl{
+{d\Psi\over dz}=A(z)\Psi(z) }
+may be characterized uniquely by its monodromy properties. 
+More precisely, suppose $A$ has only simple poles at points 
+$a_\nu$ and the residue can be diagonalized to $L_\nu$. Then
+the matrix $\Psi$ can be uniquely characterized by 
+the requirement that 
+
+(i.) $\Psi(z_0)=1$
+
+(ii.) $\Psi(z)$ is holomorphic in $z\in\IP^1-\{a_1,\dots , a_n\}$
+
+(iii.) $\Psi(z)=\hat \Psi^{(\nu)}(z)
+e^{L_\nu log(z-a_\nu)}$ for, $z\cong a_\nu$
+where $\hat \Psi^{(\nu)}$ is holomorphic and invertible in a neighborhood
+of $a_\nu$. 
+
+Conversely, any such matrix defines a rational matrix
+$A=\Psi_z\Psi^{-1}$ with at most simple poles.
+Thus, 
+if one can construct appropriate ``twist operators'' 
+$\varphi_i$
+such that the correlation function 
+\eqn\corr{\Psi_{\beta\alpha}(z_0;z)=
+(z_0-z)
+{\langle
+\bar \psi_\beta(z_0)\psi_\alpha(z) \varphi_n(a_n)\cdots \varphi_1(a_1)
+\rangle\over
+\langle \varphi_n(a_n)\cdots\varphi_1(a_1)\rangle } 
+}
+has the correct monodromy properties, then it must be a solution of 
+\diffl . Thus we have reduced the global Riemann-Hilbert
+problem to the {\it local} problem
+of finding conformal fields $\varphi_{L}(a)$ with the operator 
+product expansion 
+\eqn\twis{
+\psi_\alpha(z)\varphi_L(a)\sim \bigl[\CO^0_{L,\alpha}(a)+
+(a-z)\CO^1_{L,\alpha}(a)+\cdots\bigr](z-a)^{L_\alpha} }
+
+The construction of these operators proceeds by
+choosing a basis of curves
+$\gamma_\nu$ circling once around $a_\nu$ and generating the 
+fundamental group $\pi_1(\IP^1-\{a_\nu\};z_0)$ 
+and defining:
+\eqn\gentwis{
+\varphi_{M}(a)=exp\Biggl[\int_\CC^a tr\biggl\{log(M)J(y)\biggr\}
+{dy\over 2\pi}\Biggr] 
+}
+where $J_{\beta\alpha}=\bar\psi_\beta\psi_\alpha$ 
+and $\CC$ is a contour (a branch cut
+for $\Psi$) emanating from $a$. Consider now \corr\  with such
+operators inserted. As we analytically continue $z$ around
+$a$ the simple pole in the ope of $\psi$ with $J$
+gives rise to the monodromy $\psi_\alpha\to \psi_\gamma M_{\gamma\alpha}$
+in the Fermi field. Therefore \corr\ solves 
+conditions ({\it i-iii}). 
+
+Let us now consider isomonodromic deformation of \diffl\ .
+It is clear from locality of the ope that changing the 
+$a_\nu$ leaves the monodromy data unchanged. 
+Necessary and sufficient conditions
+for isomonodromic deformation are given by:
+\eqn\schles{\eqalign{
+{\p \Psi\over \p z_0}&=-\sum {A_\nu\over z_0-a_\nu}\Psi\cr
+{\p \Psi\over \p a_\nu}&=\biggl(-{A_\nu\over z-a_\nu}+-{A_\nu\over z_0-a_\nu}
+\biggr)\Psi\cr}
+}
+The
+compatibility conditions for these linear equations give the 
+nonlinear Schlesinger equations
+\foot{For an appropriate choice of matrices, for example, 
+these equations reduce to PVI \Jimboii .}.
+From \corr\ we see that the linear equations of
+isomonodromic deformation theory should 
+be thought of as transport equations on moduli space, 
+analogous to the Knizhnik-Zamalodchikov equations,
+so that the theory of isomonodromic deformation
+for regular singular points fits nicely 
+into the framework of Friedan-Shenker modular geometry.
+
+According to the general theory 
+of isomonodromic deformation \Jimboi\Jimboii\Jimboiii\ there is 
+a tau function associated to the deformation parameters $a_\nu$.
+In this case it is given by 
+\eqn\taufn{
+d~log~\tau(a_1,\dots, a_n)=-\sum_\nu Res_{z=a_\nu}tr
+\Biggl[ (\hat \Psi^{(\nu)})^{-1}
+{\p \hat \Psi^{(\nu)}\over\p z} d \biggl(log(z-a_\nu)L_\nu\biggr)\Biggr]
+}
+where the $d$ is a differential in the parameters $a_\nu$. 
+In fact the $\tau$ function is given by
+$\tau=\langle \varphi_1\dots\varphi_n\rangle$\ 
+\Jimboi\Jimboii\Jimboiii\ .
+We will now rederive this
+using general principles of conformal field theory
+\foot{Exactly the same observation was made 3 years 
+ago in \knizhnik\ , ch. 4. I was unaware of this work when 
+I published \geom .}.
+
+We have normalized \corr\ so that it is equal to $\delta_{\alpha\beta}$
+at $z=z_0$. Taking the 
+operator product expansion as $z\to z_0$ and matching this with 
+an expansion of a solution to \diffl\ around $z_0$ we find
+\eqn\corrii{\eqalign{
+{\langle
+J_{\beta\alpha}(z_0) \varphi_n(a_n)\cdots \varphi_1(a_1)
+\rangle\over
+\langle \varphi_n(a_n)\cdots\varphi_1(a_1)\rangle }
+&=-A(z_0)_{\beta\alpha} \cr
+{\langle
+\CT(z_0) \varphi_n(a_n)\cdots \varphi_1(a_1)
+\rangle\over
+\langle \varphi_n(a_n)\cdots\varphi_1(a_1)\rangle } 
+&=\half tr A^2(z_0)\cr} }
+where 
+$\CT$ is the stress energy tensor. Since $L_{-1}$ always takes a
+derivative with respect to position we have
+$${\p\over\p a_\nu}log[\langle\varphi(a_1)\cdots\varphi(a_n)\rangle]
+=
+\oint_{a_\nu}dz_0
+{\langle
+\CT(z_0) \varphi_n(a_n)\cdots \varphi_1(a_1)
+\rangle\over
+\langle \varphi_n(a_n)\cdots\varphi_1(a_1)\rangle } 
+=
+\oint_{a_\nu}dz_0 \half trA^2(z_0)$$
+On the other hand, substituting the local expansion 
+$\Psi=\hat\Psi(z-a)^L$ we get
+\eqn\lcexp{\hat \Psi^{-1}\hat \Psi_z + L/(z-a)
+=\hat \Psi^{-1}A\hat \Psi\qquad .}
+Squaring this equation we find
+\eqn\sqaring{
+{\p\over\p a}\bigl(log~\tau\bigr)=Res~tr~\biggl(\hat\Psi^{-1}\hat\Psi_z
+{L\over z-a}\biggr)=\half Res~tr~A^2
+\qquad ,}
+and hence the tau function is simply the correlation function 
+of twist operators. 
+
+\subsec{Irregular Singular Points}
+
+Let us now attempt to repeat the 
+previous discussion for the case of 
+a differential equation \diffl\ where 
+$A$ is rational but can have irregular singularities. 
+Our treatment is the same in spirit as the discussion of 
+T. Miwa \miwai\ , although there are some
+differences of detail.
+
+Recall that
+at an irregular singular point we divide up a neighborhood 
+of the point into sectorial domains, each containing 
+a fundamental solution with asymptotics 
+\eqn\stoii{
+\Psi\sim\biggl(\sum_{l\geq 0}\hat\Psi^{(l)}(z-a)^l\biggr)(z-a)^L
+e^{T(z-a)} }
+where $L$ and 
+$$T(z-a)=\sum_{i=1}^{r}{T_r\over (z-a)^r}$$ 
+are diagonal, and $\hat \Psi^{(0)}$ 
+is invertible. In 
+particular, 
+the analytic continuation of $\Psi_1$ will have the asymptotic 
+expansion 
+\eqn\stoki{
+\Psi_1\sim\biggl[\sum_{l\geq 0}
+\hat\Psi^{(l)}(z-a)^l\biggr](z-a)^L e^T(S_1\cdots
+S_{k-1})^{-1} }
+in the sector $\Omega_k$. 
+A solution to the differential equation can be uniquely characterized
+by the conditions $(i)-(iii)$ above except that $(iii)$ must
+be replaced by the requirement that $\Psi$ have the asymptotic
+expansions \stoki\ . 
+Assume there is only one
+irregular singular point and
+define $\tilde \Psi\equiv \Psi_1 e^{-T(z-a)}$. 
+We now search for quantum 
+field operators $V_{S,T,L}(a)$, which we call ``star'' operators,
+such that 
+\eqn\corstar{
+\tilde\Psi_{\beta\alpha}(z_0;z)= 
+(z_0-z)
+{\langle
+\bar \psi_\beta(z_0)\psi_\alpha(z) V_{S_1,T_1,L_1}(a_1)\cdots \rangle\over
+\langle V_{S_1,T_1,L_1}(a_1)\cdots\rangle } 
+}
+Evidently,
+a star operator is characterized by its operator product expansion 
+with $\psi$, $\bar\psi$, e.g., for $z\in \Omega_k$ we have
+\eqn\starope{
+\psi_\alpha(z)V_{S,T,L}(a)\sim \bigl[\CO^0_{\gamma}(a)+
+(a-z)\CO^1_\gamma(a)+\cdots\bigr](z-a)^{L_\gamma}\bigl[
+e^T(S_1\cdots S_{k-1})^{-1}e^{-T}\bigr]_{\gamma\alpha}
+}
+From this description it looks very unlikely that star operators
+exist 
+\foot{For example, it is often claimed that operator product expansions
+in CFT are convergent. Note that \starope\ is only asymptotic.
+The reason for this is ultimately to be found in the fact that 
+the string coupling has become dimensionful
+\DS . Note that it is $x$ and the masses $T_j$ 
+which multiply the terms giving the essential 
+singularity at infinity. }.
+We now give at least a formal construction of these operators.
+
+Consider a ray $\CC$ emanating from a point $a$. Consider the product 
+of operators 
+$$exp\bigl[\int^a_\CC dy\psi_\alpha(y) M_{\alpha\beta}(y)\bar\psi_\beta(y)
+\bigr]\psi_\alpha(z)$$
+where $M$ is some matrix defined along the line. 
+If we analytically continue in $z$ through 
+the curve $\CC$ and compare with the other operator ordering 
+it is a simple consequence of Cauchy's theorem and the 
+operator product expansion that we have the exchange algebra:
+\eqn\galg{\eqalign{
+exp\bigl[\int^a_\CC dy\psi_\alpha(y) M_{\alpha\beta}(y)\bar\psi_\beta(y)
+\bigr]\psi_\alpha(z-\epsilon)&=\cr\cr
+\psi_\gamma(z+\epsilon) (e^{M(z)})_{\gamma\alpha}&
+exp\bigl[\int^a_\CC dy\psi_\alpha(y) M_{\alpha\beta}(y)\bar\psi_\beta(y)
+\bigr]\cr}
+}
+where $z$ is a point on $\CC$ and $z\pm\epsilon$ are points above and 
+below $z$. Thus, defining $\CS_k\equiv e^T S_k e^{-T}$ we may define, 
+at least formally, 
+\eqn\stardef{
+V_{S,T,L}(a)=\varphi_L(a)\prod_k exp\Biggl[\int^a_{\CC_k}
+tr\biggl\{(log \CS_l(y))J(y)\biggr\}dy \Biggr]
+}
+where we choose contours $\CC_k$ in $\Omega_k$ such that the 
+matrix $\CS_k$ approaches the identity rapidly. 
+In \miwai\ T. Miwa obtained formulae for star operators using 
+a slightly different formalism. Comparing his formulae in 
+terms of infinite expansions evaluated by Wick's theorem we 
+obtain the same result.
+As shown in \miwai\ contours of integration can be defined so 
+that for small enough Stokes data the integrals make 
+sense, thus giving a more precise definition to the star 
+operator.
+
+It follows from locality of the operator product 
+expansion that the differential equation 
+satisfied by \corstar\ has the property that the monodromy
+data $S,L$ are preserved if we vary the parameters $a_i,T_i$. 
+Just as the tau function for isomonodromic deformation of 
+an equation with regular singular points is given by the 
+correlation function of twist operators, the tau function for 
+isomonodromic deformation in an equation with irregular singular
+points
+is given by the correlation function
+of star operators \miwai\ . One may give a formal 
+argument for this following steps analogous to those 
+leading from 4.7 to 4.9. The analog of \corrii\ is
+\eqn\stress{\eqalign{
+{\langle
+J_{\beta\alpha}(z_0) V_{S_1,T_1,L_1}(a_1)\cdots 
+\rangle\over
+\langle V_{S_1,T_1,L_1}(a_1) \cdots\rangle }
+&=-A(z_0)+T'(z_0)\cr
+{\langle
+\CT(z_0) V_{S_1,T_1,L_1}(a_1)\cdots 
+\rangle\over
+\langle V_{S_1,T_1,L_1}(a_1)\cdots \rangle } 
+&=\half tr (A-T')^2(z_0)\cr}
+}
+where $\CT$ is the stress-energy tensor.
+Using formal manipulations with the ope one can show that
+\eqn\gobpe{
+-Res_{z_0=a} tr\delta T(z_0) A(z_0)=
+{\sum_k\int^a_{\CC_k}dy tr\biggl(\delta T(y){\delta\over
+\delta T(y)}\biggr)\langle V_{S,T,L}\cdots\rangle\over
+\langle V_{S,T,L}(a)\cdots \rangle}
+}
+Putting together \stress\ and \gobpe\ we then find
+\eqn\taustar{
+{d\over da}~log~\langle V\cdots V\rangle= \half Res_{z_0=a} 
+tr~A^2(z_0)
+={d\over da}~log~\tau
+}
+where the second equality follows from an argument similar to 
+the case of regular singularities. Similarly, one can show
+that the dependence
+of $log~\tau$ and $log\langle V\cdots V\rangle$ on other 
+parameters is the same.
+
+\subsec{$\tau$ functions for 2D gravity}
+
+As a special case of the above formalism we can express the solution 
+$u$ of the string equations in terms of a fermion correlation function. 
+We represent the solutions $W$ to \dforz\ and $\Psi$ to \lasaga\ as 
+fermion two-point functions in the presence of star operators. For 
+the $\tau$ function of the PII family we may define
+$t(y)\equiv \half
+\sum_\ell {2m+1\over 2\ell +1}t_\ell \lambda^{2\ell+1}$, so that 
+$\tau(t_\ell)=\langle V(\infty;s_k,t_\ell)\rangle$ where
+\eqn\srptw{\eqalign{
+V(\infty;s_k,t_\ell)=\prod_k &
+exp\biggl[s_{2k+1}\int^a_{\CC_{2k+1}}e^{2t(y)}\psi_1\bar\psi_2(y)\biggr]\cr
+&\qquad
+exp\biggl[s_{2k}\int^a_{\CC_{2k}}e^{-2t(y)}\psi_2\bar\psi_1(y)\biggr]\cr}
+}
+For the PI family we have a fermion twist operator at the origin 
+(from the regular singularity in \dforz\ ). If we bosonize the 
+two fermions $e^{i\phi_i}=\psi_i$ then the twist 
+operator at the origin is just $e^{i\omega/\sqrt{2}}$
+where $-i\sqrt{2}\p\omega=\bar\psi\sigma_3\psi$. The 
+$\tau$ function is now 
+\eqn\srpon{
+\tau(t_\ell)=\langle V(\infty;s_l,t_\ell) e^{i\omega/\sqrt{2}} \rangle}
+where the star operator is the same as in the PII case but 
+$t(y)=-{1\over 4}\sum t_j\zeta^{2j+1}$.
+
+These expressions are, of course, rather formal. It would be worthwhile
+making rigorous sense of them since, at least formally, they make
+transparent some interesting properties of the 2D gravity 
+partition function. For example, a corollary of the operator 
+formalism is that a $\tau$ function satisfies certain 
+Virasoro constraints. Applying \stress\ to this case
+with $A,T$ obtained from \dforz\lasaga\ we find:
+\eqn\vircni{
+\eqalign{
+L_n\tau&={1\over 4}\delta_{n,0}\tau\qquad n\geq-1\qquad{\rm for~
+PI}\cr
+L_n\tau&=0\qquad \qquad n\geq-1\qquad{\rm for~
+PII}\cr} }
+
+Similarly since commutation with $J=\bar\psi\sigma_3\psi$
+rotates the fermions $\psi_{1,2}$ oppositely we may imagine 
+that there is an identity like
+\eqn\cohi{
+e^{\int_\CC\bigl(t^{(2)}(y)-t^{(1)}(y)\bigr)J(y)dy}
+V(a;s,t^{(1)}_\ell)
+e^{-\int_\CC\bigl(t^{(2)}(y)-t^{(1)}(y)\bigr)J(y)dy}
+=V(a;s,t^{(2)}_\ell)}
+and hence we would have
+\eqn\cohii{
+\tau(t_\ell)=\langle t_\ell-\bar t_\ell|\Omega_{\bar t}\rangle}
+where $|\Omega_{\bar t}\rangle$ is the state created by 
+the star operator at $\bar t$, and $\langle t_\ell-\bar t_\ell|$
+is a coherent state for the scalar $\omega$ where only the 
+odd oscillator modes are excited. (This follows since 
+$t(y)$ involves only odd powers of $y$.) Combining with 
+\vircni\ we may obtain, formally, expressions similar to those
+in \fukuma\dvv\morozovi\morozovii\ .
+
+Finally, let us compare with the fermion formalism of the 
+matrix model described in section 2. There we found that the 
+partition function at couplings $t_\ell$ can be expressed in 
+terms of a correlation function in the ground state for 
+couplings $\bar t_\ell$ according to:
+\eqn\mtrxtaus{
+\eqalign{
+\tau_{PI}&=\biggl\langle e^{\int_\IR\sum_{\ell}\bigl(t_\ell-\bar
+t_\ell\bigr)\lambda^{\ell +1/2}\psi^\dagger\psi(\lambda) d\lambda}
+\biggr\rangle\cr
+\tau_{PII}&=\biggl\langle e^{i\int_\IR\sum_{\ell}\bigl(t_\ell-\bar
+t_\ell\bigr)\lambda^{2 \ell +1}\psi^\dagger\psi(\lambda) d\lambda}
+\biggr\rangle\cr} }
+
+DERIVE? natural explanation of stokes data etc .
+
+For the $(2l-1,2)$ models we have a star operator at infinity and a 
+twist operator at the origin. We may choose the contours of the star 
+operator to converge to the branch cut for the twist operator at the 
+origin. Then applying \gobpe\ to the case where we vary the parameter
+$x$, (one of the parameters in $T(\zeta)$) we see that the 
+tau function for the string equations can be computed using the 
+star operator,
+\eqn\grvstr{\eqalign{
+V_{S,x}(a)=e^{i(\phi_1(a)+\phi_2(a))/2}\prod_k &
+exp\biggl[s_{2k+1}\int^a_{\CC_{2k+1}}e^{2T(y)}\psi_1\bar\psi_2(y)\biggr]\cr
+&\qquad
+exp\biggl[s_{2k}\int^a_{\CC_{2k}}e^{-2T(y)}\psi_2\bar\psi_1(y)\biggr]\cr}
+}
+and a twist operator $\varphi$, as the two-point 
+function:
+\eqn\taustr{
+\tau(x)=\langle V_{S,x}(\infty)\varphi(0)\rangle
+}
+Very similar considerations hold for the string equations in 
+the PII family, the main difference being that 
+we do not have to take a squareroot of the spectral parameter, 
+hence there is no twist field.
+
+\subsec{Virasoro action, heuristic origin from matrix model}
+
+
+\newsec{Grassmannians, Krichever's construction, and all that}
+
+
+When the connection to the KDV hierarchy was discovered in 
+2D gravity the theory of the KDV hierarchy, as presented in 
+\ref\BMN{Dubrovin, Matveev, and Novikov, ``Non-Linear Equations 
+of Korteweg-De Vries Type, Finite-Zone Liner Operators, and 
+Abelian Varieties,'' Russian Math Surveys, {\bf 31} (1976)59}
+\ref\qpKdV{E. Date, M. Jimbo, M. Kashiwara, and 
+T. Miwa, ``Transformations Groups for Soliton Equations,''
+I. Proc. Japan Acad. {\bf 57A}(1981)342; II. Ibid., 387;III. J. Phys. Soc.
+Japan {\bf 50}(1981)3806;IV. Physica {\bf 4D}(1982)343;V. Publ. RIMS, 
+Kyoto Univ. {\bf 18}(1982)1111;VI. J. Phys. Soc. Japan {\bf 50}
+(1981)3813;VII. Publ RIMS, Kyoto Univ. {\bf 18}(1982)1077.}
+\ref\segal{G. Segal and G. Wilson, ``Loop Groups and Equations of 
+KdV Type,'' Publ. I.H.E.S. {\bf 61}(1985)1.} , 
+was already familiar to string theorists. 
+Indeed, one of the main points of the so-called operator
+formalism
+\foot{Representative papers include...}
+is the equivalence of 
+the Krichever theory with the 
+theory of free fermions on an algebraic curve.
+In the previous section we related the $\tau$
+function of 2D gravity to a correlation function of 
+free fermions.
+In this section we will see that the two theories 
+are closely connected, but
+because of stokes phenomenon we require an 
+extension of the the theory in \BMN\qpKdV\segal\ .
+
+\subsec{Quasiperiodic kdv flow and isomonodromy}
+
+We begin by explaining a remark of M. Jimbo and T. Miwa
+that the tau function of the quasiperiodic
+solutions to the kdv equations is a special case of 
+the isomonodromic tau function \Jimboii\ .
+
+Recall that quasiperiodic kdv flow is straightline 
+motion along $Pic_{g-1}(X)$ for a riemann surface $X$
+of genus $g$, and, fixing an origin $\CL_0$ for
+$Pic_{g-1}$ the tau function is just 
+\eqn\qptau{tau={Det~\bar\p_{\CL}\over Det~\bar\p_{\CL_0}} \qquad .}
+If $\CL\otimes\CL_0^{-1}$ has divisor $P_1+\cdots P_g-Q_1-\cdots-Q_g$
+then by the insertion theorem
+\ref\bost{Alvarez-Gaum\'e, Bost, Moore, Nelson, Vafa}
+we have
+\eqn\qpti{\tau=\langle\psi(P_1)\cdots\psi(P_g)\bar\psi(Q_1)\cdots
+\bar\psi(Q_g)\rangle_{(X,\CL_0)} \qquad .}
+Choosing a point $P_\infty$ ``at infinity'' and a local coordinate
+$1/z$ near $P_\infty$ the Baker function is essentially
+\eqn\qpbki{\langle\bar\psi(P_\infty)
+\psi(z)\psi(P_1)\cdots\psi(P_g)\bar\psi(Q_1)\cdots
+\bar\psi(Q_g)\rangle_{(X,\CL_0)} \qquad .}
+Now suppose $\pi:X\to \IP^1$ is an $m$-fold branched covering.
+As is well-known from the theory of orbifolds 
+\ref\zam{Al. B. Zamalodchikov, ``Conformal scalar field on the 
+hyperelliptic curve and critical Ashkin-Teller multipoint 
+correlation functions,'' Nucl. Phys. {\bf B285}(1987)481.}
+\ref\berrad{M. Bershadsky and A. Radul, ``Conformal field theories
+with additional $Z_N$ symmetry,'' Int. Jour. of Mod. Phys. 
+{\bf A2}(1987)165.}
+\ref\lance{L. Dixon, D. Friedan, E. Martinec and S. Shenker, 
+``The conformal field 
+theory of Orbifolds,'' Nucl. Phys. {\bf B282}(1987)13.}
+\ref\vafa{ S. Hamidi and C. Vafa, ``Interactions on Orbifolds,'' 
+Nucl. Phys. {\bf B279}(1987)465}
+\knizhnik\ 
+we can represent one weyl fermion on $X$ by $m$ weyl fermions 
+$\psi_\alpha,\bar\psi_\alpha$ on $\IP^1$, where 
+$\alpha=1,\dots, m$ labels the sheets, in the presence of 
+twist operators at the branch points. For example,
+denoting the branch points on $\IP^1$ by $b_i$ we have
+the twist field correlator
+$Det~\bar\p_{\CL_0}=\langle \prod\varphi_i(b_i)\rangle\qquad .$
+Similarly, if $P_i$, $Q_i$ lie on branches $\alpha_i,\beta_i$, 
+respectively then the Baker function descends to the 
+``Baker framing''
+\eqn\qpbkfr{\tilde Y_{\alpha\beta}(\lambda)=
+\langle\bar\psi_\alpha(\infty)
+\psi_\beta(\lambda)\psi_{\alpha_1}(\pi(P_1))\cdots
+\psi_{\alpha_g}(\pi(P_g))\bar\psi_{\beta_1}(\pi(Q_1))\cdots
+\bar\psi_{\beta_g}(\pi(Q_g))\prod_i\varphi_i(b_i)
+\rangle_{\IP^1} \qquad ,}
+where $\lambda=\pi(z)$. The actual Baker framining $Y$ differs
+from $\tilde Y$ by an invertible 
+diagonal matrix with an essential singularity
+at infinity of the form $\sim exp\bigl(\sum t_j z^j\bigr)$.
+Regarding the fermion insertions as special cases of twist operators
+and following the reasoning of the previous section we see that 
+$Y$ satisfies a liner ODE in $\lambda$ with regular singularities
+at $\pi(P_i)$. Clearly we have isomonodromic deformation in 
+these parameters, and, as we have seen, the $\tau$ function is 
+just
+\eqn\qptii{
+\langle
+\psi_{\alpha_1}(\pi(P_1))\cdots
+\psi_{\alpha_g}(\pi(P_g))\bar\psi_{\beta_1}(\pi(Q_1))\cdots
+\bar\psi_{\beta_g}(\pi(Q_g))\prod_i\varphi_i(b_i)
+\rangle_{\IP^1} \qquad ,}
+but this is the same as \qpti\ which is the tau function of 
+the krichever theory.
+
+From this discussion we conclude that the required generalization of 
+the krichever theory is the generalization from twist operators 
+to star operators. In the next section we will arrive at the 
+same conclusion from a different point of view.
+
+\subsec{Noncommutative Burchnall-Chaundy-Krichever theory}
+
+BCK THEORY: based on [P,Q]=0. here [P,Q]=1. noncommutative rs?
+put hbar, take limit to relate the two.
+impossible to diagonalize simultaneously. must look to another 
+formulation. go to lax pair. 
+
+Compare us, novikov, is his conjecture right? how do we
+see his transcendental equation? other papers.
+
+
+{\subsec Grassmannians}
+
+general discussion of tau functions-- is it the most
+general solution to kdv hierarchy?
+
+also--compare with segal-wilson tau function, argue that it 
+is NOT in their class because of the baker function. 
+note that already you can see this in pure gravity, 
+where ``baker function'' is just an airy function and 
+exhibits stokes phenomenon. nevertheless, free fermion 
+interpretation in terms of ``star'' operators etc. shows
+that there must be a sense in which this tau lies on 
+some kind of completion of the orbit.
+
+
+
+It is well known that in the case of almost periodic solutions to 
+the KdV hierarchy the tau function is properly thought of as a 
+section of a determinant line bundle \segal\ 
+and that this determinant line bundle is just the vacuum 
+bundle for free fermions defined on the algebraic curve associated to 
+the solution $u(x)$ via the BCK theory.
+We can argue that, with some modifications, 
+this picture continues to hold
+for the tau functions associated to the isomonodromy problems 
+discussed above.
+
+Recall that
+in the operator formalism we choose a disc surrounding some point 
+$P$ and define a local Hilbert space on a circle surrounding that 
+point. The partition function of fermions on the surface may 
+be regarded as a function of the line bundle $\CL\to\Sigma-\{P\}$
+of which the fermion wavefunctions are holomorphic 
+sections. By considering the restriction of these sections to 
+a circle surrounding $P$ we obtain
+a subspace $W\subset L^2(S^1)$ defining an element of the Grassmannian.
+Denoting by $\Omega$ the fermion vacuum created by the geometry
+$\CL\to\Sigma-\{P\}$, that is, $\Lambda^{max}W$ we obtain:
+\eqn\taudet{
+\tau_W=\langle 0|\Omega_W\rangle=\int_W d\psi d\bar \psi
+e^{\int \bar\psi\bar\p\psi}=Det\bar\p_W
+}
+As explained in 
+\ref\wittgr{E. Witten, ``Conformal field theory, Grassmanians, 
+and algebraic curves,'' Commun. Math. Phys. {\bf 113}(1988)189}\
+we may easily incorporate correlation functions into this 
+picture through use of the multiplicative Ward identities. 
+
+Recall that
+if we want a correlator of 
+$\langle \prod\psi(P_i)\prod\bar\psi(Q_i)\rangle$
+when the fermion field lives in the 
+line bundle $\CL\to\Sigma$ associated to 
+$W\in Gr$ we proceed as follows. Note that the Lagrangian is 
+invariant under $\psi\to f\psi$, $\bar\psi\to f^{-1}\bar\psi$. 
+This does not imply that the expression \taudet\ 
+is invariant, since
+the allowed space of sections is drastically changed.
+First of all,
+the boundary conditions are modified by $W\to f\cdot W$. Secondly,
+at zeroes and poles of $f$ the $L^2$ condition on the 
+wavefunctions becomes an unusual normalizability constraint.
+Using a local analysis of the Hilbert space on a circle surrounding
+such a pole one can show 
+\wittgr\ that this unusual constraint can be replaced by 
+the insertion of an appropriate operator in the presence
+of ordinary fermions. As an example, let us take $f$ to 
+have a single zero and pole.
+Taking into account
+the conformal weight one half 
+of fermions we get
+\eqn\multwrd{[(df^{-1}/dz)_P(df/dz)_Q]^{-1/2}
+\langle\bar\psi(P)\psi(Q)\rangle_{f\cdot W}={Det\bar\p_{W}\over
+Det\bar\p_{f\cdot W}}
+}
+As pointed out in \wittgr\ this is the physical explanation for 
+the relation between the Baker function and the tau function.
+
+Suppose now we have an $m$-tuplet of fermions $\psi_\alpha$
+defined on a riemann surface $\Sigma$. Removing 
+a neighborhood of a point $P\in\Sigma$,
+the boundary conditions on $\vec\psi$ define a subspace of 
+$W\subset Gr(H^m)$ where $H=L^2(S^1)$ as usual
+\foot{The relation between the quantum field theory 
+of a fermion on a
+surface $\Sigma$ which is an $m$-fold cover of the plane, 
+and the quantum field theory of an $m$-tuplet of fermions 
+on the plane in the presence of branch points gives a 
+nice explanation of the construction on pp. 34-35 of
+\segal\ . Moreover, it shows directly why their association of a 
+space $W$ in $Gr^{(n)}$ to an $n^{th}$ order operator
+coincides with the space 
+constructed via the BCK theory in the case that the operator
+satisfies the stationary generalized KdV equations.}.
+The partition function is again $Det\bar\p_W$ as usual, and 
+the bottom row of the Baker-Akhiezer framing describes a 
+holomorphic section of a holomorphic $m$-plane bundle 
+over $\Sigma-P$. 
+
+The theory of multiplicative 
+Ward identities again holds, but with some interesting 
+generalizations. 
+the  transformations:
+\eqn\genmt{
+\eqalign{
+\vec\psi(\zeta)&\longrightarrow Y(\zeta)\vec\psi(\zeta) \cr
+\vec{\bar\psi}(\zeta)&\longrightarrow 
+(Y^{-1})^{tr}(\zeta)\vec{\bar\psi}(\zeta) \cr}
+}
+preserve the action.
+The multiplication by $Y$ 
+will again change the boundary conditions (by the obvious 
+multiplicative action of $Y(\zeta)$ on $H^m$) and if $Y$ 
+has singularities then the $L^2$ condition on the fermi 
+wavefunctions is modified in the neighborhood of these
+singularities. Again,
+we can replace these conditions by operator 
+insertions. If $Y$ has poles or zeroes then the operators 
+are simply products of $\psi_\zeta$, $\bar\psi_\alpha$
+and their derivatives. If $Y$ has branch cuts then we 
+have inserted twist operators $\varphi_L$. 
+A rigorous discussion of construction of the associated
+$\bar\p$ operator and its determinant for the insertion of 
+twist operators on $\IP^1$ has been given in 
+\ref\Palmer{J. Palmer, ``Determinants of Cauchy-Riemann operators
+as $\tau$-functions,'' Univ. of Arizona preprint; ``The tau 
+function for Cauchy-Riemann operators on $S^2$,'' unpublished letter
+to C. Tracey.}.
+Finally, 
+if $Y$ has essential singularities associated to an
+irregular singular point of a differential equation 
+then we have inserted a star operator. In all cases we have
+$$\langle V\dots\rangle_W\sim {Det\bar\p_{Y^{-1}\cdot W}\over
+Det\bar\p_W} $$
+
+Moreover, and quite generally, 
+if we consider the multiplicative WI's for a 
+correlation function of twist and star operators 
+obtained by multiplying the Fermi fields by a function with 
+a single zero and pole we obtain a ``discrete'' relation 
+between the fermion two point function in the presence of 
+these operators and a ratio of tau functions. 
+We expect that one can explain
+in conformal-field-theoretic terms all 
+the relations obtained by use of 
+``Schlesinger transformations'' in 
+\Jimboii\ . (Schlesinger transformations themselves
+can be viewed as replacing a twist operator by its normal
+ordered product with $\psi,\bar\psi$.) 
+
+From these remarks we see 
+that the KdV flow is again induced by the infinite dimensional 
+abelian group $\Gamma_+$ of \segal . In this case the flow has 
+the interesting interpretation of being the flow of the renormalization 
+group. 
+
+\newsec{Conclusions}
+
+main points. future directions.
+
+I am very grateful to T. Banks, E. Br\'ezin, C. Crnkovic,
+M. Douglas, V. Drinfeld, I. Frenkel, H. Garland, A. Its, 
+M. Jimbo, V. Korepin, A. Morozov, D. Pickrell, 
+D. Sattinger,
+N. Seiberg, R. Shankar, 
+S. Shatashvili, S. Shenker, and 
+G. Zuckerman for helpful 
+discussions. 
+This work was supported by DOE grant DE-AC02-76ER03075. 
+thanks cargese,kyoto,trieste
+
+
+\listrefs
+\bye
+
+
+
+\ref\frsh{D. Friedan and S. Shenker, ``The analytic geometry of
+two-dimensional conformal field theory,'' Nucl. Phys. {\bf B281}
+(1987)509; D. Friedan, ``A new formulation of string theory,'' 
+Physica Scripta T {\bf 15}(1987)72.}.
+The conformal blocks of a correlation function 
+are horizontal sections of
+a flat vector bundle over the moduli space of 
+curves. A horizontal section satisfies a differential 
+equation which essentially follows from the idea that 
+the stress energy tensor defines a connection 
+on the bundle. If we discuss nontrivial (nonrational) 
+conformal field theories, e.g., those associated 
+with nonlinear sigma models with Calabi-Yau spaces as
+targets, the flatness of the connection is the 
+condition that the spacetime equations of motion 
+are satisfied, i.e., that the appropriate generalizations
+of Einstein's equations are satisfied. 
+
+We propose that a similar picture holds in the case of 
+$2D$ gravity. We begin by writing the string equations as
+flatness conditions. These conditions are compatibility 
+conditions for transport equations in a space parametrized
+by $x,T_j$, the cosmological constant and the masses 
+associated to the $2D$ gravity model. The parameters 
+$x,T_j$, together with the initial conditions for 
+the nonlinear differential equations known as the 
+``string equations,'' are identified with the moduli 
+of a certain class of meromorphic gauge fields on $\IP^1$. 
+This moduli space is given a further interpretation in 
+section five as a generalization of the moduli space 
+of curves. The analogy to conformal field theory is 
+developed further in section six where we interpret the transport
+equations in $x,T_j$ as Knizhnik-Zamalodchikov-type equations for 
+a free fermion construction of current algebra. The 
+novel element is that the correlators in question involve
+operators (dubbed ``star operators'') which are not normally
+considered in conformal field theory. In section seven we 
+suggest how one might establish a direct connection between the 
+formalism of this paper and the random matrix formulation of 
+$2D$ gravity.
+
+It is well-known that the quantum field theory of free fermions
+on a curve provides an elegant framework for understanding 
+much of the theory of the quasiperiodic solutions of the 
+generalized KdV hierarchies. Following some observations 
+of Gross and Migdal \GM\ , Douglas emphasized the importance of the 
+generalized KdV hierarchies in \newD\ . This led to the suggestion
+\newD\bdss\ 
+that the partition function of the matrix model might 
+be a tau function in the sense of 
+\ref\qpKdV{E. Date, M. Jimbo, M. Kashiwara, and 
+T. Miwa, ``Transformations Groups for Soliton Equations,''
+I. Proc. Japan Acad. {\bf 57A}(1981)342; II. Ibid., 387;III. J. Phys. Soc.
+Japan {\bf 50}(1981)3806;IV. Physica {\bf 4D}(1982)343;V. Publ. RIMS, 
+Kyoto Univ. {\bf 18}(1982)1111;VI. J. Phys. Soc. Japan {\bf 50}
+(1981)3813;VII. Publ RIMS, Kyoto Univ. {\bf 18}(1982)1077.
+}
+While not strictly true, we show that this conjecture 
+is essentially correct: the partition function of 2D gravity 
+is given by the tau function for an isomonodromic deformation
+problem
+closely related to that of the stationary KdV equations.
+The tau function in the quasiperiodic case admits an interesting 
+interpretation as a function on an orbit of a loop group
+\qpKdV
+\ref\igor{I. Frenkel, ``Representations of affine Lie algebras,
+Hecke modular forms, and Korteweg-de Vries type equations,'' 
+Proceedings of the 1981 Rutgers Conference on Lie Algebras
+and related topics. Lecture Notes in Mathematics
+933, 71. Springer 1982.}\ 
+, and it would be very interesting to find an analogous
+interpretation in this case. 
+
+In an effort to demonstrate that the above picture is not 
+merely useless reinterpretation of known results we have shown in 
+appendix A how the present formalism can be used to establish some
+properties of the string equations which have recently 
+become interesting in connection with the so-called 
+``nonperturbative violation of universality'' in matrix models.
+
+It has been repeatedly emphasized by Atiyah, Hitchin, Ward, and 
+Witten that low-dimensional integrable differential equations and field
+theories should be related to higher dimensional gauge theory. The 
+four-dimensional self-dual Yang-Mills equations are expected to 
+play a central role in such a formulation. In appendix B we sketch 
+some connections between those ideas and the ideas of this paper.
+
+After we completed most of this work we found that some
+ideas similar to those of sections 2,3 and 5, in the 
+context of the MKdV hierarchy and the associated PII 
+equation, have been discussed by Flaschka and Newell
+\ref\flasch{H. Flaschka and A. Newell, ``Monodromy and 
+Spectrum-Preserving Deformations I,'' Comm. Math. Phys. 
+{\bf 76}(1980)65.}. V. Korepin also pointed out to us 
+some overlap between the remarks of section seven and those of 
+\ref\Korep{A.R. Its, A.G. Izergin, V.E. Korepin, N.A. Slavnov,
+``Differential Equations for Quantum Correlation Functions,''
+Australian National University preprint; Trieste preprints, 
+IC/89/120,107,139}. 
+We have been informed by E. Martinec of similar
+progress, especially in relating the gravity partition function 
+to a tau function
+\ref\martinec{E. Martinec, private communication.}.
+
+\newsec{String Equations as Flatness Conditions}
+
+Let us recall how M. Douglas wrote the general $(p,q)$ string 
+equations in \newD\ . If $L=D^q+u_{q-2}D^{q-2}+\cdots + u_0$
+is the continuum limit of a multiplication operator 
+$f(\lambda)\to \lambda f(\lambda)$ on the orthogonal 
+polynomials $f$ in a 
+matrix chain model then, he argued, the continuum limit
+of the conjugate derivative operator
+$f(\lambda)\to {d\over d \lambda} f(\lambda)$ must be of the 
+form $P=L^{p/q}_+$,
+where the subscript indicates we keep only the differential
+operator part of a pseudodifferential operator.
+The nonlinear differential equations $[P,L]=1$ should define
+nonperturbative 2D quantum gravity coupled to the $(p,q)$ 
+minimal model of conformal field theory. Similarly, the 
+equations for massive models coupled to 2D gravity are of the form
+$[P,L]=1$ where $P=\sum_p t_p L^{p/q}_+$ and the $t_p$ 
+are the ``masses'' in the theory. Our first task will be to 
+rewrite these equations in first order matrix form.
+
+{\it The $(2l-1,2)$ equations:}
+
+
+The fact that a solution to $\sum(j+\half)T_jR_j=\hbar x$
+satisfies the KdV flow in $T_j$ 
+\bdss\  
+is extremely surprising to those
+familiar with the almost periodic solutions of KdV, where 
+analogous parameters play the role of moduli of an associated 
+Riemann surface, while the KdV flows are (straightline)
+flows along the Jacobian 
+of that surface. We will comment on this relation further below. 
+For now we content ourselves with the following consistency 
+check \bdss\  on \linsys\ , using the notation of Gelfand-Dickii
+\Gelf .
+Taking derivatives with respect to 
+$x,T_k$ and assuming the KdV flow in $T_k$ we have
+\eqn\consis{
+\eqalign{
+\hbar&=\sum (j+\half)T_jR_j'\cr
+0&=(k+\half)R_k'-{1\over \hbar}\sum_j(j+\half)T_j\xi_jR_{k+1}'\cr}
+}
+where $\xi_j$ are the vector fields generating KdV flow \Gelf\ 
+and we have used commutativity of the flows. The first equation 
+implies $\hbar \delta/\delta u=-\sum_j(j+\half)T_j\xi_j$, and 
+substitution into the second equation gives $0=(k+\half)R_k'+
+(\delta/\delta u)R_{k+1}'$, a true identity.
+This verifies consistency. One argument for the KdV flow 
+was given in \bdss\ , we will give another argument below.
+Note especially that the argument fails for $\hbar=0$. 
+
+\bigskip
+{\it The $(p,q)$ equations}
+
+In this case we will be somewhat less detailed. Let 
+$L=D^q+u_{q-2}D^{q-2}+\cdots$ and consider the generalized
+KdV flow $[L^{p/q}_+,L]=dL/dt$. We may rewrite this, following 
+Drinfeld-Sokolov, using the operator 
+$$\CL=D+\Lambda+\pmatrix{0&\dots&-u_0\cr
+                        .&\dots&.\cr
+                        .&\dots&.\cr
+                        .&\dots&.\cr
+                       0&\dots&-u_{q-2}\cr
+                     0&\dots & 0\cr}
+$$
+where $\Lambda$ has entries $1$ along the lower diagonal and 
+$\lambda$ in the $1,q$ matrix element. Using the methods of 
+\DrS\ one may construct
+$\CA_{q,p}(\lambda)=\Lambda^p+\cdots$ such that the generalized
+KdV flows are equivalent to 
+$${\p\CL\over \p t}=[\CA(\lambda),\CL]$$
+in particular, there are potentials $R_{q,p;i}$, $i=2,3,\dots q$
+generalizing the $R_l$'s used above such that 
+$$[\CA_{q,p},\CL]=\pmatrix{0&\cdots&-R_{q,p;q}'\cr
+                     0&\cdots&-R_{q,p;q-1}'\cr
+                     .&\dots&.\cr
+                     .&\dots&.\cr 
+                     0&\dots&-R_{q,p;2}'\cr
+                     0&\dots&0\cr}
+$$
+Thus, as before, we may write the string equations as the 
+flatness conditions $[\IB_{q,p},\CL]=0$ where 
+$$\IB_{q,p}=\hbar {d\over d\lambda}+\CA_{q,p}+
+\pmatrix{0&\cdots&\hbar x -R_{q,p;q}\cr
+                     0&\cdots&\CH_{q-1}-R_{q,p;q-1}\cr
+                     .&\dots&.\cr
+                     .&\dots&.\cr 
+                     0&\dots&\CH_2-R_{q,p;2}\cr
+                     0&\dots&0\cr}
+$$
+and the $\CH_i$ are constants, analogous to the magnetic field of the
+Ising model. We may formulate the equations for massive models 
+in the obvious way by taking linear combinations of the 
+$\IB_{q,p}$. 
+
+\bigskip
+{\it Unitary matrix models}
+
+
+
+{\it General Semisimple Lie algebras}
+
+In \DrS\ Drinfeld and Sokolov wrote analogues of the KdV
+equations associated to any Lie algebra $g$. These are 
+again of the form $\dot\CL=[\CP,\CL]$ where 
+$\CL={d\over dx} + q + \Lambda$, $q$ is a function taking 
+values in the Lie algebra and $\Lambda$ is a standard
+element in the affine Kac-Moody algebra $\hat g$. When 
+this algebra is realized as a loop algebra we may again 
+modify $\CP\to \tilde\CP$ to obtain some equations of the
+form $0=[{d\over d\lambda} + \tilde \CP , \CL]$ and these
+should be the string equations for some matrix model
+\foot{In \newD\ Douglas suggested they would be associated 
+to the nondiagonal minimal models. This idea has
+been studied in detail in 
+\ref\kutas{D. Kutasov and Ph. Di Francesco, ``Unitary minimal models
+coupled to 2D quantum gravity,'' Princeton preprint, PUPT-1173.}.
+}. 
+%MORE DETAIL.
+%ARE THE MODIFIED EQS AGAIN SELF-SIMILAR?
+%
+%HAMILTONIAN STRUCTURE, W-ALGEBRAS
+
+Flatness conditions arise very often in physics. The above 
+interpretations suggest, e.g.,  that possibly one should think about 
+a pure (holomorphic) Chern-Simons theory along the lines of 
+\ref\witjones{E. Witten, ``Quantum Field Theory and the Jones Polynomial,''
+Commun. Math. Phys. {\bf 121}(1989)351} 
+with a suitable restriction on the fields. 
+Such an interpretation yields a nice interpretation, e.g., of 
+the $(p,q)$ actions of
+\ref\paulact{P. Ginsparg, M. Goulian, M.R. Plesser,
+and J. Zinn-Justin, ``$(p,q)$ String Actions,'' Harvard preprint 
+HUTP-90/A015;SPhT/90-049}
+in terms of Wilson loops. However it is difficult to see 
+why the gauge symmetry should be broken. We will comment
+again on this below.
+
+\newsec{String Equations and Isomonodromic Deformation}
+
+The compatibility conditions of the previous section arise naturally in 
+a very interesting problem known as the isomonodromy problem.
+The theory of isomonodromic deformation has been adequately 
+reviewed in 
+So we confine ourselves here to a 
+very brief description of the method.
+
+Consider a linear homogeneous differential equation 
+\eqn\irreg{
+{d\Psi\over d z}=A(z)\Psi
+}
+At an irregular singular point $a$ of order $r$ we can write
+$$A(z)=\sum_{n=-r}^\infty A_n (z-a)^{n-1}\qquad .$$
+Assuming $A_{-r}$ is diagonalizable one can show that 
+there is a formal solution to \irreg\ of the form
+
+\foot{We state this more carefully in the following 
+section.}.
+The analytic meaning of the formal solution \stoii\ is 
+that we can divide up a neighborhood of $a$ into sectorial 
+domains $\Omega_k=\{d_k<arg(z-a)<e_k\}$ for some constants 
+$d_k,e_k$ such that in each domain there is a unique 
+true solution $\Psi_k$ to \irreg\ which is asymptotic to 
+\stoii\ . On $\Omega_{k+1}\cap
+\Omega_k$ we have $\Psi_{k+1}=\Psi_k S_k$ for some Stokes matrices.
+If the differential equation \irreg\ depends on parameters we 
+can ask how we may change the parameters so that the ``monodromy 
+data'' $S_k,L$ remains unchanged. As shown in the above 
+references, such questions lead to interesting nonlinear differential 
+equations. We now apply the general formalism of these works to 
+the string equations.
+
+\bigskip
+{\it Asymptotic analysis}
+
+Consider the massless $(2l-1,2)$ equation.
+In order to perform the 
+asymptotic analysis we follow \Jimboii\ 
+so that $W$ satisfies the differential equation:
+\eqn\dforz{\eqalign{
+\hbar {d W\over d\zeta}&=\Biggl[(B_l+\zeta^2 C_l+\Delta_l)
+\sigma_3-(B_l-\zeta^2
+C_l+\Delta_l)i\sigma_2+(2\zeta A_l
+-{\hbar \over 2\zeta})\sigma_1\Biggr]W\cr\cr
+&=\biggl[(\zeta^{2l+2}+{u^2\over 8}\zeta^{2l-2}+\cdots)\sigma_3 +
+(-{u'\over 4}\zeta^{2l+1}+\cdots)\sigma_1 
++ (-{u\over 2}\zeta^{2l}+\cdots)(-i\sigma_2)\biggr]W
+\cr}  }
+where $\Delta_l=\hbar x+2R_{l+1}$. Equation \dforz\ 
+has an irregular singularity of order $2l+3$ at infinity
+and a regular singularity at the origin. For the massive 
+string equations we replace
+$$\eqalign{
+C_l\rightarrow C\equiv -\half\sum_j (j+\half)T_{j}C_{j-1}&
+\qquad \qquad \Delta\rightarrow \Delta=\hbar x -\sum (j+\half)T_jR_j\cr
+A_l\rightarrow \half C' &\qquad\qquad B_l\rightarrow(\lambda+u)C-A'\cr}
+$$
+In particular the PI equation is associated with 
+the differential equation:
+\eqn\dforzz{
+\hbar {d W\over d\zeta}=\Biggl[(\zeta^4 + {u^2\over 8}+\hbar x)
+\sigma_3-({u\over 2}\zeta^2+{u^2\over 8} + \hbar x )i\sigma_2
+-(\zeta {u'\over 4}
++{\hbar \over 2\zeta})\sigma_1\Biggr]W }
+
+Returning to the general case, 
+the asymptotic expansion at infinity of a solution $W$ 
+to \dforz\ is given by 
+$W\sim \hat W e^{T/\hbar}$ where 
+\eqn\asymp{
+\eqalign{
+T&=
+\biggl(-{1\over 4}
+\sum_{j=1} T_j \zeta^{2j+1} +\zeta \hbar x\biggr)
+\sigma_3\cr
+\hat W&=1+ {H_1\over \zeta}\sigma_3 -
+{u\over 4\zeta^2}(i\sigma_2)+\CO(1/\zeta^3)\cr} }
+%
+%where 
+%\eqn\asympii{\eqalign{
+%\hat W_1&={u\over 4\zeta^2}+\cdots\cr
+%\hat W_2&= \CO(1/\zeta^3)\cr }
+%} 
+%
+To prove this we observe that we can rewrite $C$ 
+in terms of the resolvent $R(x,\lambda)$
+of the Schr\"odinger operator, 
+$(-D^2 + u +\lambda)^{-1}$, used extensively
+in \Gelf\ . In particular,
+\eqn\res{C=p(\zeta;T_j)R(x,\zeta^2) + {\hb x- \Delta\over 2\zeta^2}
++\CO(1/\zeta^4) }
+where $p=-\half \sum (j+\half)T_j\zeta^{2j-1}$. Defining
+$\alpha=(2\zeta^2+u)R-\half R''$, $\beta=u R-\half R''$ and 
+$\gamma=\zeta R'$ we find that 
+\eqn\what{\hat W=\pmatrix{\zeta+\alpha&-\zeta+\alpha\cr
+              \beta+\gamma&\beta+\gamma\cr} D}
+for any diagonal matrix $D$ diagonalizes equation \dforz\ to 
+order $\CO(1/\zeta)$. Equating positive powers of $\zeta$ 
+we find 
+$${\p T\over \p \zeta}=(\zeta p + x)\sigma_3$$
+from which one obtains the first equation in 
+\asymp. Using the diagonal freedom in defining $\hat W$ we 
+can arrange that the expansion in $1/\zeta$ have the form of 
+the second equation
+\foot{Strictly speaking the $\CO(1)$ part of the differential 
+equation with this substitution requires $\Delta=0$, which 
+is a condition we will find later for isomonodromic 
+deformation. A more tedious analysis shows that one can 
+start without assuming $\Delta=0$ and derive the same 
+result.}.
+
+Near the origin we may diagonalize the regular singularity to 
+be of the form $-\sigma_3/(2\zeta)$ so that, after a diagonalization 
+the matrix near the origin behaves as $(1+\CO(\zeta))e^{-\half log
+\zeta\sigma_3}$. True solutions with given asymptotic behavior 
+will be linked by a connection matrix.
+Actually, the full extent of the machinery for handling 
+several singular points is not necessary. 
+
+
+
+\bigskip
+{\it Isomonodromic deformation}:
+
+We now interpret the compatibility conditions of the previous section 
+as the conditions required for isomonodromy under changes of 
+$x,T_j$. In the literature \Jimboi\Jimboii\Jimboiii\Its
+on isomonodromic deformation the Stokes parameters $s_j$
+are referred to as monodromy parameters
+\foot{One also considers the formal monodromy, 
+i.e., the matrix $T_\infty$ multiplying the term with 
+$log \zeta$ in $T$ as a monodromy paramter. In our problem 
+we consider this parameter to be set equal to $1/2$ always.}.
+The problem of isomonodromic deformation is 
+the problem of finding
+conditions on the $u,u_x,u_{xx},\dots$ (considered as independent
+numbers) such that if we change $x,T_j$ the 
+Stokes matrices remain fixed. We will give both a geometric 
+and a physical description of the isomonodromy problem in 
+subsequent sections. For the moment let us simply consider
+the solution. Under 
+a deformation of $x,T_j$ the solution $W$ of \dforz\ will become a 
+smooth function 
+of the $x,T_j$. 
+Since $\Psi$ is regular throughout the $\lambda$ 
+plane we know that the differential $d\Psi \Psi^{-1}$ is a 
+matrix of holomorphic one-forms whose only (rational) singularity 
+lies at infinity, and is thus uniquely determined by that 
+singularity. Since the Stokes data are assumed to be 
+$x$-independent we can
+substitute the asymptotic expansion and
+compute
+\eqn\defii{
+\eqalign{
+{\p \Psi\over \p x}\Psi^{-1}&=\pmatrix{1&1\cr 1/\zeta&-1/\zeta\cr}
+\biggl[\bigl(\zeta+H_1'/\zeta\bigr)\sigma_3+{u\over 2\zeta}
+\pmatrix{0&-1\cr 1&0\cr}\biggr]
+\half\pmatrix{1&\zeta\cr
+1&-\zeta\cr}\ {\rm mod}(1/\zeta)\cr\cr
+&=\pmatrix{0&\lambda+H_1'+(u/2)\cr 1&0\cr} \cr} 
+}
+Consistency with the $\lambda$ equation then forces $H_1'=u/2$. 
+In terms of $W$ we have:
+\eqn\defx{
+{\p W\over \p x}
+W^{-1}=\zeta \sigma_3 + {u\over 2\zeta}\pmatrix{1&-1\cr
+1&-1\cr} } 
+(If we had worked directly with 
+$W$ then in computing $W_xW^{-1}$ we would have had to drop 
+only terms of order $\CO(1/\zeta^2)$.)
+
+Similarly, requiring that the Stokes parameters and 
+the formal monodromy be independent of the 
+$T_j$ leads to the equations:
+\eqn\kflo{
+{\p W \over\p T_j}W^{-1}=\Biggl[{1\over \zeta}{\p H\over\p T_j}
+\sigma_3 -{1\over 4}\zeta^{2j+1}\hat W\sigma_3\hat W^{-1}\Biggr]{\rm mod}
+1/\zeta^2 
+}
+Using \what\ , which holds to $\CO(\zeta^{-(2l+1)})$
+we establish the third equation in \linsys .
+The compatibility of the $x,T_j$ flows now shows that $u$ 
+satisfies the KdV hierarchy.
+
+\bigskip
+{\it $\tau$ functions}
+(As one may easily check directly from the 
+differential equation, the coefficient of a second order pole 
+must be $2$, implying that our $\tau$ function must be the 
+square of a holomorphic function. This is naturally explained 
+by the occurence of a pair of Weyl fermions in the free 
+fermion formulation below.)
+
+\bigskip
+{\it Inverse Monodromy Problem and Initial Conditions}
+
+As we have seen, under isomonodromic deformation 
+the monodromy data are in fact independent of the 
+parameters $x,T_j$. 
+On the other hand, in order to construct 
+the differential equation and solve explicitly for the 
+monodromy data
+we must begin with an actual solution 
+$u(x;T_j)$ of the string equations. It turns out that
+we may identify
+the $2l$ initial conditions needed to define a solution of 
+the string equations as the data needed to 
+fix completely the differential equation.
+Strictly speaking then, we should speak of the 
+function $u(x;T_j,s_j)$ since all these data are needed to 
+determine $u$. 
+
+The problem of determining explicitly the 
+data $s_i$ in terms of a solution $u$ (or in terms of its
+asymptotics) is known as the direct monodromy 
+problem, while the problem of finding the inverse relation, i.e.,
+given the $s_i$ find $u(x)$ (in particular, its initial 
+conditions)
+is known as the inverse monodromy problem. These issues 
+have been well-studied in the literature
+\Its .
+%
+%One important lesson of the philosophy of the inverse monodromy
+%problem is that the parameters $x,T_j$ and the initial conditions,
+%or, equivalently, the $s_i$ should be considered as being ``on 
+%the same footing.'' That is, in the proper formulation of the 
+%IMP one asks if, given the $x,T_j,s_j$ there exist numbers
+%$u,u_x,u_{xx},\dots$ for which the monodromy of \dforz\ gives 
+%back the same numbers $x,T_j,s_j$. 
+%\foot{
+%This might have implications regarding 
+%background independence in string field theory. 
+%I would like to thank Tom Banks for pointing out 
+%this connection to me.}
+%
+It is not always true that the inverse monodromy problem 
+is solvable. For instance, an unfortunate choice of 
+initial conditions in the form of the $s_i$ and the parameter
+$x$ could put us on top of a pole for that function $u(x)$
+determined by the $s_i$
+\foot{The fact that such a pole is the only possible obstruction 
+will be obvious, if not rigorous, from the free fermion 
+point of view below.}.
+The existence of this pole, 
+whose physical implications have been widely discussed
+\BK\bdss
+\ref\newbrez{E. Brezin, E. Marinari, and G. Parisi, ``A Non-Perturbative
+Ambiguity Free Solution of a String Model,'' preprint ROM2F-90-09}
+\ref\david{F. David, ``Loop Equations and Non-Perturbative 
+Effects in Two-Dimensional Quantum Gravity,'' preprint SPhT/90-043}\  
+can be given a geometrical interpretation 
+in terms of the nontriviality of a certain vector bundle
+in the case of the PII equation 
+\ref\itsnovok{A.R. Its and V. Yu. Novokshenov, ``Effective
+Sufficient Conditions for the Solvability of the Inverse Problem
+of Monodromy Theory for Systems of Linear Ordinary Differential
+Equations,'' Funct. Anal. and Appl. {\bf 22}(1988)190.}.
+We expect a similar statement will hold for the family of 
+equations discussed here.
+
+
+%
+%Consider a punctured neighborhood $\Omega$ 
+%of $\zeta=\infty$. Let us pass to 
+%the double cover defined by $\zeta=\xi^2$. By analytic continuation 
+%of one of the fundamental solutions we obtain a single valued
+%solution $\Psi$ of the equation $\IP\Psi=0$. Consider a circle $C$ around 
+%infinity. Restricting $\Psi$ to this circle defines a transition 
+%matrix for a holomorphic vector bundle over $\IP^1$. The function 
+%$u(x)$ has a pole when this vector bundle is nontrivial. 
+%EXPLAIN IN DETAIL.
+%
+
+\bigskip
+{\it The $(p,q)$ Equations}
+
+The above discussion may be generalized to the entire set of 
+$(p,q)$ string equations. Again we must diagonalize the leading 
+singularity. To do this, choose a $q^{th}$ root of $\lambda$,
+call it $\xi$ so that the other roots are $\xi_k=\omega^{k-1}\xi$
+where $\omega=e^{2\pi i/q}$, $k=1,\dots q$. Then we take
+$$\Xi\equiv\pmatrix{\xi_1^{q-1}&\dots&\xi_q^{q-1}\cr
+                  \xi_1^{q-2}&\dots&\xi_q^{q-2}\cr
+                   \cdot&\cdots&\cdot\cr
+                   \cdot&\cdots&\cdot\cr 
+                     \xi_1&\cdots&\xi_q\cr
+                    1&\cdots&1\cr} 
+$$
+so that $\Xi^{-1}\Lambda\Xi=\Omega\equiv Diag\{1,\omega,\dots,\omega^{q-1}
+\}$.
+Therefore, defining $W(\xi)=\Xi^{-1}\Psi$ 
+we obtain the equation
+\eqn\gen{
+-{dW\over d\xi}=\biggl(q\xi^{p+q-1}\Omega^p+\CO(\xi^{p+q-3})\biggr)W 
+}
+From the asymptotic expansion we find again that
+$W=\hat W e^{T/\hbar}$ with 
+\eqn\asmpq{\eqalign{
+T&={-q\over p+q}\Omega^p\xi^{p+q}-\hbar \xi x \Omega\cr
+\hat W&=1+{H_1\over \xi}\Omega^{-1} + {W_2\over \xi^2}+\cdots\cr} 
+}
+and for isomonodromic deformation we have $u_{q-2}=q H_1'$. It then 
+follows that 
+\eqn\taupq{\eqalign{
+{d\over dx}log~\tau&=Res_{\xi=\infty} tr\biggl[\hat W^{-1}
+{\p \hat W\over \p\xi}\bigl({\p T\over \p x}\bigr)\biggr]\cr
+&=q H_1\cr}
+}
+so that 
+$$u_{q-2}={\p^2\over \p x^2}log~\tau$$
+is always true. Hence the only singularities for a solution to 
+any of the string equations are second order poles.
+
+%ADD MASS TERMS, FLOW IN H's? SEE OTHER OPERATORS
+%
+A similar analysis can be carried out for the unitary matrix models
+\cdm\  .
+In this case one finds that if $f$ is determined by \unmm\ 
+then $f^2={\p^2\over \p x^2}log~\tau$. Since $f^2$ is the 
+specific heat of the matrix model we see once again that the 
+partition function is a tau function.
+
+
+\newsec{The Moduli Space of the String Equations}
+
+In this section we will give our first geometrical interpretation 
+of the physical parameters determining the connection 
+$\IP$, that is, the parameters $T_j$ 
+and the initial 
+conditions of the equation for $u(x)$. They will be seen to be 
+moduli for a certain class of meromorphic gauge potentials.
+
+Consider a meromorphic gauge potential $A_z(z)$ on the complex
+plane. $A_z$ defines a connection on a (trivial) bundle over 
+$\IC$. Consider the problem of classifying $A$ up to 
+gauge equivalence. The resulting classification 
+depends crucially on the nature of the singularities of $A$ and on 
+the admissible class of gauge transformations. 
+For example, in the 
+local theory we take the possible (isolated) singularity
+of $A$ to be at the origin. If $A$ has a regular singular 
+point, i.e., if $A$ has a simple pole then,
+up to equivalence under meromorphic gauge transformations,
+$A$ is classified by the conjugacy class of the
+monodromy $Pexp \int A$ around zero. This follows since
+if we try to gauge $A$ to zero by solving the equation 
+$d\Psi/dz= A \Psi$ then there is a solution of the form
+$\Psi=\hat\Psi(z)z^M$ where $\hat\Psi$ is holomorphic
+near zero, and
+$e^{2\pi iM}$ is the monodromy matrix. Passing 
+to the global theory of a connection on a vector bundle 
+over a Riemann surface $\Sigma$, the solution to the famous
+Riemann-Hilbert problem states that the moduli space of 
+connections with regular singularities at $a_i$
+are classified by the conjugacy classes
+$Hom(\pi_1(\Sigma-\{a_i\}), GL(m,\IC) )/\sim$. 
+Related facts
+have been used 
+extensively in investigations of Chern-Simons-Witten theory.
+
+The situation is very different, and far more complicated, 
+for connections with irregular singularities, i.e., with
+higher order poles. 
+We briefly summarize the situation, see
+\nref\Wasow{W. Wasow, {\it Asymptotic Expansions for Ordinary 
+Differential Equations}, Interscience, 1965.}
+\nref\sibu{Y. Sibuya, ``Stokes phenomena,'' Bull. Amer. Math. Soc. 
+{\bf 83}(1977)1075}
+\nref\Mal{B. Malgrange, ``La classification des connexions irr\'eguliers
+\'a une variable,'' in {\it Math\'ematique et Physique: S\'em
+\'Ecole Norm. Sup.} 1979-1982, Birkh\"auser, 1983.}
+\nref\Jur{W. Jurkat, {\it Meromorphe Differentialgleichungen}
+Lect. Notes in Math. 637. Springer.}
+\nref\VI{D. Babbitt and V. Varadarajan, ``Local Moduli
+for Meromorphic Differential Equations,'' Bull. Amer. Math.
+Soc. {\bf 72}(1985)95.}
+\nref\VII{D. Babitt and V. Varadarajan, 
+``Deformations of nilpotent matrices over rings and reduction of analytic
+families of meromorphic differential equations,'' 
+Mem. Amer. Math. Soc. {\bf 55}(1985)1}
+\nref\VIII{V. Varadarajan, ``Recent Progress in differential equations in 
+the complex domain,'' preprint}
+\nref\Majima{J. Majima, ``Asymptotic Analysis for Integrable 
+Connections with Irregular Singular Points,'' LNM 1075}\refs{\Wasow{--}
+\Majima}\ 
+for the full story. We follow the presentation of \VII\Majima\ .
+A major result in the theory of differential equations, the
+Hukuhara-Turittin formal reduction theorem,
+states that if $A$ has an irregular singular point at $z=0$, 
+we may 
+solve $d\Psi/dz= A \Psi$ with $\Psi=\hat\Psi e^\Lambda$ 
+where $\hat\Psi$ is a formal asymptotic series and 
+\eqn\equivl{
+{d\Lambda\over dz}=D_{r_1}z^{r_1}+D_{r_2}z^{r_2}+\cdots
+D_{r_m}z^{r_m} + z^{-1} C}
+where $r_i$ are rational numbers with $r_1<\cdots r_m <-1$,
+$D_{r_i}$ are diagonal constant matrices and $C$ commutes 
+with the $D_{r_i}$. (See, e.g., \Wasow ,
+Theorem 19.1 for a careful statement and proof of this.)
+Thus, a gauge transformation by 
+$\hat\Psi$ transforms the connection to the above {\it canonical 
+form}. Moreover, the numbers $r_i$ and the conjugacy class of 
+$\{D_{r_i},exp[2\pi i k C]\}$ are gauge invariant. These are 
+therefore the moduli of meromorphic gauge fields under
+the orbits of formal gauge transformations. 
+Applying the above observations to the class of gauge potentials 
+defined by \dforz\ and its generalizations we see that 
+the $\{T_j,x\}$ should be thought of as such moduli. 
+
+If we now ask 
+for the orbits under meromorphic gauge transformations, i.e.,
+transformations with a convergent Laurent expansion near zero 
+then, as shown in \sibu\Mal\Jur\VI\VII\ one must take into 
+account a more subtle invariant.
+This is the collection of Stokes matrices, or more properly, a 
+Stokes cocycle, which we now describe
+\foot{We skip over many technical details in what follows. 
+The interested reader should consult the above references.}.
+Suppose $A$ is in the formal 
+equivalence class \equivl\ and $A$ gives rise to Stokes matrices 
+$S_k$ in sectors around $z=0$. We can then consider the 
+matrices $\CS_k(z)=exp(\Lambda(z))S_k exp(-\Lambda(z))$, defined
+in each sector $\Omega_k$. These satisfy 
+\eqn\stcy{\eqalign{
+\CS_k\sim 1&\qquad {\rm in}\quad\Omega_k\cr\cr
+{d\CS_k\over dz}&=\biggl[{d\Lambda\over dz} ,\CS_k
+\biggr]\cr}
+}
+Let us now identify a sector $\Omega=\{\theta_1<arg z<\theta_2\}$
+with the corresponding region on the unit circle. In this way 
+we can define a sheaf 
+\foot{of unipotent groups}, $st(\Lambda)$, 
+over $S^1$ whose sections consist of 
+matrices satisfying the two conditions in \stcy\ . 
+The main theorem of Sibuya-Malgrange states that the nonabelian
+sheaf cohomology group $H^1(S^1,st(\Lambda))$ is isomorphic to 
+the moduli space 
+under meromorphic gauge equivalence
+of connections formally equivalent to \equivl\ . 
+
+In the examples studied in this paper we may represent the 
+Stokes cocycle by the matrices:
+$$\pmatrix{1&e^{2T/\hbar}s_{2k+1}\cr 0&1\cr} , \qquad 
+\pmatrix{1&0\cr e^{-2T/\hbar}s_{2k}&1\cr}$$
+in $\Omega_{2k+2}\cap \Omega_{2k+1}$ 
+and $\Omega_{2k+1}\cap \Omega_{2k}$
+respectively. The moduli in this case are simply the 
+Stokes parameters $s_i$ and hence the initial conditions
+for the solution $u(x)$ to the string equations.
+Hence
+the physical data - the masses $T_j$ and the initial conditions, 
+as expressed through the Stokes parameters $s_j$ are coordinates on 
+the moduli space of a class of meromorphic gauge fields under 
+meromorphic gauge equivalence. We think that it is an interesting 
+question to elucidate what distinguishes 
+potentials associated with integrable systems
+in the space of all connections with irregular singular 
+points. This is the same as the problem mentioned at the 
+end of section 2. 
+
+
+\newsec{Quantum Riemann Surfaces}
+
+In this section we will examine more closely the geometry of the 
+vector bundles defined in section three.
+In particular we will be interested 
+in the following question. It is well known that a pair of 
+commuting differential operators $[P,L]=0$ leads, via the 
+Burchnall-Chaundy-Krichever theory, to the construction of an 
+algebraic curve $\Sigma$ with a line bundle
+\foot{If $\Sigma$ is singular $\CL$ is not a line bundle
+because of identifications 
+at the singular points, instead it is a ``coherent sheaf.''
+We will assume below that our Riemann surfaces are nonsingular.}
+$\CL\to \Sigma$. The KdV flows are then just
+straightline motion of $\CL$ along the Picard variety of $\Sigma$.
+Since the string equations 
+can be formulated as $[P,L]=\hbar$ one is naturally lead to ask 
+if there is a sense in which one may associate to solutions of 
+these equations a corresponding ``quantum'' geometry.
+We will 
+propose such a notion below, based on isomonodromic 
+deformation
+\foot{This is not to be confused with the fact that the stationary
+KdV equations themselves can be written as an isomonodromic
+deformation problem. We discuss this latter formulation of 
+stationary KdV briefly in section six.}
+
+Although the BCK theory has already been beautifully described in 
+\ref\BMN{Dubrovin, Matveev, and Novikov, ``Non-Linear Equations 
+of Korteweg-De Vries Type, Finite-Zone Liner Operators, and 
+Abelian Varieties,'' Russian Math Surveys, {\bf 31} (1976)59}
+\segal
+\ref\mumf{D. Mumford, ``An algebro-geometric construction of 
+commuting operators and of solutions to the Toda lattice equation,
+Korteweg-de Vries equation and related non-linear equations,''
+{\it Proceedings of Symposium on Algebraic Geometry}
+M. Nagata, ed. Kinokuniya, Tokyo, 1978}
+and elsewhere, we review it again from a slightly different 
+point of view better suited to our purposes.
+
+We work with the KdV hierarchy 
+for simplicity, and will indicate the proper generalizations 
+to the generalized KdV hierarchies later. The usual presentation 
+of the BCK theory begins with the band theory of the 
+Schr\"odinger operator $L=D^2-u(x)$. We consider the two-dimensional
+eigenspace of $L$:
+\eqn\eignsp{
+V_\lambda=\{\psi(x)|L\psi(x)=\lambda\psi(x) \} 
+}
+Eigenfunctions can be shown to be meromorphic functions of the 
+``momentum'' $z$ defined by $\lambda=z^2$. More precisely,
+one introduces 
+the Baker-Akhiezer (BA) eigenfunction 
+which is uniquely characterized by 
+a normalization condition $\psi(x_0,z)=1$, for some fixed
+$x_0$, and the expansion near $z=\infty$
+$$\psi(x,z)=e^{(x-x_0)z}\bigl[1 + {a_1(x)\over z} + {a_2(x)\over z^2}
++\cdots \bigr] $$ 
+The BA function has a meromorphic extension to an affine hyperelliptic
+curve $\Sigma_0$ double covering the affine $\lambda$ line $\IC$, and 
+is a section of a (trivialized) line bundle $\CL\to\Sigma_0$. 
+For our purposes it is more convenient to work with vector bundles on 
+$\IC$ rather than line bundles on
+$\Sigma_0$. 
+The $V_\lambda$ define a trivial bundle over the affine 
+$\lambda$-line. We will be concerned with 
+various framings of this bundle, which are in one-one
+correspondence with the invertible solutions of
+\eqn\frm{\CL \Psi=\Biggl[-{d\over dx} + \pmatrix{0&\lambda+u\cr
+1&0\cr}\Biggr]\Psi=0 }
+since a solution is given by the Wronskian matrix
+\eqn\frmi{
+\Psi(x)=\pmatrix{\psi_1'&\psi_2'\cr 
+\psi_1&\psi_2\cr} 
+}
+where $\psi_1,\psi_2$ are two linearly independent elements of $V_\lambda$.
+A standard frame for this bundle is provided by the 
+two solutions $\phi_{i}(x;x_0,\lambda)$, $i=1,2$, which satisfy
+$\phi_{i}^{(j-1)}(x_0;x_0,\lambda)=\delta_{ij}$. The
+$\phi_i$ are entire functions of $\lambda$.
+
+Recall that
+if $u(x)$ solves the stationary KdV equations:
+\eqn\stKdV{
+[P,L]=0 \qquad \qquad P=\sum c_l L^{(2l+1)/2}_+ }
+then $P$ restricts to $V_\lambda$ and its restriction in 
+the $\phi_i$ basis is a matrix which is polynomial in 
+$\lambda$ and a differential polynomial in $u(x_0)$. 
+In fact, letting $P_l=L^{(2l+1)/2}_+$ one may easily 
+show that 
+\eqn\act{\CP_l[u(x)]\Psi=\pmatrix{(P_l\psi_1)'&(P_l\psi_2)'\cr
+P_l\psi_1&P_l\psi_2\cr} }
+from which it follows that 
+\eqn\pact{
+P_l:\pmatrix{\phi_1\cr \phi_2\cr}\to\pmatrix{-A_l[u(x_0)]&B_l[u(x_0)]\cr
+C_l[u(x_0)]&A_l[u(x_0)]\cr}\pmatrix{\phi_1\cr \phi_2\cr} 
+}
+The eigenvalues of $P_l|_{V_\lambda}$ thus satisfy the 
+characteristic equation of this matrix, 
+which defines an affine curve
+$\Sigma_0$ by the equation 
+$\mu^2=A^2+BC$. (Recall that $A,B,C$ are polynomials in 
+$\lambda$ and differential polynomials in $x_0$. It is 
+a simple consequence of \stKdV\ that the determinant 
+$A^2+BC$ is independent of $x_0$.)
+Consider a patch $U$ in $\IC$. If $U$ is simply connected and
+does not contain any 
+of the roots of $\mu(\lambda)$ then we may choose a framing which 
+diagonalizes $P_l$ over $U$. The eigenspaces associated to $\pm \mu$
+canonically define lines in the pullback bundle $\pi^*V$
+where $\pi:(\mu,\lambda)\to \lambda$ is the projection.
+We may choose, e.g., $\phi_{\pm\mu,\lambda}=C\phi_1 + (\pm\mu+A)\phi_2$.
+(One can impose the normalization condition 
+$\phi_{\mu,\lambda}(x_0)=1$.
+In this case the framing will be meromorphic.)
+At a branch 
+point $\lambda_i$, where $\mu(\lambda_i)=0$ the two 
+eigenspaces degenerate to a single line, so that we can 
+say the $\mu$ eigenspace of $P_l$ at the point $(\mu,\lambda)$
+defines a holomorphic line bundle $\CL\to \Sigma_0$. 
+The situation is summarized in fig. 1
+\foot{
+The situation can also be summarized in the sheaf-theoretic 
+formula:
+$0\rightarrow \pi_*\CL\rightarrow V\rightarrow\oplus_P
+S_P\rightarrow 0$
+where $\pi_*\CL$ is the direct image and $S_P$ are sheaves supported on
+branch points.}.
+Finally, note that for large $\lambda$ the eigenfunctions must 
+be plane waves,
+$\sim e^{\pm xz}$,
+and since $P$ is a differential operator of {\it  odd} order we must
+have asymptotics $\phi_{\mu,\lambda}(x)\sim e^{\pm xz}$, with the 
+choice of sign depending on $\mu$, so that these eigenfunctions 
+are proportional to the BA functions $\psi(x,\pm z)$.
+%explicitly: $\psi_1=\phi_1 + (C/\mu-A)\phi_2$,
+%$\psi_2=\phi_1 - (\mu-A/B)\phi_2$ 
+
+Let us define a {\it Baker-Akhiezer framing}
+$\Psi$ to be a simultaneous solution of \frm\ and 
+\eqn\bkfrm{
+\CP\Psi=\Psi \sigma_3 \mu(\lambda)\qquad ,
+}
+which has the asymptotics
+\eqn\bkasm{\Psi\sim \hat\Psi e^{(x-x_0)z\sigma_3} }
+where $\hat\Psi$ has a power series expansion in $1/z$
+near $\lambda\to\infty$, and is nonsingular except at the branch points
+$\lambda_i$ and the zeroes of $C$.
+For example, 
+choosing $\psi_{1,2}=\psi(x,\pm z)$ in \frmi\  gives 
+a {\it normalized} BA framing.
+A BA framing is single-valued and meromorphic
+on $\Sigma_0$ but not on the $\lambda$
+line. Rather, upon analytic continuation around a branch point 
+we have the monodromy 
+\eqn\mndrmy{
+\Psi\rightarrow \Psi\sigma_1 \qquad ,
+}
+reflecting the interchange of the two sheets.
+Nevertheless, we can construct our riemann surface $\Sigma_0$ 
+working completely 
+with the framing for a bundle $V\to\IC$ and $\Sigma_0$ can 
+be pictured  as ``sitting inside the total space of $V$,'' 
+in the sense that if we consider the surface in $\IC\times V$
+swept out by the tips of the frame we obtain a 
+copy of $\Sigma_0$ as in fig. 1.
+Since the data defining a BA framing is essentially the data
+defining the famous quintuplets occuring in Krichever's
+construction \segal\ we expect that one can define a
+``moduli space of BA framings,'' which will be, essentially,
+the universal Jacobian over the moduli space of curves.
+
+We have phrased the BCK theory in such a way that we can 
+now describe its noncommutative, or quantum, analog associated
+to the equation $[P,L]=\hbar$. The main claim is that the
+analog of 
+the BA framing is a solution $\Psi(x,\lambda)$ to
+\eqn\compa{
+\eqalign{\CL\Psi&=0\cr
+        \IP_l\Psi&=0\cr} }
+and that in the $\hbar\to 0$ limit this framing reproduces 
+the BA framing in the following sense. 
+
+The gauge connection $(\CL,\IP_l)$ is flat, so an entire
+solution of \compa\ exists for finite values of $x,\lambda$. 
+Morally speaking, $\Psi$ defines a global framing of $``\pi^*V$''
+where $\pi$ should be a projection from a ``quantum riemann surface.''
+We can try to get a picture
+of this object by studying the framing over the $\lambda$ line, in 
+the semiclassical $\hbar\to 0$ limit. To this end let us 
+consider a family of solutions
+$u_\hb(x)$ to the string equations $\sum(j+\half)T_jR_j=\hb x$ 
+which have a smooth $\hb\to 0$ limit. For example, in the case
+of PI the 
+asymptotic analysis of Boutroux shows that $u_\hb$ approaches
+either a constant or the Weierstrass $\wp$ function.
+In general we can write $u=u^{(0)}+\hb u^{(1)}+\cdots$. 
+It will also be of interest to let the equation itself
+vary with $\hb$, so we also let 
+$T_i=T_i^{(0)} + \hb T_i^{(1)} + \cdots$. 
+(Effectively, we 
+are working over the ring $\IC[[\hb]]$.)
+For such a family 
+we can study the equation $\IP\Psi=0$, i.e.,
+\eqn\wkay{
+\hb{\p\Psi\over\p\lambda}=\biggl(-\half\sum_j(j+\half)T_j
+\CP_{j-1}[u]\biggr)\Psi} 
+via the WKB approximation using an analysis similar to that 
+of appendix A. 
+We first summarize the main conclusion of the analysis:
+In the $\hbar\to 0$ limit the WKB turning 
+points become the branch points $\lambda_i$
+of the curve $\Sigma_0$ and a choice of Stokes ray emanating from 
+each of these points becomes a branch cut for the affine hyperelliptic
+curve $\Sigma_0$ defined by $\{(\mu_0,\lambda)\}$
+where $\pm\mu_0$ 
+are the eigenvalues of $\sum(j+\half)T_jP_{j-1}[u^{(0)}]$
+acting on $V_\lambda$. 
+In the various WKB sectors, and outside a neighborhood
+(vanishing with $\hb$) of the branch cuts we may find 
+solutions $\Psi_i$ of \compa\ so that if we define:
+\eqn\classbak{
+\Psi_i(\lambda)\equiv \tilde\Psi_\hb^{(i)}(\lambda)exp\biggl[
+{\sigma_3\over\hb}\int^\lambda_{\lambda_i}\mu_0
+(\lambda')d\lambda'\biggl]
+\qquad ,
+}
+then $\tilde\Psi^{(i)}_\hb$
+has a smooth classical limit, and is, in fact, a BA framing 
+in the appropriate sector. 
+Note that it immediately follows from the the smoothness of
+$\tilde\Psi$ that if we 
+substitute \classbak\ into \wkay\ then in 
+the limit $\tilde\Psi_\hb\to\tilde\Psi$
+the differential equation \wkay\ becomes the eigenvalue condition \bkfrm :
+\eqn\eigag{
+-\half\biggl(\sum(j+\half)T_j\CP_{j-1}[u^{(0)}]\biggr)
+\tilde\Psi=
+\tilde\Psi\sigma_3\mu_0(\lambda)
+\qquad .
+}
+One surprise we find is that the BA framings defined in the 
+different WKB sectors differ by multiplication on the right 
+by nontrivial (i.e., nondiagonal) matrices, a reflection
+of the Stokes phenomenon. 
+%
+%
+%Moreover, while $\Psi_\hb$ is well-defined as a function of 
+%$\lambda$,
+%$\tilde\Psi_\hb$ is not. Upon analytic continuation of 
+%$\lambda$ around a branch point the rapidly varying part of the 
+%wavefunction has a {\it smooth} monodromy even in the 
+%semiclassical limit:
+%\eqn\monoi{
+%exp\bigl[{\sigma_3\over\hb}\int^\lambda\mu(\lambda')d\lambda'\bigr]
+%\longrightarrow
+%\sigma_1
+%exp\bigl[{\sigma_3\over\hb}\int^\lambda\mu(\lambda')d\lambda'\bigr]
+%\sigma_1
+%}
+%and correspondingly $\tilde\Psi_\hb\to\tilde\Psi_\hb\sigma_1$, 
+%which is preserved in the $\hb\to 0$ limit. 
+%
+Thus, heuristically speaking, we can 
+picture a quantum riemann surface as 
+a wildly fluctuating trivialization of a vector bundle 
+which becomes smooth, and looks like a classical riemann surface,
+in the neighborhood of the branch points as in fig. 2. 
+The fluctuations are always directed along the line of the 
+Krichever line bundle. 
+Because of the Stokes phenomenon, even when we factor out 
+the wild oscillations along the Krichever line bundle, we find 
+that in different sectors of $\IC\times V$ the Riemann surface
+as been ``rotated'' and ``sheared.''
+\foot{The resulting object is thus somewhat
+reminiscent of certain cubist paintings of Picasso and Braque.}
+We now provide some justification
+of this picture.
+%
+%
+%Attempting to remove the 
+%oscillating phase to obtain a smooth classical limit
+%effectively introduces the monodromy which describes the 
+%nontrivial topology of the covering surface. 
+%We have attempted 
+%to draw a picture of this in fig. (qrs).
+%We now provide some justification of these statements.
+
+\bigskip
+{\it WKB Analysis}
+
+We write \wkay\ as
+\eqn\rwr{\hb{\p\Psi\over\p \lambda}=\bigl(\alpha\sigma_3+\beta\sigma_2+
+\gamma\sigma_1\bigr)\Psi \equiv \CA\Psi\qquad .
+}
+where $\alpha=A$, $\gamma+i\beta=C$, $\gamma-i\beta=B$. 
+Note that $\CA$ is $\CO(1)$ as $\hb\to 0$. The eigenvalues of 
+$\CA$ are given by $\mu^2=\alpha^2+\beta^2+\gamma^2=A^2+BC[u_\hb]$
+and approach $\mu_0^2$ smoothly in the classical limit.
+Therefore, writing $\mu_0^2=\prod(\lambda-\lambda_i)$ we must define 
+$3(2l+1)$ conjugate Stokes lines by the vanishing real part:
+\eqn\sks{
+\Re\int_{\lambda_i}^{\lambda}\mu_0(\lambda')d\lambda'=0
+}
+These are similar to the Stokes lines in appendix A. 
+In this case the integrand vanishes as 
+$\CO(\lambda-\lambda_i)^{1/2}$
+at the points $\lambda_i$. Hence there are three lines 
+emerging from each of these points at angles $2\pi/3$. 
+We can get a picture
+of the Stokes lines, at least, for some region of 
+moduli space, by first considering the case in which 
+$\mu^2=\prod_{i=1}^{2l+2}(\lambda-\lambda_i)$ with all the 
+$\lambda_i$ real, with $\lambda_i<\lambda_{i+1}$. 
+Then one can easily show that the Stokes lines 
+have the form given in fig. 3 . The proof 
+proceeds as follows. We know that as $\lambda\to \infty$ 
+we must reproduce the full set of $2l+3$ Stokes rays 
+going to infinity. Moreover, whenever two branch points
+coalesce the triple joining points for Stokes lines 
+must turn into quadruple joining points. Finally, 
+the intervals on the real axis are certainly among 
+the Stokes lines. The above picture is uniquely determined
+by these criteria.
+We may now imagine moving the branch points off the real 
+axis. The picture will deform smoothly unless two branch 
+points collide or unless a branch point hits a Stokes 
+line. In that case we may expect fairly intricate 
+phenomena which is outside the scope of this paper.
+In general the lines will divide the plane into several
+regions $\Omega_k$. 
+
+Our first goal is to establish the following result.
+In the interior of each region
+$\Omega_k$, for $|\lambda-\lambda_i|\geq\CO(\hb^{2/3})$ 
+there are solutions $\Psi_i(x,\lambda)$ to \compa\ 
+such that 
+$$\lim_{\hb\to 0}\Psi_i(x,\lambda)
+exp\biggl[-
+{\sigma_3\over\hb}\int^\lambda_{\lambda_i}\mu_0
+(\lambda')d\lambda'\biggl]
+$$
+exists and is a BA framing. 
+
+To prove this, recall that the usual theorem in asymptotic 
+analysis guarantees that there will be a solution $\Psi_i$ in 
+$\Omega_i$ with the asymptotic expansion
+$$\Psi_i\sim L_i\bigl(1 + \hb N^{(1)}_i+\cdots\bigr)
+exp\biggl[
+{\sigma_3\over\hb}\int^\lambda_{\lambda_i}\mu_\hb
+(\lambda')d\lambda'\biggl]$$
+where 
+\eqn\diag{\CA L_i=L_i\sigma_3\mu_\hb \qquad ,}
+and, if we expand
+$L_i=L_i^{(0)}+\hb L_i^{(1)}+\cdots$ then we require:
+$$Diag\bigl\{(L_i^{(0)})^{-1}{\p L_i^{(0)}\over\p 
+\lambda}\bigr\}=0 \qquad .$$
+Therefore, we study the difference of the WKB phase factors:
+\eqn\difaze{
+F_i(\lambda,x;T_j)\equiv \lim_{\hb\to 0}\Biggl[
+{1\over\hb}\int^\lambda_{\lambda_i}\mu_\hb
+(\lambda')d\lambda' -
+{1\over\hb}\int^\lambda_{\lambda_i}\mu_0
+(\lambda')d\lambda'\Biggr]\qquad .
+}
+If $\mu^2$ has a simple zero then it is easy to see the limit
+exists. 
+
+Since the most general BA framing differs from 
+the normalized BA framing by right-multiplication by a 
+diagonal matrix depending only on $\lambda$ and 
+having power series asymptotics at infinity we can establish 
+the result by finding a suitable function $f_i(\lambda)$ such that
+$$L_i^{(0)}=\pmatrix{\phi_{\mu,\lambda}'&\phi_{-\mu,\lambda}'\cr
+\phi_{\mu,\lambda}&\phi_{-\mu,\lambda}\cr}
+\pmatrix{f_ie^{-F_i}&\cr
+&f_i^{-1} e^{F_i}\cr}
+$$
+where we normalize the first matrix to have unit Wronskian.
+We determine $f_i$ by 
+\eqn\corff{
+{\p\over\p \lambda}log f_i={\p F_i\over\p \lambda}
+-\bigl(\phi_{-\mu,\lambda}{\p\over\p\lambda}\phi_{\mu,\lambda}'
+-\phi_{-\mu,\lambda}'{\p\over\p\lambda}\phi_{\mu,\lambda}
+\bigr) }
+Differentiating the above with respect to $x$ we see that 
+since
+$${\p\over\p x}F_i=\int_{\lambda_i}^\lambda {C(x,\lambda')\over
+2\mu_0(\lambda')}d\lambda'$$
+and $\phi_{-\mu,\lambda}\phi_{\mu,\lambda}=C/2\mu_0$ the rhs 
+of \corff\ is 
+$x$-independent, as it must be. Thus we can solve \corff\ for 
+a function of $\lambda$ only.
+
+We may establish the asymptotics of $f_i$ by using the observation of 
+section three that $C=p(\lambda,T_j)R(x,\lambda)+{\hb x/2\lambda}
++\CO(1/\lambda^2)$, where $R(x,\lambda)$ is the resolvent of 
+the Schr\"odinger operator, to find 
+$\mu_\hb=\half[p+\hb x/z +\CO(1/z^3)]$
+so that
+\foot{From \asymp\ we see that we are simply verifying 
+the fact that the asymptotics in $\hb$ and $\zeta$ is 
+double.} 
+\eqn\asympfi{F_i(x,\lambda,T_j)=-{1\over 4}\sum_j T_j^{(1)}z^{2j+1}
++ x z+\CO(1/z)\qquad .}
+Note the occurence of the parameters $T_j^{(1)}$. 
+Since $u$ satisfies KdV flow in $T_j$ we know from the standard
+theory that the BA functions have asymptotics
+$$\phi_{\mu,\lambda}={1\over \sqrt{2z}}e^{xz-{1\over 4}
+\sum T_j^{(1)}z^{2j+1}}
+\biggl(1+{a_1(x,T_j)\over z}+\cdots \biggr)$$
+from which it follows that $\p/\p z(log f_i(z))=\CO(1/z^2)$,
+which completes the proof.
+
+The different solutions $\Psi_i$ with WKB asymptotics in 
+the various sectors $\Omega_i$ will not agree on the overlaps 
+of sectors because of the Stokes phenomenon at the irregular 
+singular point at infinity. There is further disagreement from 
+the conditions for matching to the well-defined solutions at 
+the turning points $\lambda_i$, as we now describe.
+
+For $|\delta\lambda_i|
+=|\lambda-\lambda_i|\leq \CO(\hb^{2/3-\epsilon})$
+we can expand
+\eqn\turni{
+\hb{\p \Psi\over\p\lambda}=\biggl(\CA_i+\delta\lambda_i\dot \CA_i
++\CO(\hb,(\delta\lambda_i)^2)\biggr)\Psi
+}
+and the determinant $\mu^2=\dot\mu_i^2\delta\lambda_i$. 
+Defining a variable $\eta=\hb^{-2/3}\dot\mu_i^{2/3}\delta\lambda_i$
+and $\tau=\hb^{1/3}\dot\mu_i^{2/3}$, 
+one easily shows that the WKB solution has asymptotics
+\eqn\turnii{
+({C_i\over 2\tau})^{1/2}\eta^{-1/4}\pmatrix{1/C_i&A_i/C_i\cr
+0&1\cr}\pmatrix{\tau\eta^{1/2}&-\tau\eta^{1/2}\cr
+1&1\cr}exp\bigl[{2\sigma_3\over 3}\eta^{3/2}\bigr]
+}
+up to right-multiplication by a diagonal constant matrix.
+On the other hand, after transforming \turni\ by the first 
+matrix in \turnii\ we can obtain an exact solution in 
+terms of Airy functions:
+\eqn\airy{\Psi=\pmatrix{\tau Bi'(\eta)&\tau Ai'(\eta)\cr
+Bi(\eta)&Ai(\eta)\cr} }
+We can now use the standard asymptotic expansion of these 
+functions 
+\ref\abram{M. Abramowitz and I. Stegun, {\it Handbook of 
+Mathematical Functions}, Dover}:
+\eqn\asympariy{
+\eqalign{
+Ai(\eta) \sim & {1\over 2\sqrt{\pi}}\eta^{-1/4}e^{-2 \eta^{3/2}/3}
+(1+\CO(\eta^{-2/3}))\qquad\qquad -\pi< arg \eta< \pi\cr
+%Ai'(\eta)\sim {-1\over 2\sqrt{\pi}}\eta^{1/4}e^{-2 \eta^{3/2}/3}&
+%(1+\CO(\eta^{-2/3}))\qquad\qquad -\pi< arg \eta< \pi\cr
+Bi(\eta)\sim &{1\over \sqrt{\pi}}\eta^{-1/4}e^{2 \eta^{3/2}/3}
+(1+\CO(\eta^{-2/3}))\qquad\qquad -\pi/3< arg \eta< \pi/3\cr
+%Bi'(\eta)\sim {1\over \sqrt{\pi}}\eta^{1/4}e^{2 \eta^{3/2}/3}&
+%(1+\CO(\eta^{-2/3}))\qquad\qquad -\pi/3< arg \eta< \pi/3\cr
+Bi(\eta)\sim &{1\over \sqrt{\pi}}\eta^{-1/4}
+\bigl[e^{2 \eta^{3/2}/3}+{i\over 2}e^{-2 \eta^{3/2}/3}\bigr]
+\qquad\qquad -\pi/3< arg \eta< \pi\cr
+%Bi'(\eta)\sim {1\over \sqrt{\pi}}\eta^{1/4}
+%\bigl[e^{2 \eta^{3/2}/3}-{i\over 2}e^{-2 \eta^{3/2}/3}\bigr]&
+%\qquad\qquad -\pi/3< arg \eta< \pi\cr\cr
+Bi(\eta)\sim &{1\over \sqrt{\pi}}\eta^{-1/4}
+\bigl[e^{2 \eta^{3/2}/3}-{i\over 2}e^{-2 \eta^{3/2}/3}\bigr]
+\qquad\qquad -\pi< arg \eta< \pi/3\cr
+%Bi'(\eta)\sim {1\over \sqrt{\pi}}\eta^{1/4}
+%\bigl[e^{2 \eta^{3/2}/3}+{i\over 2}e^{-2 \eta^{3/2}/3}\bigr]&
+%\qquad\qquad -\pi< arg \eta< \pi/3\cr\cr
+} }
+We see that to match onto a well-defined framing near
+$\lambda_i$ the standard solutions $\Psi_i$ must
+be multiplied by the nontrivial lower-diagonal matrices
+$$\pmatrix{1&0\cr
+\pm i/2 & 1\cr}\qquad . $$
+Thus, well defined framings lead to fragmented bits of 
+Riemann surface, and well-defined Riemann surfaces lead to 
+discontinuous jumps in framings. 
+This completes the justification of the picture mentioned 
+above.
+
+We expect that the above discussion can be generalized easily
+to Riemann surfaces which are $n$-fold coverings of the plane.
+In this case the Schr\"odinger operator is replaced by 
+the operator $L=D^n+\cdots$. One can still define the notion of a
+BA framing of an $n$-plane bundle on the $\lambda$ line and so on. 
+We also remark that in the above analysis we have occasionally 
+made use of the fact that the point at infinity is a Weierstrass 
+point, but this is probably not essential.
+
+
+\bigskip
+{\it Quantum Moduli Space}
+ 
+As $\hb\to 0$, the parameters $T^{(0)}_i$ 
+define the moduli of the classical surface $\Sigma_0$. 
+On the other hand, if we allow the $T_i$ to vary: 
+$T_i=T_i^{(0)}+\hb T_i^{(1)} +\cdots$ then the $T_i^{(1)}$ 
+become coordinates on the Jacobian of $\Sigma_0$,
+as we can see from \linsys\ as well as from \asympfi\ .
+Thus, we propose that one should regard the space of 
+$(x,T_j)$ as a generalization of the universal Jacobian 
+over moduli space. This suggests several interesting questions. 
+For example, is there an analog of the modular group?
+Can we study limits like $T\to \infty$ using known 
+results about the boundary of the moduli space of curves?
+And so forth.
+
+Finally, note that another approach to our problem would be
+to use noncommutative geometry in the sense of Connes. One
+might begin with the Heisenberg algebra $[P,L]=\hb$ and 
+look for interesting ideals which would allow us to define 
+the ``ring of functions on the noncommutative Riemann surface,''
+and so on. It would be interesting to see if such ideas are
+related to the above pictures.
+
+
+\newsec{Further Speculations}
+
+Since all known matrix models are described by nonlinear
+equations associated to isomonodromic deformation one might 
+wonder if this is not a general feature. Possibly 2D 
+gravity should be formulated as a conformal field theory 
+(on auxiliary riemann surfaces!) in the presence of a new
+class of operators. This raises many 
+questions. The Riemann surfaces discussed in this 
+paper have no obvious connection to the world sheet of 
+the 2D gravity model. The latter emerges from the 
+Feynman diagram expansion of a theory of a Hermitian 
+matix $\phi_{ij}$. The surfaces in this 
+paper are coordinatized by the spectral parameter $\lambda$,
+interpreted in terms of the eigenvalues of $\phi_{ij}$. 
+Nevertheless,
+it is difficult to believe that the surfaces are unrelated.
+Indeed, it was suggested by A. Morozov and S. Shatashvili 
+that 2D gravity should be thought of in terms of a 
+nonconformal field theory at genus zero, the effects of 
+the sum over topologies effectively spoiling the conformal 
+invariance 
+\ref\samson{A. Morozov and S. Shatashvili, private communications,
+Nov. 1989, and Dec. 1989}. We have arrived at a picture
+strikingly similar to their guess.
+Possibly the auxiliary surface is, in some sense, a
+picture of an effective world-sheet, with the star
+operator reproducing the effect of a ``condensation of 
+handles.'' (This would raise the spectre of whether 
+we should consider the role of
+nontrivial topologies of the auxiliary Riemann surface itself.)
+Continuing this line of thought, 
+it is conceivable that extending 
+the above picture to conformal field theories other 
+that those of free fermions might correspond to 
+exotic types of gravity, or perhaps to $c>1$ theories.
+For example we can consider star operators in WZW theories. 
+As we saw, the isomonodromic deformation equations can 
+be interpreted as KZ equations, but these equations were
+at level $1$. It would be interesting to write down 
+and study the higher level equations. The
+free field realizations of WZW might facilitate the 
+construction of star-like operators in these models.
+
+It would also be very interesting to understand if 
+there is a connection between the above ideas and 
+the topological field theory approach of 
+\witt\DiWit\distler\newvsq .
+In the latter approach the topological origin of 
+KdV flows has proven elusive. In the present 
+approach they are interpreted as flows defined by 
+Knizhnik-Zamalodchikov-type equations on a certain 
+moduli space. Perhaps some kind of asymptotic expansion 
+of a star operator in negative powers of $x$ will
+provide the missing link between these formalisms.
+
+Be all this as it may, our work has implications 
+beyond the framework of 2D gravity.
+We have been led to a generalization of modular geometry.
+Firstly, one should include the notion of star operators
+in general conformal field theories. Thus, the basic 
+monodromy data of such a theory will include not only 
+matrices representing the braid group and operator 
+product expansions (``$B$ and $F$ matrices'')  but also 
+Stokes matrices occuring in more exotic exchange algebras 
+than have been hitherto examined. We might therefore 
+expect that these monodromy data will define some generalization 
+of a modular tensor category
+\ref\ms{G. Moore and N. Seiberg, ``Lectures on RCFT,'' preprint
+RU-89-32; YCTP-P13-89}.
+Secondly, as we have described, the introduction of star 
+operators leads to a notion of quantum Riemann surface and 
+quantum moduli space. Just as there are analytical and 
+topological aspects to modular geometry 
+(the latter corresponding to the the modular functor point of view), 
+one might expect that the analytic aspects associated to 
+this generalized MTC would be related to some geometry of 
+quantum moduli space. The geometric category representing 
+this extended notion of a MTC might well be useful 
+in understanding the analog of modular
+geometry for integrable but nonconformal models.
+From what we have managed to glean of the geometrical meaning 
+of this extension we may expect to find a rich but
+peculiar combination of algebraic and analytic geometry.
+
+
+\bigskip
+\centerline{\bf Acknowledgements}
+
+
+\appendix{A}{An Application: The BMP Solutions}
+
+
+\appendix{B}{Twistor Correspondence}
+
+Mason and Sparling 
+\ref\mas{Mason and Sparling, ``Nonlinear Schrodinger and 
+Korteweg-De Vries are reductions of self-dual Yang-Mills,'' 
+Phys. Lett. {\bf 137A}(1989)29.}
+have shown that solutions to the KdV 
+equations are in one-one correspondence with holomorphic 
+vector bundles over minitwistor space ($=T\IP^1$) which 
+posess an extra symmetry. Since solutions to the string
+equations define, in particular, solutions to the KdV equations 
+we may apply the observation of 
+\mas\ to associate corresponding holomorphic vector bundles over 
+$T\IP^1$. 
+%The question is: what distinguishes these solutions of 
+%the KdV geometrically?    
+%
+%As shown in \mas\ the holomorphic vector bundle can 
+%be characterized by defining its space of sections as follows.
+
+Consider the equations:
+\eqn\linsysi{\eqalign{
+%\IP \Psi(\lambda,x,T_j)&=0\cr
+\CL \Psi(\lambda,x,T_1)&=0\cr
+(-2{\p\over \p T_1}+\CP_1)\Psi(\lambda,x,T_j)&=0\cr} }
+which are compatible when $u(x,T_1)$ satisfies the KdV equation.
+By taking a linear combination of these conditions and 
+changing the framing by 
+$$\Psi\to\pmatrix{1&0\cr
+                  H&1\cr}\Psi$$
+where $H'=u$ we obtain the linear system which can be 
+regarded as the twice dimensionally-reduced system 
+equivalent to the SDYM's equations in a space of signature
+$(2,2)$ \mas .  This is similar to the relation to inverse 
+scattering theory pointed out in 
+\ref\Belav{A. Belavin and V. Zakharov, ``Yang-Mills Equations as 
+Inverse Scattering Problem,'' 
+Phys. Lett. {\bf 73B}(1978)53}.
+Using standard twistor methods these can be regarded as 
+defining a holomorphic structure on a two-dimensional 
+complex vector bundle over $T\IP^1$. 
+(In brief, pulling back the connection to 
+$\IP^3(\IC)-\IP(\IC)$ via the standard twistor fibration,
+the self-duality condition becomes an integrability 
+condition for a holomorphic 2-plane bundle, and dividing out
+by the lift of the symmetry $\IR^4\to\IR^4/\IR=\IR^3$ brings
+us down to minitwistor space $T\IP^1$. See 
+\ref\atiyah{M.F. Atiyah, {\it Collected Works}, vol. 5, Clarendon 
+Press, Oxford, 1988}
+for details.) In this paper a crucial role was played by the 
+``equation in $\lambda$,'' $\IP\Psi=0$. Such equations arise 
+naturally in the twistor construction - essentially they embody
+the statement that the bundle on twistor space is the pullback of 
+a bundle on spacetime.
+
+%A very direct construction of solutions to the bogomolnyi 
+%equations is by solving the scattering problem along the 
+%line. describe mason-sparling's extra symmetry, fixes sphere 
+%but acts nontrivially in fibers. 
+%
+%
+%Thus the Baker framing $\Psi$ can also be 
+%regarded as a framing for a holomorphic vector bundle on 
+%($T\IP^1$ ?) The key point is that $\Psi$ also satisfies 
+%a differential equation in $\lambda$. SHOW: This equation 
+%effectively expresses the fact that a unitary bundle has been 
+%pulled back from spacetime up to twistor space.
+%
+%%is x on the tangent space?-no, x is not a coordinate in minitwistor
+%space. complexified x is coordinate on the space of sections of 
+%%tangent bundle
+%
+%what distinguishes geometrically the stationary solutions of KdV?
+%(these can also be written as isomonodromy!)
+%role of tau function in twistor theory?
+\vfill\eject
+\bigskip
+\centerline{\bf Figure Captions}
+
+\noindent
+Fig. 1. A schematic drawing of the Riemann surface and the Krichever
+line bundle defined by 
+the BA framing, in the neighborhood of a branch point.
+\bigskip
+\noindent
+Fig. 2. A schematic drawing of a framing defined by the equation in 
+$\hb$ in the neighborhood of a branch point. The oscillations are along 
+the directions in $V_\lambda$ defined by the framing in fig. 1. 
+\bigskip
+\noindent
+Fig. 3. An example of conjugate Stokes lines in the case where 
+the branch points are all real. In this case the surface has genus
+two. 
+\bigskip
+\noindent
+Fig. 4. A schematic view of a choice of contours for the star operator.
+\bigskip
+\noindent
+Fig. 5. A simple Fermi sea. 
+\bigskip
+\noindent
+Fig. 6. Three large regions abutting infinity and a turning 
+point $\xi_i$. 
+\bigskip
+\noindent
+Fig. 7. Stokes lines for the case $l=1$, $u\sim +(-x)^{1/2}$
+for $x\to-\infty$. We have also indicated the Stokes parameter 
+associated with each region.
+\bigskip
+\noindent
+Fig. 8. Stokes lines for $l=1$, $u\sim -(-x)^{1/2}$, $x\to-\infty$.
+\bigskip
+\noindent
+Fig. 9. Stokes lines for $l=2$, $u\sim x^{1/3}$, $x\to+\infty$.
+\bigskip
+\noindent
+Fig. 10. Stokes lines for $l=2$, $u\sim x^{1/3}$, $x\to-\infty$.
+\bigskip
+\noindent
+Fig. 11. Stokes lines for $l=4$, $u\sim x^{1/5}$, $x\to+\infty$.
+\bigskip
+\noindent
+Fig. 12. Stokes lines for $l=4$, $u\sim x^{1/5}$, $x\to-\infty$.
+
+
+
+\listrefs
+\bye
+
+
+
+

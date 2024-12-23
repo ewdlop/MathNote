@@ -1,0 +1,1916 @@
+
+
+ 
+\input harvmac.tex
+\def\CD {{\cal D}}
+\def\CF {{\cal F}}
+\def\CP {{\cal P }}
+\def\CL {{\cal L}}
+\def\CV {{\cal V}}
+\def\CO {{\cal O}}
+\def\p {\partial}
+\def\CS {{\cal S}}
+\def\hb {\hbar}
+\def\inbar{\,\vrule height1.5ex width.4pt depth0pt}
+\def\IB{\relax{\rm I\kern-.18em B}}
+\def\IC{\relax\hbox{$\inbar\kern-.3em{\rm C}$}}
+\def\IP{\relax{\rm I\kern-.18em P}}
+\def\IR{\relax{\rm I\kern-.18em R}}
+ 
+ 
+\Title{\vbox{\baselineskip12pt\hbox{YCTP-P8-91}\hbox{RU-91-12}}}
+{\vbox{\centerline{Double-Scaled Field Theory at $c=1$}}}
+ 
+\centerline{Gregory Moore}
+\centerline{Department of Physics and Astronomy}
+\centerline{Rutgers University}
+\centerline{Piscataway, NJ 08855-0849}
+\centerline{and}
+\centerline{Department of Physics\footnote{*}{Permanent address}}
+\centerline{Yale University}
+\centerline{New Haven, CT 06511-8167}
+\bigskip
+\noindent
+
+We investigate the double-scaled free fermion theory of the 
+$c=1$ matrix model. We compute correlation functions of the 
+eigenvalue density field and compare with the predictions of 
+a relativistic boson theory. The $c=1$ theory behaves as a 
+relativistic theory at long distances, but has softer behavior
+at short distances. The soft short distance behavior is closely
+related to the breakdown of the topological expansion
+at high energies. We also compute macroscopic loop amplitudes 
+at $c=1$, finding an integral representation for $n$-
+loop amplitudes to all orders of perturbation theory. We evaluate
+the integrals explicitly for two, three, and four macroscopic 
+loops. The small loop length asymptotic expansion then 
+gives correlation functions of local operators in the theory.
+The two-macroscopic-loop formula gives information on the spectrum
+and wavefunctions in the theory. The three and four loop 
+amplitudes give scattering amplitudes for tachyon operators 
+to all orders of 
+perturbation theory. Again, the topological expansion 
+breaks down at high energies. We compare our amplitudes with 
+predictions from the liouville theory.
+
+\Date{Feb. 20, 1991}
+
+\newsec{Introduction}
+
+The discovery of the double scaling limit of matrix models 
+has opened the way for a study of nonperturbative effects in 
+subcritical string theory
+\ref\brkz{E.Br\'ezin and V. Kazakov, Phys. Lett. {\bf 236B}(1990)144.}
+\ref\dgsh{M.R. Douglas and S. Shenker, Nucl. Phys. {\bf B335}(1990)
+635.}
+\ref\grmgdl{D. Gross and A. Migdal, Phys. Rev. Lett. {\bf 64}(1990)127}\ .
+The exact solvability of the 
+the $c<1$ models is closely connected to the equivalence of
+the relevant matrix models to theories of free fermions
+\ref\bpiz{E. Br\'ezin, C. Itzkyson, G. Parisi, and J.-B. Zuber,
+Comm. Math. Phys. {\bf 59}(1978)35.}
+\ref\bdss{T. Banks, M.R. Douglas, N. Seiberg, and S. Shenker, 
+Phys. Lett. {\bf 238B}(1990)279} .
+In the $c<1$ models the 
+free fermions provide an efficient calculational tool
+but their relevance goes much
+deeper. First, the connection of the $c<1$ models to integrable systems 
+established in \brkz\dgsh\grmgdl\bdss\
+\ref\mike{M.R. Douglas, Phys. Lett. {\bf 238B}(1990)176}
+may be understood very naturally in terms of the theory of
+the double-scaled free fermion field
+\ref\geom{G. Moore, Comm. Math. Phys. {\bf 133}(1990)261;
+``Matrix Models of 2D 
+Gravity and Isomonodromic Deformation,'' to appear in the proceedings
+of the 1990 Yukawa International Seminar, and in the proceedings
+of the Carg\'ese Workshop on Random Surfaces}\ . Second, 
+there are many indications that the double-scaled 
+free fermion field theory will play a role in formulating a natural 
+spacetime interpretation of the $c<1$ models.
+The 
+fermionic field theory for the $c=1$ matrix model has been explored to some 
+extent in 
+\ref\senwad{A.M. Sengupta and S.R. Wadia, ``Excitations and interactions
+in d=1 string theory,'' Tata preprint 90-33, July 1990. To 
+appear Int. Jour. of Mod. Phys. A.}
+\ref\gk{D.J. Gross and I.R. Klebanov, ``Fermionic String Field 
+Theory of c=1 Two-Dimensional Quantum Gravity,'' PUPT-1198}\ ,
+but these treatments have made important approximations
+limiting their applicability to genus zero physics. 
+Consequently, the full potential 
+of the fermionic formulation has not yet been exploited in 
+the study of $c=1$ string physics. 
+
+In this paper we continue the study of the $c=1$ 
+free fermions in the double-scaling limit.
+In section two we derive the 
+theory and comment on the relation of the fermi field 
+to a relativistic fermi field. In section three we compute
+correlation functions of the eigenvalue density field, and 
+compare with the results of the Das-Jevicki formulation
+\ref\dsjv{S.R. Das and A. Jevicki, ``String field theory and physical 
+interpretation of D=1 strings,'' Brown preprint BROWN-HET-750}\ 
+of $c=1$. In section four we compute macroscopic loop amplitudes 
+and use these to define scaling operators. From explicit 
+expressions we obtain information about
+ the spectrum of the theory, the  
+wavefunctions for operators in the theory, and some 
+scattering amplitudes.
+For other approaches to $c=1$ scattering amplitudes see
+\nref\kostov{I. Kostov, Phys. Lett. {\bf B215}(1988)499}
+\nref\bmh{S. Ben-Menahem, ``Two and three-point functions in 
+the $d=1$ matrix model,'' SLAC-PUB-5262}
+\nref\grkltwpt{D.J. Gross, I.R. Klebanov, and M.J. Newman,
+``The two-point correlation function of the one-dimensional
+matrix model,'' PUPT-1192}
+\nref\JOE{J. Polchinski, ``Critical Behavior of Random Surfaces in 
+One Dimension,'' UTTG-15-90}\ 
+\nref\kutasov{D. Kutasov and P. Di Francesco, ``Correlation Functions
+in 2D String Theory,'' PUPT-1237, to appear. We thank D. Kutasov for 
+communicating the results of this paper prior to publication.}
+\refs{\kostov{--}\kutasov}\ .
+The conclusion summarizes some of the 
+physical lessons which may be learned from our computations.
+
+
+\newsec{The double-scaled field theory at $c=1$.}
+ 
+\subsec{Derivation}
+
+We begin with the standard matrix model integral at finite
+$N$
+\ref\kazrv{For a recent review see V. Kazakov, ``Bosonic 
+strings and string field theories in one dimensional target
+space,'' to appear in the proceedings of the Carg\'ese workshop
+on random surfaces and quantum gravity.}\ .
+For definiteness we
+choose a potential $V(\lambda)=\half(A^2-\lambda^2)$ with 
+infinite walls at $\lambda=\pm A$. Dependence on $A$ 
+reflects dependence on a nonuniversal cutoff. We will see
+below that all dependence on $A$ disappears in the 
+double scaling limit. The schr\"odinger equation
+is
+\eqn\scrho{
+\biggl({1\over 2\beta^2}{d^2\over d\lambda^2}-V(\lambda)+
+\varepsilon\biggr)\psi=0}
+with boundary conditions $\psi(\varepsilon,\pm A)=0$,
+leading to a discrete spectrum $\varepsilon_i(\beta,A)$,
+$i=1,\dots$.
+It follows that the wavefunctions are expressed in 
+terms of parabolic cylinder functions (see appendix A for 
+our conventions) as
+\eqn\qmwvf{\eqalign{
+\psi^+_i&=N^+\biggl(W(\nu_i,\tilde\lambda)+W(\nu_i,-\tilde\lambda)\biggr)\cr
+\psi^-_i&=N^-\biggl(W(\nu_i,\tilde\lambda)-W(\nu_i,-\tilde\lambda)\biggr)\cr}
+}
+where $\nu_i=\beta(\half A^2-\varepsilon_i)$ 
+and $\tilde\lambda=\sqrt{2\beta}
+\lambda$. In the quasiclassical limit $\beta\to\infty$ the 
+normalization factors may be evaluated using the asymptotic
+expansions of $W$ to give:
+\eqn\normfc{
+(N^+)^2=(N^-)^2={1\over 2\sqrt{2(1+e^{2\pi \nu})}\beta^{-1/2}
+log\sqrt{2\beta} A+\CO(\beta^{-1/2})}
+}
+
+From WKB estimates we find that the fermi level for $N$ fermions is 
+\eqn\fermlevel{
+\pi{N\over \beta}=\half A\sqrt{2\varepsilon_N}
+-\half(A^2-2\varepsilon_N)
+log\biggl((A+\sqrt{2\varepsilon_N})\sqrt{A^2-2\varepsilon_N}\biggr)}
+while the density of states at the fermi level is 
+$\rho(\varepsilon)={1\over \pi}\beta log\sqrt{2\beta}A$. 
+It follows that the $c=1$ double-scaling limit of
+\ref\brkzzm{E. Br\'ezin, V. A. Kazakov, Al. B. Zamalodchikov, 
+Nucl. Phys. {\bf B333}(1990)673}
+\ref\ginsparg{P. Ginsparg and J. Zinn-Justin, Phys. Lett. {\bf 240B}
+(1990)333}
+\ref\grmil{D.J. Gross and N. Miljkovi\'c, Phys. Lett. {\bf B238}(1990)217}
+\ref\parisi{G. Parisi, Phys. Lett. {\bf B238}(1990)209}
+\ref\grkli{D.J. Gross and I.R. Klebanov, Nucl. Phys. {\bf B344}(1990)475}\ 
+is obtained by taking $N,\beta\to \infty$, 
+with $N/\beta\to A^2/(2\pi)$ such that the cosmological constant
+\eqn\dscl{
+\mu\equiv\beta\bigl(\half A^2-\varepsilon_N(\beta,A)\bigr)
+}
+is held fixed.
+
+Correlation functions in the model at finite $N$ may be computed
+in a free fermion formalism much as in 
+\bdss .
+The fermion field is simply
+\eqn\finfer{
+\hat \Psi(\lambda,x)=\sum_{i=1}^\infty a_\epsilon(\varepsilon_i)
+\psi^\epsilon(\varepsilon_i,\lambda)e^{-i\varepsilon_i x}
+} 
+Here $\epsilon=\pm$ refers to the parity of the wavefunction;
+we always sum over parity states when the $\epsilon$ index
+is repeated. The $a$'s anticommute and satisfy
+$\{a_\epsilon(\varepsilon_i),a_{\epsilon'}^\dagger(\varepsilon_j)\}
+=\delta_{ij}\delta_{\epsilon,\epsilon'}$. 
+We may take the double scaling limit by defining
+\eqn\sclfer{
+\hat\Psi_\beta(\lambda,x)\equiv {1\over (2\beta)^{1/4}}
+\hat\Psi
+\bigl({\lambda\over\sqrt{2\beta}},\beta x\bigr)e^{\half i A^2 \beta x}
+}
+In the double-scaling limit 
+%
+%$\hat\Psi_\beta(\lambda,x)\to
+%\hat\psi(\lambda,x)$, 
+%
+the discrete energy levels become continuous so the 
+sum in \finfer\ becomes an integral $\int d\nu \rho(\nu) \cdots$ 
+with $\rho(\nu)\sim {1\over \pi}log\sqrt{2\beta}A$ near the 
+fermi level.
+The oscillators $a_\epsilon(\varepsilon_i)$ are related to 
+continuum oscillators satisfying 
+$\{ a_{\epsilon}^\dagger(\nu),a_{\epsilon'}(\nu')\}=\delta_{\epsilon,
+\epsilon'}\delta(\nu-\nu')$ by the rescaling:
+\eqn\contosc{
+a_\epsilon(\varepsilon_i)\rightarrow {a_\epsilon(\nu)\over
+\bigl({1\over \pi}log\sqrt{2\beta}A\bigr)^{1/2} }
+\qquad .}
+Thus, taking into account \normfc\ the {\it operator}
+$\hat\Psi_\beta(\lambda,x)$ has a limit as $\beta\to\infty$
+for fixed $\lambda,x$
+\eqn\field{
+\hat\Psi_\beta(\lambda,x)\to \hat\psi(\lambda,x)=\int d\nu e^{i\nu x} 
+a_{\epsilon}(\nu)\psi^\epsilon(\nu,\lambda) }
+where $\psi^\epsilon(\nu,x)$ are normalized as in appendix A.
+
+Thus we may compute quantities in the double scaling limit
+directly from the fermionic field theory defined by the 
+action
+\eqn\action{S=\int_{-\infty}^\infty dx d\lambda
+ \hat\psi^\dagger\biggl( i{d\over dx}+{d^2\over d\lambda^2}
++{\lambda^2\over 4}\biggr)\hat\psi}
+The infinitely negative energies of the upside-down oscillator are
+filled by the Fermi sea, i.e., the vacuum is defined by
+\eqn\vac{\eqalign{
+a_{\epsilon}(\nu)|\mu\rangle&=0\qquad \nu<\mu\cr
+a_{\epsilon}^\dagger(\nu)|\mu\rangle&=0\qquad \nu>\mu\cr}
+}
+and illustrated in \fig\fermsea{The fermi sea for 
+the upside down oscillator}\ ,
+where $\mu$ is the cosmological constant.
+When we compute physical quantities below we will often 
+be interested in their topological expansion to obtain 
+the results which should be reproduced by string perturbation
+theory. We can re-introduce the loop counting parameter $\kappa^2$
+by the substitutions $\lambda\to\kappa^{-1/2}\lambda$ 
+and $\mu\to\kappa^{-1}\mu$. It is worth emphasizing that the 
+above theory provides a nonperturbative definition of the 
+$c=1$ model.
+\foot{This has also recently been emphasized in \kazrv\ .}
+Indeed, we will discuss some nonperturbative effects 
+in sections three and four.
+
+We will see below that this field theory reproduces many of the 
+known results for $c=1$. For example, one thing which follows immediately 
+from the identity (A.12) of appendix A is that we can compute
+the derivative of the density of states as
+\eqn\dos{\eqalign{
+-Tr\delta'(H-\mu)&\equiv Im{1\over\pi}\int d\lambda {\p
+\over \p\mu} R(\mu-i\epsilon;\lambda,\lambda)\cr
+&={1\over 2\pi}Im\int_0^{\infty}ds e^{-i\mu s}{s\over sh~s/2}\cr
+&={\p\over\p\mu}\biggl[{1\over 2\pi }Re~\Psi(\half+i\mu)\biggr]\cr}
+}
+reproducing the well-known answer for the partition function. 
+
+\subsec{Propagators}
+
+Correlation functions in the matrix model are given by the 
+analytic continuation of correlators in the fermi field theory 
+from minkowski space to euclidean space (in $x$). It is useful to 
+have an operator formalism for computation directly in euclidean 
+space. Thus after computing a correlation function from wick's 
+theorem, using the minkowski space propagator, which is a 
+sum of ``hole'' and ``particle'' propagators:
+\eqn\propmink{\eqalign{
+\langle\mu|
+T\bigl(\hat\psi^\dagger(x_1,\lambda_1)\hat\psi(x_2,\lambda_2)
+\bigr)|\mu\rangle
+&=\theta(\Delta x)S_h(1,2)-\theta(-\Delta x)S_p(2,1)\cr
+=\int d\nu [\theta(\nu-\mu)\theta(\Delta x)&
+-\theta(\mu-\nu)\theta(-\Delta x)] e^{-i\nu \Delta x}
+\psi^\epsilon(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\cr}
+}
+where $\Delta x\equiv x_1-x_2$, 
+we analytically continue $\Delta x\to -i \Delta x$, so we can 
+equivalently work with  ``Euclidean time ordered'' correlation 
+functions with propagator:
+\eqn\propeuc{\eqalign{
+S^E(x_1,\lambda_1;x_2,\lambda_2)=&
+\int d\nu [\theta(\nu-\mu)\theta(\Delta x)
+-\theta(\mu-\nu)\theta(-\Delta x)]e^{-\nu(\Delta x)}
+\psi^\epsilon(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\cr
+&=e^{-\mu\Delta x}\int d\nu\int {d~p\over 2\pi}
+e^{- i p\Delta x}{i\over p+i(\nu-\mu)}
+\psi^\epsilon(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\cr
+=i e^{-\mu\Delta x} \int {d~p\over 2\pi}
+e^{- i p\Delta x}&
+\int_0^{sgn(p)\cdot\infty} ds 
+{e^{-sp+i\mu s}\over (-4\pi i sh s)^{1/2}}
+exp\bigl(-{i\over 4}({\lambda_1^2+\lambda_2^2\over
+th~s}-2{\lambda_1\lambda_2\over sh~s})\bigr)
+\cr}
+}
+where we have again used eq. A.12.
+
+\subsec{Simple variant theories}
+
+The above theory can be modified simply by generalizing to 
+the case in which the infinite walls are at $\lambda=B,A$.
+Unless $B$ or $A$ is in the scaling region near $\lambda=0$
+choosing $B\not=-A$ has no effect on the universal physics. 
+On the other hand, if $B=\CO(\beta^{-1/2})$, the physics 
+can be modified. The simplest example of this is to take
+$B=0$. In this case we have wavefunctions $\psi_i^-$ and 
+the double-scaled propagator is modified to 
+\eqn\newprop{
+S(\lambda_1,\lambda_2;\Delta x)\to\half\biggl[
+S(\lambda_1,\lambda_2;\Delta x)-
+S(\lambda_1,-\lambda_2;\Delta x)\biggr]
+}
+Most of the calculations below can be redone for this theory.
+  
+\subsec{Relation to relativistic fermions}
+
+One of our goals in this paper is to investigate 
+correlation functions in this theory, and the extent to which they 
+are related to correlators in a relativistic field theory. 
+Let us begin by considering the anticommutator in minkowski space.
+We have
+\eqn\anti{
+\{\hat\psi(x_1,\lambda_1),\hat\psi^\dagger(x_2,\lambda_2)\}=
+{1\over (4\pi~ i sh(\Delta x))^{1/2}}exp\biggl[{i\over
+4}\bigl({\lambda_1^2+\lambda_2^2\over th(\Delta
+x)}-2{\lambda_1\lambda_2\over sh(\Delta x)}\bigr)\biggr]
+}
+where $\Delta x\equiv x_1-x_2$. For $\Delta x\to 0$ this 
+approaches $\delta(\lambda_1-\lambda_2)$ as it should. Note, however
+that for $\lambda_1=\lambda_2$ the short distance singularity is 
+$\sim 1/(\Delta x)^{1/2}$ and differs from relativistic field theory.
+
+Similarly the minkowski propagator has the following 
+asymptotics:
+\eqn\asympprop{\eqalign{
+S^M&\sim \CO(1)\qquad\qquad\qquad \qquad\qquad\qquad\qquad \Delta x\to 0^+\cr
+&\sim -{1\over 4\pi |\Delta x|^{1/2}}\qquad\qquad\qquad\qquad\qquad\quad 
+\lambda_1=\lambda_2,\Delta x\to 0^-\cr
+&\sim \CO(1)\qquad\qquad\qquad\qquad\qquad\qquad\qquad 
+\lambda_1\not=\lambda_2,\Delta x\to 0^-\cr
+&\sim \pm i {1\over \Delta x} e^{-i\mu \Delta x}\psi(\mu,\lambda_1)
+\psi(\mu,\lambda_2)\qquad\qquad \Delta x\to \pm\infty\cr}
+}
+
+
+The different singularity structure from relativistic field 
+theory might come as a surprise to some readers. Naively one 
+might expect the following. 
+Important contributions to correlation functions come from 
+the neighborhood of the fermi level $\nu\cong \mu$. 
+Using the ``plane-wave'' linear combinations of appendix A, which 
+have the property that
+\eqn\appxi{
+\chi^\pm(\nu,\lambda)\cong \chi^\pm(\mu,\lambda)e^{\pm i (\nu-\mu)
+\tau(\lambda,\mu)}}
+where 
+\eqn\timflt{
+\tau(\lambda,\mu)\equiv \int_{2\sqrt{\mu}}^\lambda {dy\over
+\sqrt{y^2-4\mu}}=
+log\biggl({\lambda+\sqrt{\lambda^2-4\mu}\over
+2\sqrt{\mu} }\biggr)
+}
+is the ``time-of-flight'' coordinate we may be tempted to rewrite
+the fermi field \field\ as
+\eqn\nwfield{
+\hat\psi(\lambda,x)=e^{i\mu x}\chi^+(\mu,\lambda)\int d\nu e^{i(\nu-\mu)
+(\tau+x)}\alpha^+(\nu)
++
+e^{i\mu x}\chi^-(\mu,\lambda)\int d\nu e^{-i(\nu-\mu)
+(\tau-x)}\alpha^-(\nu)}
+where $\alpha$'s are linear combinations of the $a's$. 
+It thus appears that we should have a relativistic field theory 
+perhaps with small corrections.
+It is important to realize 
+that \appxi\ is only a valid approximation for $\lambda^2\gg \mu$,
+$\lambda^2\gg\nu$, and $\mu\gg |\nu-\mu|$.
+On the other hand, short distance 
+singularities always come from an integration in the region 
+$-\nu\gg |\lambda|$, that is, from energies well above
+the top of the parabola in fig. 1,  where the parabolic cylinder functions
+again behave like plane-waves, but of a different sort:
+\eqn\appxii{
+\psi^+\pm i\psi^-
+\sim {1\over (4\pi)^{1/2}|\nu|^{1/4}} e^{\pm i\sqrt{-\nu}\lambda}
+} 
+Since we have taken the double scaling limit,  all nonuniversal 
+quantities have dropped out so this $\nu\to -\infty$ 
+behavior is physical. Equivalently, energies with $\nu$ large and negative are
+still infinitesimally close to the fermi level in unscaled variables 
+and thus can affect the universal physics.
+
+It is, of course, possible to find an expansion around the relativistic
+theory which allows us to calculate corrections to low-momentum/
+long-distance physics. We may do this by using the WKB expansion of
+parabolic cylinder functions to calculate the corrections to \appxi\
+as a power series in $(\mu-\nu)^n/\lambda^m$. These correction
+terms in the wavefunction may be traded in for correction 
+terms to a relativistic lagrangian. The region of 
+validity of this expansion defines the region of validity
+of the effective theories of 
+\senwad\gk\dsjv\ . 
+
+\newsec{Correlation Functions of the Eigenvalue Density}
+
+\subsec{$n$-Point function}
+
+We derive 
+\foot{I would like to thank T. Banks for some useful 
+conversations relevant to these calculations.}
+an integral representation for 
+the $n$-point function of $\hat\psi^\dagger\hat\psi$.
+Let 
+\eqn\gfns{\eqalign{
+G(x_1,\lambda_1,\dots , x_n,\lambda_n)&\equiv
+\langle \mu| \hat\psi^\dagger\hat\psi(x_1,\lambda_1)\cdots
+\hat\psi^\dagger\hat\psi(x_n,\lambda_n)|\mu\rangle_c\cr
+G(q_1,\lambda_1,\dots q_n,\lambda_n)&\equiv \int \prod_i dx_i
+e^{i q_i x_i}
+G(x_1,\lambda_1,\dots x_n,\lambda_n)\cr}
+}
+Applying wick's theorem \gfns\ can be expressed in terms of 
+a sum of ring diagrams. 
+These are easily evaluated using 
+\propeuc\ and after fourier transforming and taking a 
+derivative with respect to $\mu$ we have 
+\eqn\nptev{\eqalign{
+{\p\over\p\mu}G(q_1,\lambda_1,\dots,q_n,\lambda_n)= i^{n+1}&
+\delta(\sum q_i)
+\sum_{\sigma\in\Sigma_n}\int_{-\infty}^{\infty} d~\xi e^{i\mu\xi} 
+\int_0^{\epsilon_1\infty} ds_1\cdots\int_0^{\epsilon_{n-1} \infty} 
+ds_{n-1}\cr
+e^{-s_1 Q^\sigma_1-\cdots-s_{n-1}Q^\sigma_{n-1}}&
+\langle\lambda_{\sigma(1)}|e^{2 i s_1 H}|\lambda_{\sigma(2)}\rangle
+\cdots
+\langle\lambda_{\sigma(n)}|e^{2 i \bigl(\xi-\sum_1^{n-1}s_i\bigr)H}
+|\lambda_{\sigma(1)}\rangle\cr}
+}
+where $Q_k^\sigma\equiv q_{\sigma(1)}+\cdots q_{\sigma(k)}$,
+$\epsilon_k=sgn[Q^\sigma_k]$ and $H=\half p^2
+-{1\over 4}\lambda^2$ so that
+\eqn\ker{
+\langle\lambda_1|e^{2 i t H}|\lambda_2\rangle
+={1\over (-4\pi i~sh~t)^{1/2}}
+e^{-{i\over 4}({\lambda_1^2+\lambda_2^2\over
+th~t}-2{\lambda_1\lambda_2\over sh~t})}
+}
+
+We can recover the result eq. 6.10 of 
+\gk\ 
+by taking the limit of \nptev\ 
+as $q_i\to 0$ with $q_i>0$ for $i=1,\dots, n-1$. All terms for which 
+$Q_k^\sigma$ change sign as $k$ runs from $1$ to $n-1$
+may be seen to cancel, and the remaining terms give:
+\eqn\zeromo{
+-{2\over\ n}Im~i^n
+\sum_{\sigma\in\Sigma_n}
+\int_0^{\infty} ds_1\cdots\int_0^{\infty} 
+ds_{n} e^{i\mu\bigl(\sum s_i\bigr)} 
+\langle\lambda_{\sigma(1)}|e^{2 i s_1 H}|\lambda_{\sigma(2)}\rangle
+\cdots
+\langle\lambda_{\sigma(n)}|e^{2 i s_n H}
+|\lambda_{\sigma(1)}\rangle }
+for the zero-momentum eigenvalue-density correlator.
+
+\subsec{One point function}
+ 
+The one-point function is simply the eigenvalue density:
+\eqn\evdens{
+\langle \rho(\lambda)\rangle=
+\langle\hat\psi^\dagger\hat\psi(\lambda,x)\rangle=
+\int_\mu^\infty d\nu ~ \psi^\epsilon(\nu,\lambda)^2}
+In the region $\lambda^2\gg 4\mu\gg 1$ we have the 
+asymptotics:
+\eqn\derevi{
+-{\p\over\p\mu}\langle
+\rho(\lambda)\rangle=\psi^\epsilon(\mu,\lambda)^2
+\sim {2\over
+\pi\sqrt{\lambda^2-4\mu}}\biggl[1-sin\bigl(
+\lambda\sqrt{\lambda^2-4\mu}-2\mu\tau(\lambda,\mu)\bigr)\biggr]
+}
+We may use a similar wkb approximation in the integrand of \evdens\ 
+for an energy range $1\ll C\ll\lambda^2-4\nu\le\lambda^2-4\mu$ for any
+$C$ to conclude that the eigenvalue distribution has a smooth 
+envelope 
+\eqn\envelope{\rho^{cl}={1\over 2\pi}\sqrt{\lambda^2-4\mu} }
+(away from $\lambda^2=4\mu$)
+on which are superposed rapid oscillations of small amplitude. 
+Higher order
+corrections to \envelope\ are easily obtained from the asymptotic
+expansions of parabolic cylinder functions. 
+We thus see that in the planar limit the ``Wigner
+distribution'' (in the sense of the rate of vanishing of the 
+distribution) holds also for $c=1$, where there are two 
+cuts with support $(-\infty,-2\mu^{1/2}]$ and
+$[2\mu^{1/2},\infty)$.
+\foot{It also follows that $c=1$ is a good place to look for 
+a physical interpretation of so-called 2-cut models. Indeed 
+the present model bears many fascinating similarities with a 
+recently discovered ``topological phase'' of the 2-cut 
+models
+\ref\crdglmr{\v C. Crnkovic, M. Douglas, and G. Moore, ``Loop 
+equations and the topological phase of multi-cut matrix models,''
+to appear.}}
+ The region $\mu\gg\lambda^2$ is therefore 
+far outside the cut. Here we can estimate the integral \evdens\
+to be (for $\lambda>0$):
+\eqn\outcut{\langle\rho\rangle\sim {e^{-\pi\mu+2\sqrt{\mu}\lambda}
+\over 2\pi(\pi\mu)^{1/4}}
+}
+Across the turning point $\lambda=\pm 2\mu^{1/2}$ the 
+eigenvalue density smoothly matches the behavior 
+\outcut\ to \envelope\ as in 
+\fig\evdens{A sketch of the eigenvalue density at $c=1$.}.
+
+\subsec{Two-point function}
+ 
+Since the eigenvalue density $\hat\psi^\dagger\hat\psi$ plays the 
+role of the bosonic field $\rho$ in \dsjv
+we would like to investigate the singularity structure of 
+the two point function and compare with the relativistic
+field theory described in 
+\dsjv\senwad
+\gk\ . The singularity structure is 
+most directly understood working in position space:
+\eqn\tptsp{\eqalign{
+\langle\rho(1)\rho(2)\rangle_c=
+&\biggl(\int_\mu^\infty e^{-\nu |\Delta x|}\psi^\epsilon
+(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\biggr)
+\biggl(\int_{-\infty}^\mu e^{\nu |\Delta x|}\psi^\epsilon
+(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\biggr)\cr
+&={e^{-{1\over 4}({\lambda_1^2+\lambda_2^2\over
+th~|\Delta x|}-2{\lambda_1\lambda_2\over sh~|\Delta x|})}
+\over (4\pi sin|\Delta x|)^{1/2}}
+\int_\mu^\infty e^{-\nu |\Delta x|}\psi^\epsilon(\nu,\lambda_1)
+\psi^\epsilon(\nu,\lambda_2)\cr
+&-\biggl(\int_\mu^\infty e^{-\nu |\Delta x|}\psi^\epsilon
+(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\biggr)
+\biggl(\int_\mu^\infty e^{\nu |\Delta x|}\psi^\epsilon
+(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)\biggr)\cr}
+}
+The integrals in the second equality make sense for
+$|\Delta x|<\pi$. 
+As $|\Delta x|\to 0$ we see that 
+\eqn\shrtpt{\eqalign{
+\langle \rho\rho\rangle_c&\sim -(S_h(\lambda_1,\lambda_2))^2\qquad
+\lambda_1\not=\lambda_2\cr
+\langle \rho\rho\rangle_c
+&\sim {1\over |\Delta x|^{1/2}} \langle\rho(\lambda)\rangle \qquad
+\lambda_1=\lambda_2\cr}
+}
+
+For the long-distance behavior we estimate the integrals by 
+expanding the parabolic cylinder functions in powers of $(\nu-\mu)$
+to find
+\eqn\esti{\eqalign{
+\int_\mu^\infty 
+e^{-\nu |\Delta x|}
+\psi^\epsilon(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)
+&={e^{-\mu|\Delta x|}\over |\Delta x|}\biggl[
+\psi^\epsilon(\mu,\lambda_1)\psi^\epsilon(\mu,\lambda_2)+\CO(1/|\Delta
+x|)\biggr]\cr
+\int_{-\infty}^\mu
+e^{\nu |\Delta x|}
+\psi^\epsilon(\nu,\lambda_1)\psi^\epsilon(\nu,\lambda_2)
+&={e^{\mu|\Delta x|}\over |\Delta x|}\biggl[
+\psi^\epsilon(\mu,\lambda_1)\psi^\epsilon(\mu,\lambda_2)+\CO(1/|\Delta
+x|)\biggr]\cr}
+}
+so that we have the asymptotics for $|\Delta x|\to \infty$:
+\eqn\lgtpt{
+\langle \rho\rho\rangle_c\sim{1\over |\Delta x|^2}\biggl(
+\psi^\epsilon(\mu,\lambda_1)\psi^\epsilon(\mu,\lambda_2)
+\biggr)^2+\CO(1/|\Delta x|^4)
+}
+
+In \dsjv\senwad\gk\ it was proposed that the genus zero correlators
+of the eigenvalue density would be identicle to that of a free boson.
+Taking the continuum limit of the expressions in \senwad\gk\ for 
+example we obtain the two-point function:
+\eqn\relbs{
+\langle \rho\rho\rangle_c=-{\p \tau_1\over\p\lambda}
+{\p \tau_2\over\p\lambda}
+{1\over 4\pi}\p_{\tau_1}\p_{\tau_2}
+log\biggl({(\Delta x)^2 + (\tau_1-\tau_2)^2\over (\Delta x)^2+
+(\tau_1+\tau_2)^2}\biggr)
+}
+which behaves like $1/(\Delta x)^2$ at large and small $\Delta x$. 
+
+Taking into account the wkb estimate of the parabolic cylinder 
+functions we see from \lgtpt\ that \relbs\ agrees with the exact formula 
+in the region $\lambda^2\gg\mu,|\Delta x|^2\to \infty$. 
+The deviation of \relbs\ from the exact result in the short
+distance region is due, technically, to the origin of the 
+short distance singularities in the region $\nu\to-\infty$
+as explained in section 2.4.
+
+The deviation from relativistic behavior has an 
+important consequence. 
+Physically, there is a crossover
+in the behavior due to a breakdown in the genus expansion
+\foot{Conversations with T. Banks and S. Shenker have been very helpful
+in clarifying these points.}. 
+This is seen most clearly from \nptev\ for the case
+$n=2$, which may be expressed in terms of the resolvent
+$R(\zeta; \lambda_1,\lambda_2)$ of the Schr\"odinger 
+operator with potential $u=-\lambda^2/4$ :
+\eqn\twopt{
+{\partial\over\partial\mu} G= \biggl(\psi^\epsilon(\mu,\lambda_1)
+\psi^\epsilon(\mu,\lambda_2)\biggr)\biggl[
+R(\zeta=\mu+i|p|;\lambda_1,\lambda_2)
++R(\zeta=\mu-i|p|;\lambda_1,\lambda_2)\biggr]}
+On the diagonal we may use the asymptotic expansion of 
+\ref\gelfdick{I.M. Gelfand and L.A. Dickii, Russian Math Surveys. 
+{\bf 30}(1975)77.}\ 
+(with potential $u=-\lambda^2/4$) to obtain 
+\eqn\expres{\psi^\epsilon(\mu,\lambda)^2\sum_{n=0}^\infty
+\biggl[{R_n[u]\over(-\mu+i|p|)^{n+1/2}}+
+{R_n[u]\over(-\mu-i|p|)^{n+1/2}}\biggr]
+}
+so that the asymptotic expansion in $1/\mu$, i.e., the 
+genus expansion, breaks down for 
+large $p$.
+\foot{After the this work was completed we learned that
+G. Mandal, A. Sengupta and S. Wadia have obtained related results
+\ref\wadsem{S. Wadia, Seminar at Rutgers University.}\ .}
+The perturbative regime 
+has a fermi level well below the tip of the potential 
+$u=-\lambda^2/4$. As we 
+increase $|p|$ we probe states at higher energies above the 
+fermi sea. At $|p|\sim \mu$ there is a qualitative change in the 
+nature of the wavefunctions, and a qualitative change in the 
+physics.
+
+\subsec{Comparison with Collective Field Theory}
+
+In some very interesting papers 
+\dsjv\ 
+\ref\jvrv{A. Jevicki, ``Matrix models and field theory,'' BROWN-HET-771}
+\ref\jvii{A. Jevicki, ``Collective field theory and schwinger-dyson 
+equations in matrix models,'' BROWN-HET-777}\ 
+an attempt has been made to use the matrix model to derive a 
+field theory for the eigenvalue-distribution field $\rho(\lambda,t)$.
+In particular, the classical solution of the lagrangian of \dsjv\ is
+\envelope\ . Comparing with the exact eigenvalue distribution we 
+see that the field theory of \dsjv\ omits the oscillatory terms 
+in the eigenvalue distribution. One might be tempted to call such 
+terms ``nonperturbative'' since they involve an exponential 
+$\sim e^{i \lambda^2/\kappa}$ but one must be careful about 
+such terminology, since these terms are also $\CO(1)$. Indeed 
+in ordinary quantum mechanics such terms in WKB wavefunctions 
+can contribute to the {\it perturbative} expansion in $\hbar$ in 
+the computations of physical expectation values.
+Similarly, as we
+have seen, the two-point function only agrees with 
+the genus zero 
+predictions of the Das-Jevicki lagrangian at large distances.
+It thus appears that the exact field theory of the eigenvalue 
+distribution - if it can be written as a field theory at all -
+is only approximately relativistic at long distances and has
+a different (and much {\it softer}) behavior at short 
+distances. Moreover,
+Polchinski's spacetime effective field theory 
+interpretation of $c=1$ \JOE\ 
+was interpreted \dsjv\ as being 
+equivalent to the Das-Jevicki lagrangian after identification 
+of the tachyon field with the eigenvalue field.
+Combining these observations we are lead to ask
+if it is a generic feature of nonperturbative
+string field theory that the theory only resembles
+a relativistic field theory on long distance scales and is a 
+much softer theory on short distance scales.
+ 
+\newsec{Macroscopic loop amplitudes at $c=1$}
+ 
+\subsec{$n$-point function}
+
+Formula \nptev\ for the correlation functions of
+the eigenvalue densities allows us 
+to calculate the $n$-point function $M(z_i,x_i)$
+of the ``macroscopic loop operators'': 
+\eqn\macropt{\eqalign{
+\hat\psi^\dagger e^{iz\hat \lambda}\hat\psi&\equiv
+\int_{-\infty}^{\infty}d\lambda \hat\psi^\dagger(\lambda,x)
+e^{iz\lambda}\hat\psi(\lambda,x)\cr
+M(z_i,x_i)&\equiv \langle
+\hat\psi^\dagger e^{iz_1\hat\lambda}\hat\psi
+\cdots\hat\psi^\dagger e^{iz_n\hat\lambda}\hat\psi\rangle\cr}
+}
+From $M(z_i,x_i)$ we can obtain the double-scaled correlation
+functions of the resolvent $tr\bigl({1\over \zeta-\phi}\bigr)$
+via a laplace transform. 
+Note that these integrals 
+converge and get their main contribution from the region 
+near the edge of the classical eigenvalue distribution,
+since, for large $\lambda$ the oscillatory function
+$e^{i z\lambda}$ gives a small contribution to the 
+integral. 
+By contrast, correlation functions of the operators 
+$\hat\lambda^n$, which correspond to correlators of
+$tr~\phi^n$ in the matrix model, are infinite. We believe
+this is the source of some of the wavefunction-renormalization 
+ambiguities which have plagued previous $c=1$ calculations.
+
+By shrinking the macroscopic loop amplitudes we may extract 
+the local scaling operators of the theory and their correlation
+functions, as in the one-matrix model
+\bdss\ . Namely, if
+$M(z_i,q_i)$ is the fourier transform of \macropt\ 
+we expect on physical grounds that the 
+small $z_i$ asymptotics of $M$ will have the form
+\eqn\expasymps{
+M(z_i,q_i)\sim \sum_{\Delta_i}\prod z_i^{\Delta_i}
+\langle \CO_{\Delta_1}\cdots\CO_{\Delta_n}\rangle
+}
+where $\CO_{\Delta}$ are the scaling operators of 
+dimension $\Delta>0$. We will find below that there are
+also divergent terms in the $z_i\to 0$ limit. A 
+nontrivial prediction of the liouville theory is that
+these terms will be analytic in $\mu$ since they arise
+from surfaces of zero area
+\ref\natiliouv{N. Seiberg, ``Notes on Quantum liouville Theory and 
+Quantum Gravity,'' Rutgers preprint RU-90-29, to appear in the 
+proceedings of the 1990 Yukawa International Seminar, Common 
+Trends in Mathematics and Quantum Field Theories}
+\ref\wdwppr{G. Moore, N. Seiberg, M. Staudacher, Rutgers preprint RU-91-11}\ .
+We will verify below that this is indeed the case in all our
+explicit formulae.
+
+The calculation of \macropt\ reduces to the 
+evaluation of a gaussian integral after we use
+\nptev\ .
+One finds the result
+\foot{Some details of the calculation are 
+provided in appendix C.}
+\eqn\macptii{\eqalign{
+{\p\over\p\mu}M(z_i,q_i)=\half i^{n+1}\delta(\sum
+q_i)\sum_{\sigma\in\Sigma_n}&
+\int_{-\infty}^{\infty} d\xi {e^{i\mu \xi}\over |sh~\xi/2|}
+\int_0^{\epsilon_1\infty} ds_1\cdots\int_0^{\epsilon_{n-1}\infty}
+ds_{n-1}\cr
+exp\bigl(-\sum_{k=1}^{n-1}s_k Q^\sigma_k\bigr)
+exp\bigl({i\over 2}cth(\xi/2)\sum z_i^2 \bigr)&
+exp\bigl(i\sum_{1\leq i<j\leq n}
+{ch\bigl(s_i+\cdots s_{j-1}-\xi/2\bigr)\over
+sh~(\xi/2)}z_{\sigma(i)}z_{\sigma(j)}\bigr)\cr}
+}
+It is easy to show that $M$ is real, totally symmetric in the 
+$(z_i,q_i)$ and invariant under parity: $q_i\to -q_i$. 
+
+Several remarks are in order regarding the physical interpretation
+of \macptii\ . In \macropt\ we have introduced macroscopic 
+loop lengths which are imaginary in order for the integrals 
+over $\lambda$ to converge. We cannot continue back to 
+physically sensible real loop lengths $\ell$ by $z\to \pm i \ell$ 
+because the eigenvalue distribution is concentrated on both 
+sides of the origin. Note however that in \macptii\ the integral 
+naturally splits into two pieces corresponding to integrating over
+or $\xi\in [0,\infty)$ or $\xi\in (-\infty,0]$.  In the first 
+integral we may continue $z\to i \ell$ in the upper half plane
+to obtain a convergent 
+answer. This analytic continuation makes no sense in the second 
+integral, but there we can analytically continue
+$z\to -i\ell$ in the lower half-plane.
+We interpret the two pieces as the 
+contributions of the two ``worlds'' defined by the two 
+eigenvalue cuts. Focusing on either contribution we 
+can define macroscopic loop amplitudes for real loop lengths.
+We expect that up to an
+overall $q_i$-dependent wavefunction renormalization, there
+is no difference in the perturbative expansion
+between keeping $z_i$ real and continuing 
+as above. One can check this explicitly below.
+Moreover, when we consider only one contribution, say, 
+$\int_0^\infty d \xi$ we might 
+try to interpret
+\foot{This is a suggestion of N. Seiberg.}
+$-i\xi$ as the area and the integrand of the 
+$\xi$ integral as the fixed-area partition function in liouville
+coupled to $c=1$ conformal field theory. 
+
+\subsec{Two-point function}
+
+We first examine the two-point function. 
+From this we can determine the wavefunctions, propagators, and 
+some facts about the spectrum of the theory. Factoring out
+the momentum-conserving delta function the rhs of \macptii\ becomes
+\eqn\twpti{Im~\int_0^\infty d~\xi {e^{i\mu\xi + i/2 cth(\xi/2)(z_1^2+z_2^2)}
+\over sh~(\xi/2)}
+\int_0^\infty ds e^{-|q|s }
+\biggl(e^{i{ch(s-\xi/2)\over sh\xi/2}z_1z_2}-
+e^{i{ch(s+\xi/2)\over sh\xi/2}z_1z_2}\biggr)
+}
+This formula holds for $z_i$ real. If we wish to have 
+real loop lengths we replace $Im\to -\half i$ and continue 
+$z_i\to i \ell_i$, as discussed above.
+
+We are interested in the small $z_i$ asymptotics of \twpti\ .
+Change variables 
+from $s$ to $y=e^s$ and expand in inverse powers of $y$. 
+The integral over $s$ may be written as
+\eqn\expbessl{
+2\pi e^{-i\pi|q|/2}{sh(|q|\xi/2)\over sin~\pi|q|}J_{|q|}(2\alpha)
++\sum_{r=1}^\infty {4 i^r r\over r^2-q^2}J_r(2\alpha) sh(r\xi/2)
+}
+where $\alpha=z_1z_2/2 sh(\xi/2)$. Since $|J_r(z)|\leq {|(z/2)^r|
+\over r!}$ for $z$ real the series converges.
+Here we take $|q|\notin\IZ$.  Note that \expbessl\ has a 
+smooth limit as $|q|\to r$, $r\in \IZ$, since the pole in the
+first term exactly cancels the pole in the $r+1^{st}$ term.
+So, for $|q|=r$ we have instead:
+\eqn\expbessli{
+2(-1)^r{\p\over\p |q|}\biggl[e^{-i\pi|q|/2}sh(|q|\xi/2)J_{|q|}(2\alpha)\biggr]_{|q|=r}
++\sum_{r\not= t}^\infty {4 i^t t\over t^2-r^2}J_t(2\alpha) sh(t\xi/2)
+}
+
+We can already begin to deduce some characteristics of the spectrum
+at $c=1$ from \expbessl\ .The expansion of the first
+bessel function $J|_{|q|}$ provides an infinite series of terms of the form
+$z_1^{|q|+2n}z_2^{|q|+2n}$ for $n$ a nonnegative integer.
+These contributions will be interpreted as arising from a set of operators
+\foot{We follow topological field theory notation.}
+$\sigma_{2n}(\CO_q)$ for $q\in \IR$. The $\sigma_{0}(\CO_q)$ 
+are ``gravitational primaries'' corresponding to the dressed version
+of $e^{iqX}$, and each gravitational primary gives rise to an 
+infinite tower of gravitational descendents. 
+Fortunately, the contributions of $\sigma_{2n}(\CO_q)$,
+for $q\notin \IZ$ can be unambiguously distinguished 
+from the more intricate contributions of the integer-moded
+bessel functions $J_r$. Clearly, these
+terms are related to the degenerate representations of the virasoro
+algebra for $c=1, \Delta=n^2/4$. In particular, N. Seiberg
+has proposed that the operators $\sigma_{2n}(\CO_{\pm r})$
+be identified with the dressed {\it virasoro} primaries in the 
+$U(1)$ kac-moody representation of charge $\pm r$. We hope
+to return to a more thorough study of these contributions in the 
+future.  
+
+We now consider the correlation function at fixed 
+cosmological constant. 
+ One may expand the 
+bessel functions and do the integrals term-by-term
+(use GR 3.383.4) in terms of whittaker functions. In 
+particular, use the integral
+\eqn\anint{\eqalign{
+\int_0^\infty {e^{i\mu\xi+i\half cth(\xi/2)z^2}\over
+(sh~\xi/2)^{1+|q|+2k} } sh~(|q|\xi/2)=2^{|q|+2k}(-iz^2)^{-(1+|q|+2k)/2}&
+\cr\cr
+\biggl[
+\Gamma(k+\half-i\mu)W_{i\mu+|q|/2,|q|/2+k}(-iz^2)
+-\Gamma(k+|q|+\half-i\mu)&W_{i\mu-|q|/2,|q|/2+k}(-iz^2)\biggr]\cr}
+}
+%may be done using the change of variables $w=cth(\xi/2)$
+%and
+As long as
+$|q|\notin \IZ$ we may 
+further express the whittaker functions in terms of the degenerate
+hypergeometric function 
+\def\oneff{{}_1F_1}
+$\oneff(\alpha,\beta;z)$,
+\eqn\dfonf{
+\oneff(\alpha,\beta;z)\equiv 1+{\alpha\over \beta}{z\over 1}+
+{\alpha(\alpha+1)\over \beta(\beta+1)}{z^2\over 2!}+\cdots
+}
+ The resulting amplitude should be separated into 
+two parts defined by the holomorphic and nonholomorphic terms
+in $\mu$. We find the nonholomorphic terms are:
+\eqn\nnhltw{
+\eqalign{
+2Im\Biggl[e^{-i\pi|q|/2}\sum_{k=0}{\Gamma(-|q|-2k)\Gamma(-|q|-k)\over
+k!}(z_1z_2)^{|q|+2k}&\qquad\cr
+\biggl({\Gamma(k+|q|+\half-i\mu)\over\Gamma(-k+\half-i\mu)}e^{w/2}
+\oneff(k+\half+i\mu, 1+2k+|q|;-w)&-\cr
+{\Gamma(k+\half-i\mu)\over\Gamma(-k-|q|+\half-i\mu)}
+e^{-w/2}
+\oneff(k+\half-i\mu,& 1+2k+|q|;w)\biggr)\Biggr]\cr}
+}
+where $w\equiv -i(z_1^2+z_2^2)$.
+
+The holomorphic terms in $\mu$ are similar:
+\eqn\hltw{
+\eqalign{
+2
+Im\Biggl[\sum_{k=0}{\Gamma(|q|+2k)\Gamma(-k-|q|)\over
+k!}\bigl({z_1z_2\over z_1^2+z_2^2}\bigr)^{|q|+2k}&\qquad\qquad\cr
+\biggl(e^{-w/2}
+\oneff(-k+\half-i\mu, 1-2k-|q|;w)
+-e^{w/2}
+\oneff(-k&+\half+i\mu, 1-2k-|q|;-w)
+\biggr)\Biggr]\cr}
+}
+As claimed above, all divergent terms for $z_i\to 0$ 
+multiply holomorphic expressions in $\mu$.
+
+One interesting special case of the above formula is the genus
+zero limit. The topological 
+expansion is defined by substituting 
+$\mu\to \kappa^{-1}\mu$ and $z\to \kappa^{1/2} z$
+and expanding in $\kappa\to 0$. 
+Using an expansion of the whittaker function as an 
+infinite sum of bessel functions
+\ref\buch{H. Buchholz, {\it Die Konfluente Hypergeometrische Funktion}, 
+Springer 1953}\ we obtain the genus zero two-macroscopic
+loop amplitude:
+\eqn\gnzrtwlp{\langle w(\ell_1)w(\ell_2)\rangle=
+4|q|\sum_{k=0}^\infty{(-1)^k\over k!}\Gamma(-|q|-k)\biggl(
+{\mu\ell_1\ell_2\over\sqrt{\mu(\ell_1^2+\ell_2^2)}}\biggr)^{|q|+2k}
+K_{|q|+2k}(2\sqrt{\mu(\ell_1^2+\ell_2^2)})
+}   
+
+Turning now to local operators, from \nnhltw\ 
+we can find the two-point functions of $\sigma_{2k}(\CO_q)$
+which are defined 
+\foot{In fact, this is rather naive and one should define an appropriate
+inner product on a space of wavefunctions. See \wdwppr\ .
+Related to this is the issue of the ``best'' normalization 
+of the operators $\sigma_{2n}(\CO_q)$, which is not that 
+given above.}
+by 
+\eqn\dfntwpt{
+{\p M\over \p\mu}\equiv 2\sum\ell_1^{|q|+2k_1}\ell_2^{|q|+2k_2}
+{\p\over \p\mu}\langle\sigma_{2k_1}(\CO_q)\sigma_{2k_2}(\CO_{-q})\rangle
+}
+In particular, from \nnhltw\ we may extract
+\eqn\twptii{\eqalign{
+{\p\over\p\mu}\langle\sigma_{0}(\CO_q)\sigma_{0}(\CO_{-q})\rangle
+=\qquad\qquad &\qquad\qquad\qquad\cr
+(\Gamma(-|q|))^2
+Im~\biggl[e^{i\pi |q|/2}&
+\biggl({\Gamma(|q|+\half-i\mu)\over\Gamma(\half-i\mu)}
+-
+{\Gamma(\half-i\mu)\over\Gamma(-|q|+\half-i\mu)}\biggr)
+\biggr]\cr}
+}
+for $q\notin \IZ$. As always, the situation for 
+$|q|\to r$ is more subtle. We may attempt to extract the 
+correlation function by taking a limit of \twptii\ . 
+The second order pole multiplies holomorphic terms in $\mu$ and 
+can be dropped. The first order pole multiplies nonholomorphic
+terms. Thus we may imagine that we can absorb the pole
+into a wavefunction renormalization of $\sigma_0(\CO_r)$
+in which case we obtain the result 
+\eqn\twdg{
+\eqalign{
+{\p\over\p\mu}
+\langle \sigma_0(\CO_r)\sigma_0(\CO_{-r})\rangle=\qquad\qquad\qquad\qquad&
+\cr
+Im\Biggl[i^r
+\biggl((\half-i\mu)_r&+(-1)^{r+1}(\half+i\mu)_r\biggr)
+\Psi(\half-i\mu)
+\Biggr]\cr}
+}
+where $(x)_n\equiv x(x+1)\cdots(x+n-1)$ is the pochhammer symbol.
+
+
+We now check \twptii\  physically
+in two ways. First, taking the $q\to 0$ limit we find
+\eqn\quezer{
+\lim_{q\to 0}{\p\over\p
+\mu}\langle\sigma_{0}(\CO_q)\sigma_{0}(\CO_{-q})\rangle
+={\p\over\p \mu}Re\Psi(\half-i\mu)
+}
+As expected, $\sigma_0(\CO_q)$
+becomes the  cosmological constant in the zero momentum limit.
+An interesting subtlety arises in comparing
+\quezer\ with the liouville theory. 
+For nonzero momentum the operator $\sigma_0(\CO_q)$ corresponds to the 
+liouville operator
+\eqn\liouv{
+\sigma_0(\CO_q)\leftrightarrow f(q)
+\int_\Sigma e^{\gamma(1-|q|/2)\varphi_L}
+e^{iq\cdot X} 
+}
+where $\Sigma$ is the worldsheet, $\gamma=\sqrt{2}$, $\varphi_L$
+is the liouville field and $X$ is the embedding coordinate. 
+On the other hand, the cosmological constant at $c=1$ is 
+given by $\int \varphi e^{\gamma\varphi}$
+\JOE\natiliouv\ . Therefore, the operator $\int e^{\gamma\varphi_L}$
+must decouple from amplitudes
+\foot{This was pointed out by N. Seiberg.}. 
+Moreover, it follows from the smooth 
+limit in \quezer\ that the ``wavefunction renormalization''
+$f(q)$ must have a pole at $q=0$.
+
+As a second check we show that
+at fixed $q$, \twptii\ has a topological expansion. 
+After analytic continuation to real loop lengths 
+$z_i\to i \ell_i$ we may use the expansion of 
+gamma functions quoted in appendix B to obtain the 
+result at any order of perturbation theory. 
+In particular, the first four orders of perturbation 
+theory are:
+\eqn\twptiii{\eqalign{
+\langle \sigma_0(\CO_q)\sigma_0(\CO_{-q})\rangle =
+(q\Gamma(-|q|))^2\mu^{|q|}&\biggl[{1\over |q|} \qquad\qquad\qquad\cr
+&-(|q|-1){(q^2-|q|-1)\over 24}\mu^{-2}\cr
++\prod_{r=1}^3(|q|-r)&
+{(3q^4-10|q|^3-5q^2+12|q|+7)\over 5760}\mu^{-4}\cr
+-\prod_{r=1}^5(|q|-r)&
+{(9q^6-63|q|^5+42q^4+217|q|^3-205|q|-93)\over 2903040}
+\mu^{-6}\cr
+&\qquad\qquad\qquad+\cdots \biggr]\cr}
+}
+The first term is 
+in agreement with the famous result of \kostov\ .
+The above expansion should prove very useful in 
+formulating a Das-Jevicki-like theory to all orders
+of perturbation theory. 
+
+We may again observe the phenomena of the breakdown 
+of the topological expansion for large momenta.
+The asymptotic expansion of the correlation function may 
+be obtained from the expansion of 
+\eqn\explg{log{\Gamma(a+\half-i\mu)\over \Gamma(\half-i\mu)}
+}
+The $(2h+1)^{th}$ term in the series has the form
+\eqn\proptw{
+{a\over\mu^{2h+1}}(-1)^h B_{2h}(1-2^{-2h+1})+\cdots
++i {(-1)^h\over (2h+2)(2h+1)}{a^{2h+2}\over\mu^{2h+1}}}
+The first term reproduces the familiar $(2h)!$ in the asymptotic
+expansion in genus. The last term, however, is a 
+convergent expansion for $|a|<\mu$, and diverges for $|a|>\mu$. 
+In this way we see that for large enough momenta, the 
+topological expansion ceases to be even asymptotic. As we 
+have discussed this is due to the qualitatively 
+different nature of the 
+wavefunctions for energies above the top of the parabolic 
+maximum. From another point of view, 
+this phenomenon is probably related to nonrenormalizability
+of the effective theories of \JOE\dsjv\senwad\gk\ .
+More physically, the string approximation is seen 
+to be an effective description only for low momentum processes, but at
+high momenta we begin to see the fermi particle itself. 
+
+Another application of the formulae of this section
+\foot{Suggested by S. Shenker}
+is to the study of high energy processes.
+From \twptiii\ we see that the scattering amplitudes 
+at fixed genus are (after dividing by a genus-independent
+wavefunction renormalization) polynomials in the 
+momenta. As we will see, 
+similar results hold for other correlation functions derived below. 
+This behavior is rather different from the high energy
+behavior of perturbative critical string theory
+\ref\grmend{D.J. Gross and P.F. Mende, Phys. Lett. {\bf 197B}(1987)
+129; Nucl. Phys. {\bf B303}(1988)407}.
+If, instead, we study the high energy behavior of the 
+nonperturbative result \twptii\ we obtain the large $|q|$ asymptotics: 
+\eqn\lrgqtw{
+%{\sqrt{\pi}\over sin~\pi|q|}e^{\mu\pi/2}\Gamma(-|q|)\biggl[
+%sin\bigl(\pi|q|/2 +\mu log(|q|/\mu)+\mu\bigr)
+%-
+%sin\bigl(3\pi|q|/2 -\mu log(|q|/\mu)-\mu\bigr)\biggr]
+\eqalign{
+{-\pi^{3/2}\over |q|sin^2\pi|q|}e^{-|q|log~|q|+|q|}\sqrt{cosh(\pi\mu)}
+\biggl[{2+e^{2\pi\mu}\over 1+e^{2\pi\mu}}&
+cos\bigl(\pi|q|/2 -\mu log|q|+2\Phi(\mu)\bigr)\cr
++{e^{2\pi\mu}\over 1+e^{2\pi\mu}}
+cos\bigl(3\pi|q|/2 &+\mu log|q|-2\Phi(\mu)\bigr)\biggr]\cr}
+}
+This also differs from proposed summations of the 
+results of \grmend\ given in 
+\ref\menoog{P.F. Mende and H. Ooguri, Nucl. Phys. {\bf B339}(1990)641} .
+
+\subsec{Wavefunctions and the Wheeler-de-Witt Equation}
+
+In a recent paper \wdwppr\ the role of the wheeler-de-witt
+equation in 2D gravity and 
+matrix models has been clarified. In this 
+section we sketch how many of the results in \wdwppr\ , which 
+were derived for $c<1$ may be trivially carried over to the case 
+of $c=1$. 
+
+We may use \expbessl\ to obtain a formula for a macroscopic 
+loop with one tachyon insertion, by letting $\ell_1\to 0$ holding 
+$\ell_2$ finite. 
+The genus zero contribution is 
+particularly interesting because, following the reasoning of 
+\wdwppr\ 
+we expect it to solve the wheeler-de-witt equation in minisuperspace. 
+The wavefunction of $\sigma_0(\CO_q)$ is easily extracted from 
+\gnzrtwlp\ with the result:
+\eqn\onbglp{
+\psi^{h=0}_q(\ell)\equiv\langle\sigma_0(\CO_q)w(\ell)\rangle=
+ \bigl(2|q|\Gamma(-|q|)\bigr)
+\mu^{|q|/2}K_{|q|}\biggl(2\sqrt{\mu \ell^2}\biggr)
+}
+in beautiful confirmation of the expectations of the liouville theory.
+In particular, 
+$\psi^{h=0}_q$ satisfies the wheeler-de-witt equation 
+in minisuperspace:
+\eqn\wdwi{
+\biggl(-(\ell{\p\over\p\ell})^2+4\mu\ell^2+q^2\biggr)\psi^{h=0}_q=0
+}
+
+Inspired by the result at genus zero, and the relatively simple 
+expression \anint\ summarizing the wavefunction $\psi_q$ to 
+all orders of the topological expansion we ask if some 
+simple equation summarizes the corrections to the WdW equation 
+from summing over topologies. The answer is especially simple
+at $q=0$ where we find the wavefunction
+\foot{This wavefunction has fascinating large $\ell$ behavior:
+$$\psi_{q=0}(\ell)\to-\sqrt{8\pi\over 1-e^{-\pi\mu}}e^{-\pi\mu}
+\ell^{-1}cos\bigl[\half\ell^2-\mu log\ell^2+2\Phi(\mu)-\pi/4\bigr]$$
+To all orders of perturbation theory the wavefunction decays
+exponentially at $\ell\to\infty$ but nonperturbatively the 
+the wavefunction  oscillates rapidly with a slowly-decaying envelope.}
+\eqn\alwvfn{
+\psi_{q=0}=Im \biggl[e^{-3\pi i/4}\Gamma(\half-i\mu)
+\ell^{-1}W_{i\mu,0}(i\ell^2)\biggr]
+}
+using the whittaker differential equation we find that 
+$\psi_q$ satisfies the modified wheeler-de-witt equation:
+\eqn\wdwmdf{
+\biggl(-(\ell{\p\over\p\ell})^2+4\mu\ell^2-\kappa^2
+\ell^4\biggr)\psi_{q=0}=0
+}
+where we have explicitly introduced the topological coupling
+$\kappa$. The extra term is reminiscent of wormhole effects 
+arising from nonlocal terms in the liouville action 
+$\sim (\int_{\Sigma} \varphi_L e^{\gamma\varphi_L})^2$. 
+Similar considerations apply to $\psi_q$. The modified
+wheeler-de-witt equation is most simply written by 
+taking an inverse laplace transform in $\mu$ to work 
+at fixed area.
+
+\subsec{Three-point function}
+
+We now examine the three-point function. This allows us to 
+determine the nature of the couplings and fusion rules in 
+the theory. Moreover, since there is an ambiguity in 
+the relative normalization of matrix-model and liouville 
+operators we cannot obtain unambiguous physical amplitudes
+until we compute the three-point function.
+Choosing $q_1,q_2>0$ the rhs of \macptii\ becomes
+\eqn\thrpti{\eqalign{
+2\delta(\sum q_i)Re\int_0^\infty d\xi{e^{i\mu\xi}\over sh~(\xi/2)}
+e^{{i\over 2}cth(\xi/2)\sum z_i^2}\Biggl\{
+&\cr
+\int_0^\infty ds_1\int_0^\infty ds_2 e^{-q_1 s_1+q_3 s_2}
+&\biggl[ e^{i(f(s_1)z_1 z_2+f(s_1+s_2)z_1z_3+f(s_2)z_2z_3}
+\cr
+&+e^{i(f(-s_1)z_1 z_2+f(-s_1-s_2)z_1z_3+f(-s_2)z_2z_3}\biggr]\cr
+-\int_0^\infty ds_1\int_0^\infty ds_2 e^{-q_1 s_1-q_2s_2}&
+\biggl[ e^{i(f(s_1)z_1 z_3+f(s_1-s_2)z_1z_2+f(-s_2)z_2z_3}
+\cr
+&+e^{i(f(-s_1)z_1 z_3+f(-s_1+s_2)z_1z_2+f(s_2)z_2z_3}\biggr]\cr
++\int_0^\infty ds_1\int_0^\infty ds_2 e^{-q_2 s_1+q_3 s_2}&
+\biggl[ e^{i(f(s_1)z_1 z_2+f(s_1+s_2)z_2z_3+f(s_2)z_1z_3} \cr
+&+e^{i(f(-s_1)z_1 z_2+f(-s_1-s_2)z_2z_3+f(-s_2)z_1z_3}\biggr]
+\Biggr\} \cr}
+}
+where $f(s)=ch(s-\xi/2)/sh(\xi/2)$. 
+
+
+The small $z_i$ behavior of the above integrals is subtle. 
+For simplicity assume that $|q_i|<1$. 
+%
+%Denote
+%$$\varepsilon_{jk}^{\pm}\equiv {-i z_j z_k e^{\pm \xi/2}\over
+%2 sh~(\xi/2)}$$
+%
+Denote the six integrals by $I_j$, $j=1,6$. 
+These integrals contribute both analytic and nonanalytic terms in 
+$\mu$. Keeping only the nonanalytic terms in $z_i$ and dropping
+terms of order $\CO(z^{2|q|+n})$ for $n\geq 1$ we find that 
+$I_1+I_2$ contributes
+\eqn\cntrii{\eqalign{
+2(-i z_2z_3)^{|q_3|}{\Gamma(-|q_3|)^2\over q_1}F(q_3,-q_1,1-q_1;-z_1/z_2)
+&\CF^+(|q_3|;\mu)\cr
++2(-i z_1z_3)^{|q_3|}{\Gamma(-q_1)^2\over q_2}F(-q_1,q_2,1+q_2;-z_2/z_3)
+&\CF^+(q_1;\mu)\cr
++2(-i z_1z_3)^{q_1}(-iz_2z_3)^{q_2}\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+&\CF^+(|q_3|;\mu)\cr}
+%
+%\Biggl[{\Gamma(\half-i\mu+|q_3|)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-|q_3|)}\Biggr]\cr
+%
+}
+where $F(\alpha,\beta,\gamma;z)$ is the hypergeometric
+function and 
+we will frequently use the notation
+\eqn\dffn{\CF^\pm(a,b;\mu)\equiv
+{\Gamma(a+\half-i\mu)\over\Gamma(b+\half-i\mu)}
+\pm
+{\Gamma(-b+\half-i\mu)\over\Gamma(-a+\half-i\mu)}
+}
+We also use the notation $\CF^\pm(a;\mu)=\CF^\pm(a,0;\mu)$. 
+
+
+The contribution of $I_5+I_6$ is obtained by changing
+$z_1\leftrightarrow z_2$ and $q_1\leftrightarrow q_2$. 
+The contribution of $I_3+I_4$ is similar:
+\eqn\cntriii{\eqalign{
+-2(-i z_2z_3)^{q_2}{\Gamma(-q_2)^2\over q_1}F(-q_2,q_1,1+q_1;-z_1/z_3)
+&\CF^+(q_2;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+q_2)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-q_2)}\Biggr]\cr
+%
+-2(-i z_1z_3)^{q_1}{\Gamma(-q_1)^2\over q_2}F(-q_1,q_2,1+q_2;-z_2/z_3)
+&\CF^+(q_1;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+q_1)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-q_1)}\Biggr]\cr
+%
+-2(-i z_1z_3)^{q_1}(-iz_2z_3)^{q_2}\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+&\CF^+(q_1,-q_2;\mu)\cr}
+%
+%\Biggl[{\Gamma(\half-i\mu+q_1)\over \Gamma(\half-i\mu-q_2)}
+%+{\Gamma(\half-i\mu+q_2)\over \Gamma(\half-i\mu-q_1)}\Biggr]\cr}
+%
+}
+Adding these together we find:
+\eqn\cntriv{\eqalign{
+2(-i z_2z_3)^{|q_3|}{(\Gamma(-|q_3|)^2\over q_1}F(q_3,-q_1,1-q_1;-z_1/z_2)
+&\CF^+(|q_3|;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+|q_3|)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-|q_3|)}\Biggr]\cr
+%
++
+2(-i z_1z_3)^{|q_3|}{(\Gamma(-|q_3|)^2\over q_2}F(q_3,-q_2,1-q_2;-z_2/z_1)
+&\CF^+(|q_3|;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+|q_3|)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-|q_3|)}\Biggr]\cr
+%
++
+2(-i z_1z_3)^{q_1}(-iz_2z_3)^{q_2}\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+&\CF^+(|q_3|;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+|q_3|)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-|q_3|)}\Biggr]\cr
++
+2(-i z_2z_3)^{q_2}(-iz_1z_3)^{q_1}\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+&\CF^+(|q_3|;\mu)\cr
+%
+%\Biggl[{\Gamma(\half-i\mu+|q_3|)\over \Gamma(\half-i\mu)}
+%+{\Gamma(\half-i\mu)\over \Gamma(\half-i\mu-|q_3|)}\Biggr]\cr
+-2(-i z_1z_3)^{q_1}(-iz_2z_3)^{q_2}\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+&\CF^+(q_1,-q_2;\mu)\cr}
+%
+%\Biggl[{\Gamma(\half-i\mu+q_1)\over \Gamma(\half-i\mu-q_2)}
+%+{\Gamma(\half-i\mu+q_2)\over \Gamma(\half-i\mu-q_1)}\Biggr]\cr}
+}
+In isolating nonanalytic powers of $z$ we have to be careful that we can 
+expand the hypergeometric functions as power series. Thus their 
+arguments must have absolute value smaller than 1. It follows that 
+we must apply the inversion formula for $F$ to one of the first 
+two terms in \cntriv\ . Taking this into account we finally find
+\eqn\threptii{\eqalign{
+{\p\over\p\mu}\langle\sigma_0(\CO_{q_1})\sigma_0(\CO_{q_2})
+\sigma_0(\CO_{q_3})\rangle&=\cr
+\Gamma(-q_1)\Gamma(-q_2)\Gamma(-|q_3|)
+Re\biggl[e^{i\pi |q_3|/2}&
+\biggl(\CF^+(|q_3|;\mu)-\CF^+(q_2,-q_1;\mu)\biggr)\biggr]\cr}
+}
+As a check, one may take the limit $q_1\to 0$ in which case we
+obtain the derivative with respect to $\mu$ of the two-point
+function found above. Moreover, we can compute the topological 
+expansion as before. In particular, the first two terms in
+the topological expansion are
+\eqn\genzrthr{\eqalign{
+\langle\sigma_0(\CO_{q_1})\sigma_0(\CO_{q_2})
+\sigma_0(\CO_{q_3})\rangle_{h=0}&=
+\prod_i q_i\Gamma(-|q_i|)\mu^{|q_3|-1}\qquad\qquad\qquad\qquad
+\cr
+\biggl[1-&{(|q_3|-1)(|q_3|-2)(q_1^2+q_2^2-|q_3|-1)\over 24}\mu^{-2}
++\cdots\biggr] \cr}   
+}
+Accounting for wavefunction renormalization the leading term 
+agrees with
+the recent calculations of Kutasov and Di Francesco using 
+the liouville theory \kutasov\ .
+
+\subsec{Four-point function}
+
+Next we turn to the four-point function. This allows us
+to consider issues of factorization and the nature of 
+intermediate states, a subject fraught with ticklish
+issues of principle \natiliouv\ . 
+
+The scattering amplitude depends on the kinematic configuration we 
+are studying. There are, up to inversion and permutation, only
+ two kinds of configurations:
+either two or three momenta have the same sign.
+We first consider the kinematic configuration:
+\eqn\kincnfi{
+q_1>0\qquad q_2>0\qquad  q_3>0,\qquad q_4<0
+}
+i.e., $0<q_1,q_2,q_3<-q_4$. 
+Doing the $s,\xi$ integrals and keeping the 
+contribution proportional to 
+$\prod z_i^{|q_i|}$ as $z_i\to 0$
+we find
+\eqn\frscnfg{\eqalign{
+2Im\Biggl[\prod_i \bigl(z_i^{|q_i|}\Gamma(-|q_i|)\bigr)e^{-i\pi|q_4|/2}
+\biggl(&
+\CF^-(q_1+q_2,-q_3,\mu)+\CF^-(q_3+q_1,-q_2,\mu)+\cr
+&\CF^-(q_2+q_3,-q_1,\mu)-\CF^-(|q_4|;\mu)\biggr)\Biggr]\cr}
+}
+Expanding the polygamma functions we obtain the genus zero result
+\eqn\frptzeriii{
+\langle\sigma_0(\CO_{q_1})\sigma_0(\CO_{q_2})
+\sigma_0(\CO_{q_3})\sigma_0(\CO_{q_4})\rangle_{h=0}
+=\prod_i \bigl(|q_i|\Gamma(-|q_i|)\bigr)
+\biggl((|q_4|-1)\mu^{|q_4|-2}\biggr)
+}
+reproducing the result of Kutasov and Di Francesco \kutasov\ . 
+
+A rather different result emerges if
+we choose the kinematic configuration:
+\eqn\kinconf{\eqalign{
+q_1>0\qquad q_2>0\qquad & q_3<0\qquad q_4<0\cr
+q_1+q_3&=-(q_2+q_4)<0\cr
+q_1+q_4&=-(q_2+q_3)<0\cr}
+}
+i.e., $0<q_1<-q_3,-q_4<q_2$. 
+The calculation of the $s$-integrals proceeds by dividing up the 24 permutations
+according to the configuration of signs $\epsilon_i$ they 
+produce. Furthermore the result of any permutation is easily
+related to its inverse. Thus one need only study the integrals 
+corresponding to the permutations yielding $+++$, $+-+$, and $++-$. 
+As before the small $z_i$ terms may be expressed in terms of 
+hypergeometric functions. 
+% 
+%Of the 24 terms in \macptii\ only four can give a term of the form 
+%$\prod_i z_i^{|q_i|}$ in the small $z_i$ expansion. These four 
+%terms may be written as:
+%\eqn\fourpti{\eqalign{
+%\delta(\sum q_i)Im\int_0^\infty d\xi{e^{i\mu\xi}\over sh~(\xi/2)}
+%e^{{i\over 2}cth(\xi/2)\sum z_i^2}
+%&
+%\int_0^\infty ds_1\int_0^\infty ds_2\int_0^\infty ds_3
+%e^{-q_1 s_1+(q_1+q_3)s_2+q_4 s_3}\cr
+%\biggl[e^{H(s_i,z_i)}
+%&-[s_i\to - s_i]\biggr]\cr
+%&+[q_3\leftrightarrow q_4,z_3\leftrightarrow z_4]\cr}
+%}
+%where
+%\eqn\ehdef{\eqalign{
+%H(s_i,z_i)\equiv &
+% exp~ i\biggl(f(s_1)z_1 z_3+f(s_1-s_2)z_1z_2+f(s_2)z_2z_3\cr
+%&+f(s_1-s_2+s_3)z_1 z_4+f(s_3-s_2)z_3z_4+f(s_3)z_2z_4\biggr)\cr}
+%}
+%
+%Changing variables to $y_i=e^{s_i}$, and dropping terms from the 
+%exponential leading to higher order terms in $z_i$ we find, after 
+%some algebra, MORE DETAILS 
+After some algebra we reduce \macptii\ to 
+\eqn\fourptii{\eqalign{
+\delta\bigl(\sum q_i\bigr){\prod_i\Gamma(-|q_i|)z_i^{|q_i|}
+\over 2^{S}\Gamma(-S)}\qquad\qquad & \cr
+Im\int_0^\infty d\xi {e^{i\mu\xi}\over \bigl(sh~(\xi/2)\bigr)^{1+S}}
+\Biggl\{\biggl[e^{-\xi S/2}&F\bigl(q_3,-q_2;-S;1-e^\xi\bigr)\cr
+-e^{\xi S/2}&F\bigl(q_3,-q_2;-S;1-e^{-\xi}\bigr)\biggr]
++\biggl[3\leftrightarrow 4\biggr]\cr
++&\biggl[e^{-\xi(q_2-q_1)/2}-e^{\xi(q_2-q_1)/2}\biggr]
+-\biggl[e^{-\xi S/2}-e^{\xi S/2}\biggr]\Biggr\}\cr}
+}
+where $S\equiv q_1+q_2$. 
+
+
+We can rewrite \fourptii\ in a way which makes its connection 
+to the liouville theory more evident using a mellin-barnes 
+representation of the hypergeometric function.
+\foot{A similar representation for liouville amplitudes has been proposed
+in\ref\sasha{A. Zamolodchikov, unpublished.}\natiliouv\wdwppr\ .}
+Let $\CC$ be a curve running from $-i\infty$
+ to 
+$+i\infty$ as in 
+\fig\mellbrnes{The curve $\CC$ for the case that $|q_i|<1$.}\ 
+such that the poles of $\Gamma(-t)$, i.e., $t=0,1,2,\dots$ lie to 
+the right of $\CC$ and the poles of $\Gamma(t-q_2)\Gamma(t+q_3)$ and 
+$\Gamma(t-q_2)\Gamma(t+q_4)$, i.e., $t=q_2-n$, $t=-q_3-n$, $n=0,1,2,\dots$
+ lie to the left of $\CC$.
+Then we may write the four-point function:
+\eqn\frmellin{\eqalign{
+2\delta\bigl(\sum q_i\bigr) Im\Biggl[e^{-i\pi S/2}\prod_i\biggl(\Gamma(-|q_i|)z_i^{|q_i|}\biggr)
+\Biggl[\CF^-(q_2,-q_1;\mu)&-\CF^-(S;\mu)+\cr\cr
+\int_\CC {dt\over 2\pi i} {\Gamma(-q_2+t)\over \Gamma(-q_2)}
+\biggl({\Gamma(q_3+t)\over \Gamma(q_3)}+{\Gamma(q_4+t)\over \Gamma(q_4)}\biggr)
+\Gamma(-t)&\cr
+\biggl(
+{\Gamma(+S-t+\half-i\mu)\over \Gamma(\half-i\mu)}&-
+{\Gamma(q_2-t+\half-i\mu)\over\Gamma(-q_1+\half-i\mu)}\biggr)
+\Biggr] \cr }
+}
+We may obtain the topological expansion by deforming the contour 
+so that it wraps around the positive real axis. As we do so we 
+pick up a pole at $t=\half+S-i\mu, t=\half+q_2-i\mu$ which gives
+an exponentially small correction to the four-point function.
+ We can then evaluate
+the remaining integral as an infinite sum of residues. Thus, the
+perturbative expansion is obtained from 
+\eqn\frmellni{\eqalign{
+2\delta\bigl(\sum q_i\bigr) Im\Biggl[e^{i\pi S/2}\prod_i\biggl(\Gamma(-|q_i|)\biggr)
+\Biggl[\CF^+(S;\mu)&-\CF^+(q_2,-q_1;\mu)+\cr\cr
+\sum_{n=1}^\infty {(-1)^n\over n!}{\Gamma(-q_2+n)\over \Gamma(-q_2)}
+\biggl({\Gamma(q_3+n)\over \Gamma(q_3)}+{\Gamma(q_4+n)\over \Gamma(q_4)}\biggr)
+&\cr
+\biggl(
+{\Gamma(+S-n+\half-i\mu)\over \Gamma(\half-i\mu)}-&
+{\Gamma(q_2-n+\half-i\mu)\over\Gamma(-q_1+\half-i\mu)}\biggr)
+\Biggr] \cr }
+}
+
+In particular, 
+expanding the above results to obtain the genus zero answer we find
+\eqn\frptzr{
+\langle\sigma_0(\CO_{q_1})\sigma_0(\CO_{q_2})
+\sigma_0(\CO_{q_3})\sigma_0(\CO_{q_4})\rangle_{h=0}
+=\prod_i \bigl(|q_i|\Gamma(-|q_i|)\bigr)
+\biggl((q_2-1)\mu^{S-2}\biggr)
+}
+Given the result in these two 
+kinematic configurations we can easily obtain the genus zero result in all configurations:
+\foot{After this work was completed we learned that J. Polchinski,
+and G. Mandal, A. Sengupta, and S. Wadia
+have derived the same formula from another point of view
+\wadsem
+\ref\jotlk{J. Polchinski, Talk at Rutgers University.}.}
+\eqn\frptzri{ \langle\sigma_0(\CO_{q_1})\sigma_0(\CO_{q_2})
+\sigma_0(\CO_{q_3})\sigma_0(\CO_{q_4})\rangle_{h=0}
+=\prod_i \bigl(|q_i|\Gamma(-|q_i|)\bigr)
+\biggl(({\rm max}\{|q_i|\}-1)\mu^{\half(\sum |q_i|)-2}\biggr)
+}
+Physically, the singularities found in going from one kinematic 
+configuration to another arise from the presence of on-shell
+zero-momentum states in the intermediate channels.
+\foot{Another remark of N. Seiberg 's.}
+This is seen very clearly from \frmellin\ ; continuing from one 
+configuration to another a pole of the integrand is forced to 
+cross the contour $\CC$.
+
+We expect that the above formulae can be cast into a much more 
+beautiful form which illustrates the nature of duality and 
+factorization in nonperturbative string theory
+\foot{We hope to return to this point in the future.} .
+Already from the above we can 
+interpret the integral over $\CC$ as an integral over the 
+spectrum of the liouville theory. The fact that $\CC$ runs 
+along the imaginary axis has a physical interpretation. 
+In the language of \natiliouv\ the external states are the 
+``hartle-hawking'' or microscopic states.
+In accordance with 
+general reasoning, we see that the intermediate states which 
+propagate are the ``curtright-thorn,'' or 
+macroscopic states \natiliouv\ .
+
+\newsec{Conclusion} 
+
+In conclusion, let us address briefly four lessons we may 
+learn from the above rather technical calculations. 
+We have seen that macroscopic loop amplitudes are
+naturally written in terms of hypergeometric functions.
+This might have some bearing on the phenomenon of integrability 
+of nonperturbative string theory. A general 
+feature of matrix models solved thus far is that correlation 
+functions turn out to be related to correlators of other
+integrable quantum field theories at genus zero
+\ref\alsms{The idea that this might be true in general 
+was first proposed to me by A. Morozov and S. Shatashvili, Oct. 1989}\ .
+For example, painlev\'e functions appear in the study 
+of correlation functions of the massive ising model 
+and in the nonlinear schr\"odinger theory
+\ref\its{A.R. Its, A.G. Izergin, V.E. Korepin, and N.A. Slavnov, 
+``Differential equations for quantum correlation functions,'' preprint, 
+and references therein.}. 
+This is probably related to the fact that the matrix models can be 
+reformulated in terms of a field theory on the spectral 
+plane (or line) as emphasized in 
+\bdss\geom
+\ref\alexy{A. Gerasimov, A. Marshakov, A. Mironov, and A. Orlov, 
+``Matrix Models of 2D Gravity and Toda Theory,''
+Lebedev Inst. Preprints, July, August, 1990; A. Mironov and A. Morozov,
+Lebedev Inst. Preprint July 1990}
+\ref\tomcar{T. Banks, ``Matrix Models, String Field Theory and Topology,''
+RU-90-52, to appear in the proceedings of the Carg\'ese workshop on 
+random surfaces.}
+\ref\emil{E. Martinec,``On the origin of integrability in matrix
+models,'' Chicago preprint EFI-90-67}. 
+One might therefore ask if 
+there is a reformulation of the free fermi theory
+at $c=1$ which makes clearer its relation to 
+standard integrable field theories.
+
+Given the observed phenomenon of integrability of nonperturbative
+string physics  one must 
+ask how generic we expect it to be. If it is indeed merely
+a manifestation of the equivalence to a theory of free fermions
+then we would guess that the phenomenon is far from generic.
+On the other hand, the idea that such a phenomenon might
+take place was proposed some time ago by Knizhnik
+\ref\knizh{V.G. Knizhnik, Sov. Phys. Usp. {\bf 32}(1989)945}\ 
+in a slightly different context.
+The essential point of \knizh\ is that 
+we could try to sum all orders of perturbation 
+theory in {\it critical} string theory by adding a kind of ``handle-gluing 
+operator'' to a conformal field theory action. One imagines
+that inclusion of this operator converts the theory to some
+kind of integrable theory
+\foot{We thank A. Morozov for explanations of this idea.}.
+ If this is what lies behind the 
+phenomenon of nonperturbative integrability then we might guess that it is 
+in fact generic. Even if the phenomenon is not generic it is 
+worth understanding thoroughly, for such an understanding
+might yield a wealth of new examples.
+
+A second lesson is that the equivalent string field 
+theory is likely to be more complicated than the lagrangian 
+written in \dsjv\ . In particular, the short distance behavior
+is softer than that encountered in relativistic field theory.
+
+A third lesson from the above calculations has been 
+discussed throughout the paper, namely, that for high 
+energies, the string perturbation series ceases to be 
+even a good asymptotic expansion. Surfaces do not provide
+a good description of the physics at high energies.
+Instead, one must use
+other, ``parton,'' degrees of freedom. In our case, the 
+parton is the double-scaled free fermion.
+Does this provide a good model for what happens in the effective
+string theory of QCD?
+
+A fourth lesson we may draw from our calculations is that topology- 
+changing effects in gravity can induce rather mild modifications
+of the wheeler-de-witt equation. If that is true in four dimensional
+gravity it will probably be important.
+\bigskip
+{\it Note added (2/26/91):} We would like to bring the 
+reader's attention to two other recent 
+papers on  $c=1$ matrix model correlation functions
+\ref\wadii{G. Mandal, A. Sengupta, and S. Wadia, ``Interactions 
+and scattering in d=1 string theory,'' IAS preprint, IASSNS-HEP/91/8}
+\ref\grkliii{D. Gross and I. Klebanov, ``S=1 For c=1,'' 
+Princeton preprint, PUPT-1241}\ .
+\bigskip
+\bigskip
+\centerline{\bf Acknowledgements}
+
+As is evident from the many footnotes above, this work was 
+heavily influenced by many remarks and insights of T. Banks,
+N. Seiberg, and S. Shenker. We thank them for their generous
+help and interest, and for comments on the manuscript.
+We also thank A. Dabholkar, D. Kutasov,
+E. Martinec, K. Rabe, R. Shankar, M. Staudacher, and A. Zamolodchikov 
+for useful conversations.
+We thank the Rutgers Department of Physics for hospitality.
+This work was supported by DOE grants DE-AC02-76ER03075
+and DE-FG05-90ER40559 and by a Presidential Young Investigator
+Award.
+
+\appendix{A}{Parabolic Cylinder Functions}
+
+\subsec{Definitions}
+ 
+Unfortunately, there are four notations commonly used for 
+parabolic cylinder functions 
+\ref\gradsh{I.S. Gradshteyn and I.M. Ryzhik, {\it Tables of Integrals,
+Series, and Products}, Academic Press, 1980}
+\ref\abram{M. Abramowitz and I. Stegun, {\it Handbook of Mathematical
+Functions} Dover, 1968}\ .
+Our wavefunctions $\psi^\pm(a,x)$ are the delta-function 
+normalized even and odd solutions of 
+$({d^2\over dx^2}+{x^2\over 4})\psi=a\psi$. 
+In terms of degenerate hypergeometric $_1 F_1(\alpha,\beta;x)$ and
+whittaker functions $M_{\mu,\nu}(x), D_a(x)$ we have even and odd parity
+wavefunctions:
+\eqn\wvfnspl{\eqalign{
+\psi^+(a,x)&={1\over \sqrt{4 \pi (1+e^{2\pi a})^{1/2}}}(W(a,x)+W(a,-x))\cr
+&={1\over \sqrt{4 \pi (1+e^{2\pi a})^{1/2}}}2^{1/4}\biggl|{\Gamma(1/4+i a/2)
+\over \Gamma(3/4+i a/2)}\biggr|^{1/2}e^{-i x^2/4} 
+{}_1F_1(1/4-ia/2;1/2;i x^2/2)\cr
+&={e^{-i \pi/8}\over 2\pi} e^{-a \pi/4}|\Gamma(1/4+i a/2)|{1\over \sqrt{|x|}}
+M_{ia/2,-1/4}(i x^2/2)\cr}
+}
+\eqn\wvfnsmi{\eqalign{
+\psi^-(a,x)&={1\over \sqrt{4 \pi (1+e^{2\pi a})^{1/2}}}(W(a,x)-W(a,-x))\cr
+&={1\over \sqrt{4 \pi (1+e^{2\pi a})^{1/2}}}2^{3/4}\biggl|{\Gamma(3/4+i a/2)
+\over \Gamma(1/4+i a/2)}\biggr|^{1/2} x e^{-i x^2/4} 
+{}_1F_1(3/4-ia/2;3/2;i x^2/2)\cr
+&={e^{-3 i \pi/8}\over \pi} e^{-a \pi/4}|\Gamma(3/4+i a/2)|
+{x\over |x|^{3/2}}
+M_{ia/2,1/4}(i x^2/2)\cr}
+}
+ 
+It is useful to have a good picture of what these states look like.
+In 
+\fig\wvfns{The even parity wavefunction for $a=2,0,-2$.}\ 
+we have plotted three representative wavefunctions.
+Note that, as opposed to the correct sign harmonic oscillator, 
+{\it both} solutions of the differential equation decay at infinity, 
+and there is a continuous spectrum.
+
+\subsec{Asymptotics}
+
+Define
+\eqn\asydefs{\eqalign{
+\Phi(\mu)&\equiv{\pi\over 4}+\half arg\Gamma(\half+i\mu)\cr
+k(\mu)&=\sqrt{1+e^{2\pi\mu}}-e^{\pi\mu}=\CO(e^{-\pi\mu})\cr
+k(\mu)^{-1}&=\sqrt{1+e^{2\pi\mu}}+e^{\pi\mu}=2 e^{\pi\mu}+\CO(e^{-\pi\mu})
+\cr}
+}
+The asymptotic properties of the wavefunctions
+\abram\ 
+are:
+ 
+\noindent
+1. $\mu\gg\lambda^2$.
+\eqn\pcfi{\eqalign{
+\psi^+(\mu,\lambda)&\sim {e^{-\pi\mu/2}\over (2\pi)^{1/2}\mu^{1/4}}
+ch\bigl(\sqrt{\mu}\lambda\bigr)\cr
+\psi^-(\mu,\lambda)&\sim {e^{-\pi\mu/2}\over (2\pi)^{1/2}\mu^{1/4}}
+sh\bigl(\sqrt{\mu}\lambda\bigr)\cr}
+}
+
+\noindent
+2. $-\mu\gg\lambda^2$.
+\eqn\pcfi{\eqalign{
+\psi^+(\mu,\lambda)&\sim {1\over (4\pi)^{1/2}|\mu|^{1/4}}
+cos(\sqrt{-\mu}\lambda)\cr
+\psi^-(\mu,\lambda)&\sim {1\over (4\pi)^{1/2}|\mu|^{1/4}}
+sin(\sqrt{-\mu}\lambda)\cr}
+}
+
+\noindent
+3. $\lambda\gg |\mu|$.
+\eqn\asyi{\eqalign{
+\psi^{\pm}(\mu,\lambda)\sim & {1\over 
+(2\pi\lambda\sqrt{1+e^{2\pi\mu}})^{1/2}}
+\biggl[\sqrt{k(\mu)}cos\bigl(\lambda^2/4-\mu log\lambda+\Phi(\mu)
+\bigr)\cr
+\pm &
+1/\sqrt{k(\mu)}sin\bigl(\lambda^2/4-\mu log\lambda+\Phi(\mu)\bigr)
+\biggr]\cr}
+}
+ 
+\noindent
+4. $X\equiv\sqrt{\lambda^2-4\mu}\gg 1$.
+\eqn\asyii{\eqalign{
+\psi^{\pm}(\mu,\lambda)\sim &{1\over 
+(2\pi X \sqrt{1+e^{2\pi\mu}})^{1/2}}
+\biggl[\sqrt{k(\mu)}cos\bigl({1\over 4}\lambda X-\mu \tau(\lambda,\mu)
++{\pi\over 4}
+\bigr)\cr
+\pm &
+1/\sqrt{k(\mu)}sin\bigl({1\over 4}\lambda X-\mu \tau(\lambda,\mu)
++{\pi\over 4}
+\bigr)\biggr]\cr}
+}
+
+This last estimate suggests that we define ``plane-wave'' combinations
+\eqn\planewvii{\eqalign{
+\chi^+&\equiv\half(k^{-1/2}+ik^{1/2})\psi^++\half(k^{-1/2}-ik^{1/2})\psi^-\cr
+\chi^-&\equiv\half(k^{-1/2}-ik^{1/2})\psi^++\half(k^{-1/2}+ik^{1/2})\psi^-\cr}
+}
+which have the property that for the asymptotic configuration 4
+we may write:
+\eqn\planewv{
+\chi^{\pm}(\nu,\lambda)\sim 
+\chi^{\pm}(\mu,\lambda)e^{\mp i(\nu-\mu)
+\bigl(\tau(\lambda,\mu)+\CO(\nu/\lambda^2)\bigr)}
+}
+
+\subsec{Integrals}
+
+The wavefunctions \wvfnspl\wvfnsmi\ 
+are delta-function normalized states:
+\eqn\delone{
+\int d~\lambda [\psi^+(a_1,\lambda) \psi^+(a_2,\lambda)+
+\psi^-(a_1,\lambda) \psi^-(a_2,\lambda)]=\delta(a_1-a_2)}
+and
+\eqn\deltwo{
+\int d~a [\psi^+(a,\lambda_1) \psi^+(a,\lambda_2)+
+\psi^-(a,\lambda_1) \psi^-(a,\lambda_2)]=\delta(\lambda_1-\lambda_2)}
+ 
+In fact, we will need a stronger result, namely,
+\eqn\lapi{\eqalign{
+\int d\nu e^{i \nu s}\sum_{\epsilon}\psi^\epsilon(\nu,\lambda_1)
+\psi^{\epsilon}(\nu,\lambda_2)&=
+{1\over\sqrt{4\pi i~sh~s}}
+exp{i\over 4}\biggl[{\lambda_1^2+\lambda_2^2\over
+th~s}-{2\lambda_1\lambda_2\over sh~s}\biggr]\cr
+&=\langle\lambda_1|e^{-2 i sH}|\lambda_2\rangle\cr}
+}
+which is valid for $-\pi<Im~s<0$ and for $Im~s=0,Re~s\not=0$.
+In the second line we have $H=\half p^2-{1\over 4}\lambda^2$.
+One may think that this identity is an obvious consequence of 
+the analytic continuation of a similar formula for the 
+right-side-up oscillator. However, since the nature of the 
+spectrum and eigenfunctions is radically different we give 
+here a careful proof of \lapi\ . Substituting the 
+third line of \wvfnspl\wvfnsmi\ we see that \lapi\ is a 
+consequence
+\foot{In fact, the identity in \gradsh\ is incorrect. This 
+is a second motivation to give a careful proof.}
+of GR 7.694
+\eqn\grdshdient{\eqalign{
+\int_{-\infty}^\infty e^{-2\rho x i}\Gamma(\half+\nu+ix)
+\Gamma(\half+\nu-ix)M_{ix,\nu}(\alpha)&M_{ix,\nu}(\beta) dx=\cr
+\pi & \bigl(\Gamma(2\nu+1)\bigr)^2{\sqrt{\alpha\beta}\over ch~\rho}
+e^{-\half th\rho(\alpha+\beta)}J_{2\nu}
+\bigl({\sqrt{\alpha\beta}\over ch\rho}\bigr)\cr}
+}
+
+{\it Proof}: Use GR 6.643.1,2. to express the integrand 
+in terms of bessel and 
+modified bessel functions. Exchange orders of integration and do the $x$ 
+integral to get a delta function. 
+Evaluating the delta function we are left with 
+an integral with a product of two bessel functions. Now use
+GR 6.633.4 to obtain \grdshdient\ .
+ 
+One useful immediate corrolary of \lapi\ 
+is the resolvent of the upside-down oscillator:
+\eqn\rslvnt{\eqalign{
+R(\zeta;\lambda_1,\lambda_2)&\equiv\int d\nu {1\over \nu-\zeta}
+\sum_{\epsilon}\psi^\epsilon(\nu,\lambda_1)
+\psi^{\epsilon}(\nu,\lambda_2)\cr
+&=-i\int_0^{-\epsilon \infty}ds e^{-i s\zeta}
+{1\over\sqrt{4\pi i~sh~s}}
+exp{i\over 4}\biggl[{\lambda_1^2+\lambda_2^2\over
+th~s}-{2\lambda_1\lambda_2\over sh~s}\biggr]\cr}
+}
+where $\epsilon=sgn[Im\zeta]$. This gives a rigorous justification
+for the analytic continuations used extensively in \grkli\ .
+
+\appendix{B}{Expansions of $\CF^\pm$}
+
+Here we record some properties of the functions $\CF^\pm$ 
+occuring in the macroscopic loop amplitudes. 
+In particular, $\CF^\pm(a,b;\mu)$ 
+may be expressed in terms of polygamma functions defined by
+\eqn\plygmma{\eqalign{
+\Psi(\half-i\mu)&=-i{\pi\over 2}+log~\mu+\sum_{n=1}^\infty
+{(-1)^n B_{2n}\over 2n}(1-2^{-2n+1})\mu^{-2n}\cr
+\Psi^{(n)}(z)&\equiv {d\over dz}\Psi^{(n-1)}(z)\cr}
+}
+First we taylor expand:
+\eqn\plygmii{\eqalign{\CF^\pm(a,b;\mu)&\equiv
+{\Gamma(a+\half-i\mu)\over\Gamma(b+\half-i\mu)}
+\pm
+{\Gamma(-b+\half-i\mu)\over\Gamma(-a+\half-i\mu)}\cr
+&=
+exp\biggl(\sum_{n=1,odd}^\infty{a^n-b^n\over n!}\Psi^{(n-1)}(\half-i\mu)\biggr)\cr
+\Biggl[exp\biggl(\sum_{n=2,even}^\infty{a^n-b^n\over n!}&\Psi^{(n-1)}(\half-i\mu)\biggr)
+\pm exp\biggl(-\sum_{n=2,even}^\infty{a^n-b^n\over n!}\Psi^{(n-1)}(\half-i\mu)\biggr)\Biggr]\cr}
+}
+Then we use the asymptotics in \plygmma\ . The result may be expressed as
+\eqn\expeff{\eqalign{
+\CF^+(a,b;\mu)&\equiv
+e^{-i\pi(a-b)/2}\mu^{a-b}\sum_{h=0}^\infty{Q_h^+(a,b)\over\mu^{2h}}\cr
+\CF^-(a,b;\mu)&\equiv
+i e^{-i\pi(a-b)/2}\mu^{a-b}\sum_{h=0}^\infty{Q_h^-(a,b)\over\mu^{2h+1}}\cr}
+}
+where $Q_h^\pm$ are polynomials in $a,b$ with real coefficients.
+The first few are
+\eqn\qmiply{\eqalign{
+Q^+_0(a,b)&=2\cr
+Q^+_1(a,b)&=-d(d-1){(3s^2-d-1)\over 12}\cr
+Q^+_2(a,b)&=d(d-1)(d-2)(d-3){(15s^4-30ds^2-30s^2+5d^2+12d+7)\over 2880}\cr
+Q^-_0(a,b)&=sd\cr
+Q^-_1(a,b)&=-sd(d-1)(d-2){(s^2-d-1)\over 24}\cr
+Q^-_2(a,b)&=sd(d-1)(d-2)(d-3)(d-4)
+{(3s^4-10ds^2-10s^2+5d^2+12d+7)\over 5760}\cr}
+}
+where $s=a+b,d=a-b$. 
+
+These polynomials are also useful for discussing high-energy
+behavior. Indeed, since amplitudes are functions of 
+$q+i\mu$ there is an interesting duality between the 
+high and low energy regimes. For example, as $a\to +\infty$
+we find
+\eqn\hgha{
+{\Gamma(a+\half-i\mu)\over\Gamma(\half-i\mu)}\sim
+\half {\Gamma(a+\half)\over\Gamma(\half-i\mu)}a^{-i\mu}
+\biggl[\sum_{h=0}^\infty{Q_h^+(-i\mu,0)\over a^{2h}}
++i \sum_{h=0}^\infty{Q_h^-(-i\mu,0)\over a^{2h+1}}\biggr]
+}
+
+\appendix{C}{Gaussian integrals}
+
+The gaussian integral needed for the macroscopic
+loop amplitude is most conveniently done using 
+harmonic oscillators. Note that the evaluation of 
+the quantity
+\eqn\trci{
+tr\biggl(e^{\xi_n \hat x}e^{-t_1 H} e^{\xi_1\hat x}e^{-t_2 H}
+\cdots e^{\xi_{n-1}\hat x}e^{-t_n H}\biggr)
+}
+in position space, where $H=\half p^2+\half\omega^2 x^2$,
+involves the same gaussian integral as the one we need, after analytic 
+continuation of $t_i,\omega$ from real to pure
+imaginary values. On the other hand, this trace is
+easily evaluated using coherent state formalism
+with the result that \trci\ is
+\eqn\trcii{{1\over 2 sh(\omega T/2)}
+exp\biggl[{cth(\omega T/2)\over 4\omega}\sum_1^n\xi_i^2\biggr]
+exp\biggl[\sum_{i>j}
+{ch\bigl(\omega(t_i+\cdots t_{j+1}-T/2)\bigr)\over 2\omega sh\omega T/2}
+\xi_i\xi_j\biggr]
+}
+One might object to harmonic oscillators with these 
+``unphysical'' values of parameters.
+Since gaussian integrals are given in terms of the 
+inverse and determinant of a certain quadratic form, 
+we may regard the introduction of harmonic
+oscillators as a trick to prove a certain {\it algebraic}
+identity for the quadratic form arising in \macropt .
+ 
+ 
+\listrefs
+\listfigs
+\bye
+
+
+
+
+
+Moreover, 
+we can express the two-point functions:
+\eqn\twdsc{
+\langle \CO^{(k)}_q\CO^{(k)}_{-q}\rangle
+=
+2Im\Biggl[e^{-i\pi|q|/2}\CF^-(k+|q|,-k;\mu)
+\Biggr]
+}
+A similar discussion can be carried out for the degenerate
+fields $\CD^{(n)}_r$. In this case the formulae are more complicated
+since the second index of the whittaker function is an integer. 
+We simply quote the result for the correlator
+\eqn\twdg{
+\eqalign{
+\langle \CD^{(0)}_r\CD^{(0)}_{-r}\rangle=\qquad\qquad\qquad\qquad&
+\cr
+2Im\Biggl[{4(-i)^rr\over r^2-q^2}({(z_1z_2)^r\over r!^2}
+\biggl({\Gamma(r+|q|+\half-i\mu)\over\Gamma(\half-i\mu)}&
+\Psi(r+\half-i\mu)
+-
+{\Gamma(\half-i\mu)\over\Gamma(-r+\half-i\mu)}
+\Psi(\half-i\mu)\biggr)\Biggr]\cr}
+}
+in fact the above expression is also analytic in $\mu$ for $q$ not
+an integer. This is expected since, for momentum $q\not= r$ 
+the operator cannot couple to the macroscopic loop of 
+momentum $q$. Nevertheless the pole at $q=r$ should be interpreted 
+as an extra logarithmic factor in $\mu$.
+\foot{These last few remarks were pointed out to me by N. Seiberg.}
+
+DISCUSS SPECTRUM
+From the expansion of the bessel 
+function we see that we will obtain terms of the form $z_1^{|q|+n}
+z_2^{|q|+n}$, where $n\in \IZ_+$, from the bessel function $J_{|q|}$
+and terms of the form $z_1^{r+n}z_2^{r+n}$ from th bessel 
+functions $J_r$. 
+Thus, if working at fixed $\xi$ is indeed working at 
+fixed area, we can already conclude that the scaling operators 
+of the 
+theory, $\CO^{(n)}_{q}$, are labelled by
+a smoothly varying part, $q$ together with an nonnegative
+integer $n$ labelling the tower of ``gravitational descendents.'' 
+In addition there is a discrete spectrum $\CD_m^{(n)}$ 
+arising from the degenerate representations of 
+the virasoro algebra at $c=1$, together with their gravitational
+descendents. NO D's??
+
+We use the double scaled free fermion field theory of 
+the c=1 matrix model to compute the correlation functions
+of eigenvalue densities and macroscopic loops. Integral 
+representations for these quantities are found. We compare
+the eigenvalue density correlators with the predictions of 
+free relativistic field theory on the spectral curve and 
+find differences, whose physical origin is explained. 
+We obtain explicit expressions for the correlation function
+of two macroscopic loops to all orders of perturbation 
+theory. From this one may deduce the spectrum of the model. 
+We find explicit expressions for the 3 and 4 point scattering
+amplitudes of tachyon operators to all orders of perturbation theory.
+It is found that for momenta of the order of the cosmological
+constant the topological perturbation series ceases to be asymptotic,
+explicitly realizing the transition in a string theory from 
+a theory of strings to a theory of partons.
+
+
+
+
+ 
+ 
+ 
+ 
+
+
